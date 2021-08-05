@@ -19,17 +19,17 @@ const components = {
   ProfileInfo: () => import('../../components/Profile/ProfileInfo.vue' /* webpackChunkName: "components/profile-info" */).then(c => wrapFunctional(c.default || c)),
   ProfileSkills: () => import('../../components/Profile/ProfileSkills.vue' /* webpackChunkName: "components/profile-skills" */).then(c => wrapFunctional(c.default || c)),
   ProfileUserCard: () => import('../../components/Profile/UserCard.vue' /* webpackChunkName: "components/profile-user-card" */).then(c => wrapFunctional(c.default || c)),
-  HeroSimpleCentered: () => import('../../components/hero/HeroSimpleCentered.vue' /* webpackChunkName: "components/hero-simple-centered" */).then(c => wrapFunctional(c.default || c)),
-  AnimatePing: () => import('../../components/animate/AnimatePing.vue' /* webpackChunkName: "components/animate-ping" */).then(c => wrapFunctional(c.default || c)),
+  UIPickansCard: () => import('../../components/UI/PickansCard.vue' /* webpackChunkName: "components/u-i-pickans-card" */).then(c => wrapFunctional(c.default || c)),
+  UIPickansQuestionIcon: () => import('../../components/UI/PickansQuestionIcon.vue' /* webpackChunkName: "components/u-i-pickans-question-icon" */).then(c => wrapFunctional(c.default || c)),
+  UISearchBar: () => import('../../components/UI/SearchBar.vue' /* webpackChunkName: "components/u-i-search-bar" */).then(c => wrapFunctional(c.default || c)),
+  UIStarIcon: () => import('../../components/UI/StarIcon.vue' /* webpackChunkName: "components/u-i-star-icon" */).then(c => wrapFunctional(c.default || c)),
   AlertsAlertComponent: () => import('../../components/alerts/AlertComponent.vue' /* webpackChunkName: "components/alerts-alert-component" */).then(c => wrapFunctional(c.default || c)),
   PostDetail: () => import('../../components/post/PostDetail.vue' /* webpackChunkName: "components/post-detail" */).then(c => wrapFunctional(c.default || c)),
   PostList: () => import('../../components/post/PostList.vue' /* webpackChunkName: "components/post-list" */).then(c => wrapFunctional(c.default || c)),
   PostListItem: () => import('../../components/post/PostListItem.vue' /* webpackChunkName: "components/post-list-item" */).then(c => wrapFunctional(c.default || c)),
   QuestionPost: () => import('../../components/question/QuestionPost.vue' /* webpackChunkName: "components/question-post" */).then(c => wrapFunctional(c.default || c)),
-  UIPickansCard: () => import('../../components/UI/PickansCard.vue' /* webpackChunkName: "components/u-i-pickans-card" */).then(c => wrapFunctional(c.default || c)),
-  UIPickansQuestionIcon: () => import('../../components/UI/PickansQuestionIcon.vue' /* webpackChunkName: "components/u-i-pickans-question-icon" */).then(c => wrapFunctional(c.default || c)),
-  UISearchBar: () => import('../../components/UI/SearchBar.vue' /* webpackChunkName: "components/u-i-search-bar" */).then(c => wrapFunctional(c.default || c)),
-  UIStarIcon: () => import('../../components/UI/StarIcon.vue' /* webpackChunkName: "components/u-i-star-icon" */).then(c => wrapFunctional(c.default || c))
+  HeroSimpleCentered: () => import('../../components/hero/HeroSimpleCentered.vue' /* webpackChunkName: "components/hero-simple-centered" */).then(c => wrapFunctional(c.default || c)),
+  AnimatePing: () => import('../../components/animate/AnimatePing.vue' /* webpackChunkName: "components/animate-ping" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

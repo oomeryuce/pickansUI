@@ -50,11 +50,17 @@
   "ProfileUserCard": {
     "description": "Auto imported from components/Profile/UserCard.vue"
   },
-  "HeroSimpleCentered": {
-    "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
+  "UIPickansCard": {
+    "description": "Auto imported from components/UI/PickansCard.vue"
   },
-  "AnimatePing": {
-    "description": "Auto imported from components/animate/AnimatePing.vue"
+  "UIPickansQuestionIcon": {
+    "description": "Auto imported from components/UI/PickansQuestionIcon.vue"
+  },
+  "UISearchBar": {
+    "description": "Auto imported from components/UI/SearchBar.vue"
+  },
+  "UIStarIcon": {
+    "description": "Auto imported from components/UI/StarIcon.vue"
   },
   "AlertsAlertComponent": {
     "description": "Auto imported from components/alerts/AlertComponent.vue"
@@ -71,16 +77,10 @@
   "QuestionPost": {
     "description": "Auto imported from components/question/QuestionPost.vue"
   },
-  "UIPickansCard": {
-    "description": "Auto imported from components/UI/PickansCard.vue"
+  "HeroSimpleCentered": {
+    "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
   },
-  "UIPickansQuestionIcon": {
-    "description": "Auto imported from components/UI/PickansQuestionIcon.vue"
-  },
-  "UISearchBar": {
-    "description": "Auto imported from components/UI/SearchBar.vue"
-  },
-  "UIStarIcon": {
-    "description": "Auto imported from components/UI/StarIcon.vue"
+  "AnimatePing": {
+    "description": "Auto imported from components/animate/AnimatePing.vue"
   }
 }
