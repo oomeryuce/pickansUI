@@ -304,6 +304,7 @@
 
       <!-- User -->
       <div
+        v-show="user"
         class="
           flex flex-row
           items-center
@@ -342,25 +343,84 @@
             ></a
           >
         </div>
-        <div class="relative w-auto">
-          <button
+        <div class="relative inline-block w-auto">
+          <div>
+            <button
+              class="
+                block
+                w-10
+                h-10
+                overflow-hidden
+                rounded-full
+                md:w-12 md:h-12 md:my-4
+                profile-thumb
+                hover:outline-none
+                hover:ring-2
+                hover:ring-offset-2
+                hover:ring-offset-gray-100
+                hover:ring-blue-200
+                focus:outline-none
+                focus:ring-2
+                focus:ring-offset-2
+                focus:ring-offset-gray-100
+                focus:ring-blue-400
+              "
+              type="button"
+              @click="menuShow = !menuShow"
+            >
+              <img
+                class="block w-full profile-thumb"
+                :src="
+                  user
+                    ? user.photoUrl
+                    : require('~/assets/svg/profile-user.svg')
+                "
+                alt="Your profile photo"
+              />
+            </button>
+          </div>
+          <div
+            v-show="menuShow"
             class="
-              block
-              w-10
-              h-10
-              overflow-hidden
-              rounded-full
-              md:w-12 md:h-12 md:my-4
-              profile-thumb
+              origin-top-left
+              top-16
+              absolute
+              left-0
+              mt-2
+              w-56
+              rounded-md
+              shadow-lg
+              bg-white
+              ring-1 ring-black ring-opacity-5
+              focus:outline-none
             "
-            type="button"
           >
-            <img
-              class="block w-full profile-thumb"
-              src="https://cdn.hashnode.com/res/hashnode/image/upload/v1619177937853/AKybvMQKA.jpeg?w=200&amp;h=200&amp;fit=crop&amp;crop=faces&amp;auto=compress"
-              alt="Your profile photo"
-            />
-          </button>
+            <div class="px-2 py-1 border-b-2">
+              Hi {{ user ? user.name : "User" }}!
+            </div>
+            <div class="py-1" role="none">
+              <n-link
+                id="menu-item-0"
+                to="/profile"
+                class="text-gray-700 block px-4 py-2 text-sm hover:bg-blue-100"
+                >Profile</n-link
+              >
+              <a
+                id="menu-item-1"
+                class="
+                  text-gray-700
+                  block
+                  px-4
+                  py-2
+                  text-sm
+                  hover:bg-blue-100
+                  cursor-pointer
+                "
+                @click="signOut"
+                >Logout</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -476,7 +536,7 @@
         ><span class="inline-block">Ask</span></a
       >
     </div>
-    <SearchBar />
+    <SearchBar class="sm:hidden" />
     <div
       v-if="open"
       class="z-40 absolute bg-white h-full w-full top-0 left-0 py-20 px-2"
@@ -790,6 +850,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import SearchBar from "~/components/UI/SearchBar.vue";
 export default {
   name: "SideBar",
@@ -806,12 +867,27 @@ export default {
       // scrollY: 0,
       // isOpen: false,
       open: false,
+      menuShow: false,
     };
   },
 
-  computed: {},
+  computed: {
+    user() {
+      return this.$store.getters["users/user"];
+    },
+  },
+
   mounted() {},
-  methods: {},
+  methods: {
+    ...mapActions({
+      logout: "users/logout",
+    }),
+
+    signOut() {
+      this.logout();
+      this.$router.push("/login");
+    },
+  },
 };
 </script>
 

@@ -172,6 +172,6 @@ export const actions = {
   },
   logout({ commit }) {
     firebase.auth().signOut();
-    commit("shared/setUser", null, { root: true });
+    commit("setUser", null);
   },
 };

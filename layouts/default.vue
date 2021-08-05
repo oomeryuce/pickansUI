@@ -7,6 +7,7 @@
 <script lang="ts">
 import { defineComponent } from "@nuxtjs/composition-api";
 import { mapGetters } from "vuex";
+import firebase from "firebase";
 
 export default defineComponent({
   name: "DefaultLayout",
@@ -15,6 +16,15 @@ export default defineComponent({
     ...mapGetters({
       user: "users/user",
     }),
+  },
+
+  created() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.$store.dispatch("users/autoSignIn", user, { root: true });
+        this.$router.push("/");
+      }
+    });
   },
 });
 </script>

@@ -14,7 +14,7 @@
     "
   >
     <SideBar active-page="more" />
-    <div class="z-30 col-span-12 md:col-span-9 lg:col-span-10 xl:col-span-7">
+    <div class="col-span-12 md:col-span-9 lg:col-span-10 xl:col-span-7">
       <div class="flex flex-row items-start flex-grow-0 w-full max-w-full py-2">
         <div class="flex-1 w-full max-w-full lg:w-auto">
           <profile-feed-header />
