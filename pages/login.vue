@@ -62,7 +62,7 @@
               class="fill-current w-36 lg:w-48"
             />
           </div>
-          <p
+          <!-- <p
             class="
               mb-8
               text-lg
@@ -74,91 +74,244 @@
             "
           >
             Sign in / Create an account
-          </p>
+          </p> -->
 
-          <div class="flex flex-row flex-wrap items-center mb-5">
-            <input
-              v-model="loginData.email"
-              type="email"
-              autofocus=""
-              class="
-                mb-4
-                input-text
-                w-full
-                bg-transparent
-                rounded-lg
-                outline-none
-                p-4
-                border border-current border-bluish-gray-300
-                placeholder-bluish-gray-400
-              "
-              placeholder="Enter your email address"
-            />
-            <input
-              v-model="loginData.password"
-              type="password"
-              autofocus=""
-              class="
-                mb-4
-                input-text
-                w-full
-                bg-transparent
-                rounded-lg
-                outline-none
-                p-4
-                border border-current border-bluish-gray-300
-                placeholder-bluish-gray-400
-              "
-              placeholder="Password"
-            />
-            <button
-              class="
-                button-hn-primary
-                py-3
-                px-5
-                bg-pickans-light
-                rounded-lg
-                border
-                text-lg
-                leading-snug
-                font-bold
-                text-white
-                hover:shadow-md
-                focus:outline-none
-                inline-flex
-                items-center
-                order-transparent
-                transition
-                ease-in-out
-                duration-150
-              "
-              type="button"
-              @click="signIn"
-            >
-              <svg
-                v-if="loading"
-                class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
+          <ul class="flex mb-5 bg-gray-100 rounded-lg p-1">
+            <li class="flex-1 mr-1">
+              <a
+                class="
+                  text-center
+                  block
+                  rounded-lg
+                  py-2
+                  px-4
+                  cursor-pointer
+                  font-bold
+                "
+                :class="
+                  activeTab === 'signIn'
+                    ? 'border border-blue-300 bg-pickans-light hover:bg-blue-400 text-white'
+                    : 'hover:border-blue-200 hover:bg-blue-100 text-blue-400'
+                "
+                @click="activeTab = 'signIn'"
+                >Sign In</a
               >
-                <circle
-                  class="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  stroke-width="4"
-                ></circle>
-                <path
-                  class="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-              Submit
-            </button>
-          </div>
+            </li>
+            <li class="flex-1 ml-1">
+              <a
+                class="
+                  text-center
+                  block
+                  rounded-lg
+                  py-2
+                  px-4
+                  cursor-pointer
+                  font-bold
+                "
+                :class="
+                  activeTab === 'signUp'
+                    ? 'border border-blue-300 bg-pickans-light hover:bg-blue-400 text-white'
+                    : 'hover:border-blue-200 hover:bg-blue-100 text-blue-400'
+                "
+                @click="activeTab = 'signUp'"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+          <transition name="fade" mode="out-in">
+            <div
+              v-if="activeTab === 'signIn'"
+              :key="activeTab"
+              class="flex flex-row flex-wrap items-center mb-5"
+            >
+              <input
+                v-model="loginData.email"
+                type="email"
+                autofocus=""
+                class="
+                  mb-4
+                  input-text
+                  w-full
+                  bg-transparent
+                  rounded-lg
+                  outline-none
+                  p-4
+                  border border-current border-bluish-gray-300
+                  placeholder-bluish-gray-400
+                "
+                placeholder="Enter your email address"
+              />
+              <input
+                v-model="loginData.password"
+                type="password"
+                autofocus=""
+                class="
+                  mb-4
+                  input-text
+                  w-full
+                  bg-transparent
+                  rounded-lg
+                  outline-none
+                  p-4
+                  border border-current border-bluish-gray-300
+                  placeholder-bluish-gray-400
+                "
+                placeholder="Password"
+              />
+              <button
+                class="
+                  button-hn-primary
+                  py-3
+                  px-5
+                  bg-pickans-light
+                  rounded-lg
+                  border
+                  text-lg
+                  leading-snug
+                  font-bold
+                  text-white
+                  hover:shadow-md
+                  focus:outline-none
+                  inline-flex
+                  items-center
+                  order-transparent
+                  transition
+                  ease-in-out
+                  duration-150
+                "
+                type="button"
+                @click="signIn"
+              >
+                <svg
+                  v-if="loading"
+                  class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Submit
+              </button>
+            </div>
+            <div
+              v-if="activeTab === 'signUp'"
+              :key="activeTab"
+              class="flex flex-row flex-wrap items-center mb-5"
+            >
+              <input
+                v-model="signUpData.email"
+                type="email"
+                autofocus=""
+                class="
+                  mb-4
+                  input-text
+                  w-full
+                  bg-transparent
+                  rounded-lg
+                  outline-none
+                  p-4
+                  border border-current border-bluish-gray-300
+                  placeholder-bluish-gray-400
+                "
+                placeholder="Enter your email address"
+              />
+              <input
+                v-model="signUpData.password"
+                type="password"
+                autofocus=""
+                class="
+                  mb-4
+                  input-text
+                  w-full
+                  bg-transparent
+                  rounded-lg
+                  outline-none
+                  p-4
+                  border border-current border-bluish-gray-300
+                  placeholder-bluish-gray-400
+                "
+                placeholder="Password"
+              />
+              <input
+                v-model="signUpData.passwordConfirm"
+                type="password"
+                autofocus=""
+                class="
+                  mb-4
+                  input-text
+                  w-full
+                  bg-transparent
+                  rounded-lg
+                  outline-none
+                  p-4
+                  border border-current border-bluish-gray-300
+                  placeholder-bluish-gray-400
+                "
+                placeholder="Password Confirm"
+              />
+              <button
+                class="
+                  button-hn-primary
+                  py-3
+                  px-5
+                  bg-pickans-light
+                  rounded-lg
+                  border
+                  text-lg
+                  leading-snug
+                  font-bold
+                  text-white
+                  hover:shadow-md
+                  focus:outline-none
+                  inline-flex
+                  items-center
+                  order-transparent
+                  transition
+                  ease-in-out
+                  duration-150
+                "
+                type="button"
+                @click="signUp"
+              >
+                <svg
+                  v-if="loading"
+                  class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+                Submit
+              </button>
+            </div>
+          </transition>
+
           <alerts-alert-component
             v-if="error || alert.type"
             :type="alert.type"
@@ -301,11 +454,19 @@ export default defineComponent({
         password: null,
       },
 
+      signUpData: {
+        email: null,
+        password: null,
+        passwordConfirm: null,
+      },
+
       alert: {
         type: null,
         title: null,
         content: null,
       },
+
+      activeTab: "signIn",
     };
   },
 
@@ -334,12 +495,22 @@ export default defineComponent({
   methods: {
     ...mapActions({
       signUserIn: "users/signUserIn",
+      signUserUp: "users/signUserUp",
       signUserInGoogle: "users/signUserInGoogle",
       signUserInFacebook: "users/signUserInFacebook",
       signUserInGithub: "users/signUserInGithub",
+      clearError: "shared/clearError",
     }),
 
+    async clearAlerts() {
+      this.alert.type = null;
+      this.alert.title = null;
+      this.alert.content = null;
+      await this.clearError();
+    },
+
     async signIn() {
+      await this.clearAlerts();
       if (this.loginData.email && this.loginData.password) {
         await this.signUserIn(this.loginData);
         if (this.user) {
@@ -350,12 +521,48 @@ export default defineComponent({
         }
       }
     },
+
+    async signUp() {
+      await this.clearAlerts();
+      if (
+        this.signUpData.email &&
+        this.signUpData.password &&
+        this.signUpData.passwordConfirm
+      ) {
+        if (this.signUpData.password === this.signUpData.passwordConfirm) {
+          await this.signUserUp({
+            email: this.signUpData.email,
+            password: this.signUpData.password,
+          });
+          if (!this.error) {
+            this.alert.type = "success";
+            this.alert.title = "Signed Up";
+            this.alert.content = "Welcome to the Pickans!";
+          }
+        } else {
+          this.alert.type = "error";
+          this.alert.title = "Password Error!";
+          this.alert.content = "Passwords does not match.";
+        }
+      } else {
+        this.alert.type = "error";
+        this.alert.title = "Sign Up Field Error!";
+        this.alert.content = "Please fill all fields to sign up.";
+      }
+    },
   },
 });
 </script>
 
-<style>
+<style scoped>
 /* .firebase-emulator-warning {
   display: none !important;
 } */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>

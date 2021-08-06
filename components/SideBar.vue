@@ -371,7 +371,7 @@
               <img
                 class="block w-full profile-thumb"
                 :src="
-                  user
+                  user && user.photoUrl
                     ? user.photoUrl
                     : require('~/assets/svg/profile-user.svg')
                 "
@@ -383,9 +383,9 @@
             v-show="menuShow"
             class="
               origin-top-left
-              top-16
+              top-0
               absolute
-              left-0
+              left-16
               mt-2
               w-56
               rounded-md
@@ -396,7 +396,7 @@
             "
           >
             <div class="px-2 py-1 border-b-2">
-              Hi {{ user ? user.name : "User" }}!
+              Hi {{ user && user.name ? user.name : "User" }}!
             </div>
             <div class="py-1" role="none">
               <n-link
