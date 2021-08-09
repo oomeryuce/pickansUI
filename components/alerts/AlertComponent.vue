@@ -4,6 +4,8 @@
     :class="
       type === 'success'
         ? 'bg-green-100 border-green-500 text-green-900'
+        : type === 'warning'
+        ? 'bg-yellow-100 border-yellow-500 text-yellow-900'
         : 'bg-red-100 border-red-500 text-red-900'
     "
     role="alert"

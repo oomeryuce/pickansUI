@@ -2,10 +2,14 @@ import firebase from "firebase/app";
 
 export const state = () => ({
   user: null,
+  isEmailExist: null,
 });
 export const mutations = {
   setUser(state, payload) {
     state.user = payload;
+  },
+  setEmailStatus(state, payload) {
+    state.isEmailExist = payload;
   },
 };
 export const getters = {
@@ -14,6 +18,32 @@ export const getters = {
   },
 };
 export const actions = {
+  emailCheck({ commit }, payload) {
+    commit("shared/setLoading", true, { root: true });
+    commit("shared/clearError", null, { root: true });
+    firebase
+      .auth()
+      .fetchSignInMethodsForEmail(payload.email)
+      .then((user) => {
+        commit("shared/setLoading", false, { root: true });
+        if (user.length > 0) {
+          commit("setEmailStatus", {
+            exist: true,
+            loginType: user,
+          });
+        } else {
+          commit("setEmailStatus", {
+            exist: false,
+            loginType: [],
+          });
+        }
+      })
+      .catch((error) => {
+        commit("shared/setLoading", false, { root: true });
+        commit("shared/setError", error, { root: true });
+        console.log(error);
+      });
+  },
   signUserUp({ commit }, payload) {
     commit("shared/setLoading", true, { root: true });
     commit("shared/clearError", null, { root: true });
