@@ -15,7 +15,7 @@
     >
       <SideBar active-page="feed" />
       <div
-        class="col-span-12 md:pt-2 md:col-span-9 lg:col-span-6 xl:col-span-5"
+        class="col-span-12 md:pt-2 md:col-span-8 lg:col-span-7 xl:col-span-5"
       >
         <FeedHeader />
         <FeedRank />
@@ -29,8 +29,8 @@
           md:block
           lg:block
           xl:block
-          md:pt-2 md:col-span-2
-          lg:col-span-2
+          md:pt-2 md:col-span-4
+          lg:col-span-3
           xl:col-span-2
         "
       >

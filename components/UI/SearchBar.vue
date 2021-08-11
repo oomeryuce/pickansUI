@@ -1,12 +1,11 @@
 <template>
-  <div class="relative z-30 mb-2 bg-white rounded-lg">
+  <div class="relative mb-2 bg-white rounded-lg">
     <div class="relative">
       <div
         class="
           absolute
           top-0
           left-0
-          z-10
           flex flex-row
           items-center
           justify-center
@@ -32,7 +31,7 @@
         type="input"
         class="
           relative
-          z-20
+          z-10
           w-full
           px-12
           py-5
@@ -56,7 +55,6 @@
           absolute
           top-0
           right-0
-          z-10
           flex flex-row
           items-center
           justify-center

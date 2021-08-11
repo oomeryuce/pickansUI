@@ -23,9 +23,16 @@
   {
     "name": "profile",
     "path": "/profile",
-    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/profile.vue",
-    "chunkName": "pages/profile",
-    "_name": "_1fd2e0d2"
+    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/profile/index.vue",
+    "chunkName": "pages/profile/index",
+    "_name": "_2b6e6e4c"
+  },
+  {
+    "name": "profile-me",
+    "path": "/profile/me",
+    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/profile/me/index.vue",
+    "chunkName": "pages/profile/me/index",
+    "_name": "_ed174b7a"
   },
   {
     "name": "posts-id",

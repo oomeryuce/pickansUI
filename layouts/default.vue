@@ -22,7 +22,6 @@ export default defineComponent({
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.$store.dispatch("users/autoSignIn", user, { root: true });
-        this.$router.push("/");
       }
     });
   },

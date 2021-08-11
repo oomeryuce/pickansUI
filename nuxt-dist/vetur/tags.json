@@ -47,8 +47,14 @@
   "ProfileSkills": {
     "description": "Auto imported from components/Profile/ProfileSkills.vue"
   },
+  "ProfileTemplate": {
+    "description": "Auto imported from components/Profile/ProfileTemplate.vue"
+  },
   "ProfileUserCard": {
     "description": "Auto imported from components/Profile/UserCard.vue"
+  },
+  "ProfileUserSideBar": {
+    "description": "Auto imported from components/Profile/UserSideBar.vue"
   },
   "UIPickansCard": {
     "description": "Auto imported from components/UI/PickansCard.vue"
@@ -62,6 +68,9 @@
   "UIStarIcon": {
     "description": "Auto imported from components/UI/StarIcon.vue"
   },
+  "HeroSimpleCentered": {
+    "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
+  },
   "PostDetail": {
     "description": "Auto imported from components/post/PostDetail.vue"
   },
@@ -71,16 +80,13 @@
   "PostListItem": {
     "description": "Auto imported from components/post/PostListItem.vue"
   },
+  "QuestionPost": {
+    "description": "Auto imported from components/question/QuestionPost.vue"
+  },
   "AnimatePing": {
     "description": "Auto imported from components/animate/AnimatePing.vue"
   },
   "AlertsAlertComponent": {
     "description": "Auto imported from components/alerts/AlertComponent.vue"
-  },
-  "QuestionPost": {
-    "description": "Auto imported from components/question/QuestionPost.vue"
-  },
-  "HeroSimpleCentered": {
-    "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
   }
 }
