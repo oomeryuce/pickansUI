@@ -1,6 +1,6 @@
 <template>
   <div>
-    <UserCard />
+    <UserCard v-show="userCard" />
     <ProfileInfo />
     <ProfileCounters />
     <ProfileSkills />
@@ -18,12 +18,20 @@ import ProfileRecentActivity from "~/components/Profile/ProfileRecentActivity.vu
 
 export default defineComponent({
   name: "UserSideBar",
+
   components: {
     UserCard,
     ProfileInfo,
     ProfileCounters,
     ProfileSkills,
     ProfileRecentActivity,
+  },
+
+  props: {
+    userCard: {
+      type: Boolean,
+      default: true,
+    },
   },
 });
 </script>

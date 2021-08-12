@@ -32,6 +32,18 @@
   "TrendingExperts": {
     "description": "Auto imported from components/TrendingExperts.vue"
   },
+  "UIPickansCard": {
+    "description": "Auto imported from components/UI/PickansCard.vue"
+  },
+  "UIPickansQuestionIcon": {
+    "description": "Auto imported from components/UI/PickansQuestionIcon.vue"
+  },
+  "UISearchBar": {
+    "description": "Auto imported from components/UI/SearchBar.vue"
+  },
+  "UIStarIcon": {
+    "description": "Auto imported from components/UI/StarIcon.vue"
+  },
   "ProfileFeedEnd": {
     "description": "Auto imported from components/Profile/FeedEnd.vue"
   },
@@ -53,23 +65,17 @@
   "ProfileUserCard": {
     "description": "Auto imported from components/Profile/UserCard.vue"
   },
+  "ProfileUserHero": {
+    "description": "Auto imported from components/Profile/UserHero.vue"
+  },
   "ProfileUserSideBar": {
     "description": "Auto imported from components/Profile/UserSideBar.vue"
   },
-  "UIPickansCard": {
-    "description": "Auto imported from components/UI/PickansCard.vue"
-  },
-  "UIPickansQuestionIcon": {
-    "description": "Auto imported from components/UI/PickansQuestionIcon.vue"
-  },
-  "UISearchBar": {
-    "description": "Auto imported from components/UI/SearchBar.vue"
-  },
-  "UIStarIcon": {
-    "description": "Auto imported from components/UI/StarIcon.vue"
-  },
   "HeroSimpleCentered": {
     "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
+  },
+  "QuestionPost": {
+    "description": "Auto imported from components/question/QuestionPost.vue"
   },
   "PostDetail": {
     "description": "Auto imported from components/post/PostDetail.vue"
@@ -79,9 +85,6 @@
   },
   "PostListItem": {
     "description": "Auto imported from components/post/PostListItem.vue"
-  },
-  "QuestionPost": {
-    "description": "Auto imported from components/question/QuestionPost.vue"
   },
   "AnimatePing": {
     "description": "Auto imported from components/animate/AnimatePing.vue"

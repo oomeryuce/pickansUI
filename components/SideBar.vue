@@ -33,7 +33,7 @@
             items-center
             flex-shrink-0
             md:w-full md:flex-col
-            mt-2
+            mt-1
           "
         >
           <n-link to="/" class="md:mb-8 md:w-full">
@@ -317,7 +317,7 @@
             md:flex-col
             text-brand-grey-800
             dark:text-brand-grey-300
-            mb-5
+            mb-10
           "
         >
           <div class="relative mr-2 md:mr-0">

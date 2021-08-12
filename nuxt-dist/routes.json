@@ -28,18 +28,18 @@
     "_name": "_2b6e6e4c"
   },
   {
-    "name": "profile-me",
-    "path": "/profile/me",
-    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/profile/me/index.vue",
-    "chunkName": "pages/profile/me/index",
-    "_name": "_ed174b7a"
-  },
-  {
     "name": "posts-id",
     "path": "/posts/:id",
     "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/posts/_id.vue",
     "chunkName": "pages/posts/_id",
     "_name": "_0d629f6c"
+  },
+  {
+    "name": "profile-username",
+    "path": "/profile/:username",
+    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/profile/_username/index.vue",
+    "chunkName": "pages/profile/_username/index",
+    "_name": "_6f427d80"
   },
   {
     "name": "index",
