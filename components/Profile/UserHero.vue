@@ -7,7 +7,10 @@
         profile-cover
         dark:border-brand-grey-800 dark:bg-brand-grey-900
       "
-      :style="'background-image: url(' + user.backGround + ')'"
+      :class="!user.backGround ? 'bg-pickans-light' : ''"
+      :style="
+        user.backGround ? `background-image: url(${user.backGround})` : ''
+      "
     ></div>
     <div
       class="
@@ -42,24 +45,13 @@
           "
         >
           <n-link
-            :to="'/profile/@' + user.username"
+            :to="'/@' + user.username"
             class="block w-full h-auto relative undefined"
             data-title="false"
             ><img
               :src="user.avatar"
               :alt="user.name + '\'s photo'"
-              class="
-                block
-                w-full
-                undefined
-                block
-                w-full
-                rounded-full
-                z-20
-                relative
-                lazyautosizes
-                lazyloaded
-              "
+              class="block w-full rounded-full relative"
           /></n-link>
         </div>
         <div class="w-full pr-10 md:flex-1 lg:w-auto">
@@ -74,35 +66,32 @@
               dark:text-white
             "
           >
-            <n-link :to="'/profile/@' + user.username">{{ user.name }}</n-link>
+            <n-link :to="'/@' + user.username">{{ user.name }}</n-link>
           </h1>
           <p class="mb-6 text-lg text-brand-grey-700 dark:text-brand-grey-300">
             {{ user.proffesion }}
           </p>
-          <p class="mb-6 text-lg text-brand-grey-700 dark:text-brand-grey-300">
-            {{ user.bio }}
-          </p>
-          <div class="flex flex-row flex-wrap items-center mt-6">
-            <a
-              href="#"
-              class="
-                flex flex-row
-                items-center
-                justify-center
-                px-14
-                py-1.5
-                font-semibold
-                tracking-wider
-                text-white
-                uppercase
-                rounded
-                shadow
-                bg-pickans-light
-              "
-            >
-              <span class="inline-block">Ask Me !</span></a
-            >
-          </div>
+        </div>
+        <div class="flex items-start justify-items-start">
+          <a
+            href="#"
+            class="
+              flex flex-row
+              items-center
+              justify-center
+              px-14
+              py-1.5
+              font-semibold
+              tracking-wider
+              text-white
+              uppercase
+              rounded
+              shadow
+              bg-pickans-light
+            "
+          >
+            <span class="inline-block">Ask Me!</span></a
+          >
         </div>
       </div>
       <div
@@ -110,7 +99,7 @@
           flex flex-row
           items-center
           justify-center
-          mt-12
+          mt-4
           overflow-auto
           text-sm
           font-bold
@@ -121,81 +110,25 @@
         "
       >
         <a
+          v-for="tab in tabItems"
+          :key="tab.key"
           class="
             px-6
             py-2
             border-b-2 border-transparent
             dark:hover:bg-gray-700
             cursor-pointer
+            uppercase
           "
           :class="
-            active === 'profile'
+            active === tab.title
               ? 'border-blue-300'
               : 'hover:bg-gray-50 hover:border-gray-300'
           "
-          @click="changeTab('profile')"
-          >Profile</a
-        ><a
-          class="
-            px-6
-            py-2
-            border-b-2 border-transparent
-            dark:hover:bg-gray-700
-            cursor-pointer
-          "
-          :class="
-            active === 'followers'
-              ? 'border-blue-300'
-              : 'hover:bg-gray-50 hover:border-gray-300'
-          "
-          @click="changeTab('followers')"
-          >Followers</a
-        ><a
-          class="
-            px-6
-            py-2
-            border-b-2 border-transparent
-            dark:hover:bg-gray-700
-            cursor-pointer
-          "
-          :class="
-            active === 'following'
-              ? 'border-blue-300'
-              : 'hover:bg-gray-50 hover:border-gray-300'
-          "
-          @click="changeTab('following')"
-          >Following</a
-        ><a
-          class="
-            px-6
-            py-2
-            border-b-2 border-transparent
-            dark:hover:bg-gray-700
-            cursor-pointer
-          "
-          :class="
-            active === 'questions'
-              ? 'border-blue-300'
-              : 'hover:bg-gray-50 hover:border-gray-300'
-          "
-          @click="changeTab('questions')"
-          >Questions</a
-        ><a
-          class="
-            px-6
-            py-2
-            border-b-2 border-transparent
-            dark:hover:bg-gray-700
-            cursor-pointer
-          "
-          :class="
-            active === 'answers'
-              ? 'border-blue-300'
-              : 'hover:bg-gray-50 hover:border-gray-300'
-          "
-          @click="changeTab('answers')"
-          >Answers</a
+          @click="changeTab(tab.title)"
         >
+          {{ tab.title }}
+        </a>
       </div>
     </div>
   </div>
@@ -212,12 +145,35 @@ export default {
 
     active: {
       type: String,
-      default: "progile",
+      default: "profile",
     },
   },
 
   data() {
-    return {};
+    return {
+      tabItems: [
+        {
+          key: 0,
+          title: "profile",
+        },
+        {
+          key: 1,
+          title: "questions",
+        },
+        {
+          key: 2,
+          title: "answers",
+        },
+        {
+          key: 3,
+          title: "followers",
+        },
+        {
+          key: 4,
+          title: "following",
+        },
+      ],
+    };
   },
 
   methods: {
@@ -231,6 +187,6 @@ export default {
 <style scoped>
 .profile-cover {
   width: 100%;
-  padding-top: 30%;
+  padding-top: 20%;
 }
 </style>

@@ -32,18 +32,6 @@
   "TrendingExperts": {
     "description": "Auto imported from components/TrendingExperts.vue"
   },
-  "UIPickansCard": {
-    "description": "Auto imported from components/UI/PickansCard.vue"
-  },
-  "UIPickansQuestionIcon": {
-    "description": "Auto imported from components/UI/PickansQuestionIcon.vue"
-  },
-  "UISearchBar": {
-    "description": "Auto imported from components/UI/SearchBar.vue"
-  },
-  "UIStarIcon": {
-    "description": "Auto imported from components/UI/StarIcon.vue"
-  },
   "ProfileFeedEnd": {
     "description": "Auto imported from components/Profile/FeedEnd.vue"
   },
@@ -74,8 +62,23 @@
   "HeroSimpleCentered": {
     "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
   },
-  "QuestionPost": {
-    "description": "Auto imported from components/question/QuestionPost.vue"
+  "AnimatePing": {
+    "description": "Auto imported from components/animate/AnimatePing.vue"
+  },
+  "AlertsAlertComponent": {
+    "description": "Auto imported from components/alerts/AlertComponent.vue"
+  },
+  "UIPickansCard": {
+    "description": "Auto imported from components/UI/PickansCard.vue"
+  },
+  "UIPickansQuestionIcon": {
+    "description": "Auto imported from components/UI/PickansQuestionIcon.vue"
+  },
+  "UISearchBar": {
+    "description": "Auto imported from components/UI/SearchBar.vue"
+  },
+  "UIStarIcon": {
+    "description": "Auto imported from components/UI/StarIcon.vue"
   },
   "PostDetail": {
     "description": "Auto imported from components/post/PostDetail.vue"
@@ -86,10 +89,16 @@
   "PostListItem": {
     "description": "Auto imported from components/post/PostListItem.vue"
   },
-  "AnimatePing": {
-    "description": "Auto imported from components/animate/AnimatePing.vue"
+  "QuestionPost": {
+    "description": "Auto imported from components/question/QuestionPost.vue"
   },
-  "AlertsAlertComponent": {
-    "description": "Auto imported from components/alerts/AlertComponent.vue"
+  "SettingsProfileSettings": {
+    "description": "Auto imported from components/settings/ProfileSettings.vue"
+  },
+  "SettingsTabs": {
+    "description": "Auto imported from components/settings/SettingsTabs.vue"
+  },
+  "SettingsTemplate": {
+    "description": "Auto imported from components/settings/SettingsTemplate.vue"
   }
 }

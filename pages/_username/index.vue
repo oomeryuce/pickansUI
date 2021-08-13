@@ -36,8 +36,7 @@ export default {
 
         proffesion: "CTO of Pickans",
         bio: "Test",
-        backGround:
-          "https://cdn.hashnode.com/res/hashnode/image/upload/v1584035951809/rA6njTVVd.jpeg?w=1600&amp;fit=crop&amp;crop=entropy&amp;auto=compress&amp;auto=compress",
+        backGround: "",
       },
     };
   },

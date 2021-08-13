@@ -8,9 +8,10 @@ const _4808603e = () => interopDefault(import('../pages/home.vue' /* webpackChun
 const _7d39da52 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _6f216c04 = () => interopDefault(import('../pages/posts/index.vue' /* webpackChunkName: "pages/posts/index" */))
 const _2b6e6e4c = () => interopDefault(import('../pages/profile/index.vue' /* webpackChunkName: "pages/profile/index" */))
+const _434d3230 = () => interopDefault(import('../pages/settings/index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _0d629f6c = () => interopDefault(import('../pages/posts/_id.vue' /* webpackChunkName: "pages/posts/_id" */))
-const _6f427d80 = () => interopDefault(import('../pages/profile/_username/index.vue' /* webpackChunkName: "pages/profile/_username/index" */))
 const _10892080 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _30d38634 = () => interopDefault(import('../pages/_username/index.vue' /* webpackChunkName: "pages/_username/index" */))
 
 const emptyFn = () => {}
 
@@ -40,17 +41,21 @@ export const routerOptions = {
     component: _2b6e6e4c,
     name: "profile"
   }, {
+    path: "/settings",
+    component: _434d3230,
+    name: "settings"
+  }, {
     path: "/posts/:id",
     component: _0d629f6c,
     name: "posts-id"
   }, {
-    path: "/profile/:username",
-    component: _6f427d80,
-    name: "profile-username"
-  }, {
     path: "/",
     component: _10892080,
     name: "index"
+  }, {
+    path: "/:username",
+    component: _30d38634,
+    name: "username"
   }],
 
   fallback: false

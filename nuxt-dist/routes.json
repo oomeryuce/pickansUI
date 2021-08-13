@@ -28,6 +28,13 @@
     "_name": "_2b6e6e4c"
   },
   {
+    "name": "settings",
+    "path": "/settings",
+    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/settings/index.vue",
+    "chunkName": "pages/settings/index",
+    "_name": "_434d3230"
+  },
+  {
     "name": "posts-id",
     "path": "/posts/:id",
     "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/posts/_id.vue",
@@ -35,17 +42,17 @@
     "_name": "_0d629f6c"
   },
   {
-    "name": "profile-username",
-    "path": "/profile/:username",
-    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/profile/_username/index.vue",
-    "chunkName": "pages/profile/_username/index",
-    "_name": "_6f427d80"
-  },
-  {
     "name": "index",
     "path": "/",
     "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/index.vue",
     "chunkName": "pages/index",
     "_name": "_10892080"
+  },
+  {
+    "name": "username",
+    "path": "/:username",
+    "component": "/Users/omer/Desktop/Projects/PickansFE/pickansUI/pages/_username/index.vue",
+    "chunkName": "pages/_username/index",
+    "_name": "_30d38634"
   }
 ]

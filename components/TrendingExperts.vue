@@ -1,8 +1,10 @@
 <template>
   <PickansCard>
     <div slot="header" class="flex flex-row items-center justify-between">
-      <h2 class="flex flex-row items-center text-xl font-extrabold">
-        <span>Trending experts</span>
+      <h2
+        class="flex flex-row items-center lg:text-lg xl:text-xl font-extrabold"
+      >
+        Trending experts
       </h2>
     </div>
     <template #content>

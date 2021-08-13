@@ -13,10 +13,6 @@ const components = {
   SideBar: () => import('../../components/SideBar.vue' /* webpackChunkName: "components/side-bar" */).then(c => wrapFunctional(c.default || c)),
   TopQuestions: () => import('../../components/TopQuestions.vue' /* webpackChunkName: "components/top-questions" */).then(c => wrapFunctional(c.default || c)),
   TrendingExperts: () => import('../../components/TrendingExperts.vue' /* webpackChunkName: "components/trending-experts" */).then(c => wrapFunctional(c.default || c)),
-  UIPickansCard: () => import('../../components/UI/PickansCard.vue' /* webpackChunkName: "components/u-i-pickans-card" */).then(c => wrapFunctional(c.default || c)),
-  UIPickansQuestionIcon: () => import('../../components/UI/PickansQuestionIcon.vue' /* webpackChunkName: "components/u-i-pickans-question-icon" */).then(c => wrapFunctional(c.default || c)),
-  UISearchBar: () => import('../../components/UI/SearchBar.vue' /* webpackChunkName: "components/u-i-search-bar" */).then(c => wrapFunctional(c.default || c)),
-  UIStarIcon: () => import('../../components/UI/StarIcon.vue' /* webpackChunkName: "components/u-i-star-icon" */).then(c => wrapFunctional(c.default || c)),
   ProfileFeedEnd: () => import('../../components/Profile/FeedEnd.vue' /* webpackChunkName: "components/profile-feed-end" */).then(c => wrapFunctional(c.default || c)),
   ProfileFeedHeader: () => import('../../components/Profile/FeedHeader.vue' /* webpackChunkName: "components/profile-feed-header" */).then(c => wrapFunctional(c.default || c)),
   ProfileCounters: () => import('../../components/Profile/ProfileCounters.vue' /* webpackChunkName: "components/profile-counters" */).then(c => wrapFunctional(c.default || c)),
@@ -27,12 +23,19 @@ const components = {
   ProfileUserHero: () => import('../../components/Profile/UserHero.vue' /* webpackChunkName: "components/profile-user-hero" */).then(c => wrapFunctional(c.default || c)),
   ProfileUserSideBar: () => import('../../components/Profile/UserSideBar.vue' /* webpackChunkName: "components/profile-user-side-bar" */).then(c => wrapFunctional(c.default || c)),
   HeroSimpleCentered: () => import('../../components/hero/HeroSimpleCentered.vue' /* webpackChunkName: "components/hero-simple-centered" */).then(c => wrapFunctional(c.default || c)),
-  QuestionPost: () => import('../../components/question/QuestionPost.vue' /* webpackChunkName: "components/question-post" */).then(c => wrapFunctional(c.default || c)),
+  AnimatePing: () => import('../../components/animate/AnimatePing.vue' /* webpackChunkName: "components/animate-ping" */).then(c => wrapFunctional(c.default || c)),
+  AlertsAlertComponent: () => import('../../components/alerts/AlertComponent.vue' /* webpackChunkName: "components/alerts-alert-component" */).then(c => wrapFunctional(c.default || c)),
+  UIPickansCard: () => import('../../components/UI/PickansCard.vue' /* webpackChunkName: "components/u-i-pickans-card" */).then(c => wrapFunctional(c.default || c)),
+  UIPickansQuestionIcon: () => import('../../components/UI/PickansQuestionIcon.vue' /* webpackChunkName: "components/u-i-pickans-question-icon" */).then(c => wrapFunctional(c.default || c)),
+  UISearchBar: () => import('../../components/UI/SearchBar.vue' /* webpackChunkName: "components/u-i-search-bar" */).then(c => wrapFunctional(c.default || c)),
+  UIStarIcon: () => import('../../components/UI/StarIcon.vue' /* webpackChunkName: "components/u-i-star-icon" */).then(c => wrapFunctional(c.default || c)),
   PostDetail: () => import('../../components/post/PostDetail.vue' /* webpackChunkName: "components/post-detail" */).then(c => wrapFunctional(c.default || c)),
   PostList: () => import('../../components/post/PostList.vue' /* webpackChunkName: "components/post-list" */).then(c => wrapFunctional(c.default || c)),
   PostListItem: () => import('../../components/post/PostListItem.vue' /* webpackChunkName: "components/post-list-item" */).then(c => wrapFunctional(c.default || c)),
-  AnimatePing: () => import('../../components/animate/AnimatePing.vue' /* webpackChunkName: "components/animate-ping" */).then(c => wrapFunctional(c.default || c)),
-  AlertsAlertComponent: () => import('../../components/alerts/AlertComponent.vue' /* webpackChunkName: "components/alerts-alert-component" */).then(c => wrapFunctional(c.default || c))
+  QuestionPost: () => import('../../components/question/QuestionPost.vue' /* webpackChunkName: "components/question-post" */).then(c => wrapFunctional(c.default || c)),
+  SettingsProfileSettings: () => import('../../components/settings/ProfileSettings.vue' /* webpackChunkName: "components/settings-profile-settings" */).then(c => wrapFunctional(c.default || c)),
+  SettingsTabs: () => import('../../components/settings/SettingsTabs.vue' /* webpackChunkName: "components/settings-tabs" */).then(c => wrapFunctional(c.default || c)),
+  SettingsTemplate: () => import('../../components/settings/SettingsTemplate.vue' /* webpackChunkName: "components/settings-template" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {
