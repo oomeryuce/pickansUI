@@ -87,6 +87,7 @@
           <div>
             <div class="relative">
               <input
+                v-model="skillText"
                 type="text"
                 class="
                   focus:ring-pickans-light focus:border-pickans-light
@@ -99,7 +100,7 @@
                 "
                 placeholder="Enter some skills"
               />
-              <div class="hidden">
+              <div :class="skillText ? 'block' : 'hidden'">
                 <div class="absolute z-40 left-0 mt-2 w-full">
                   <div
                     class="
@@ -119,10 +120,10 @@
                         cursor-pointer
                         hover:bg-indigo-600 hover:text-white
                       "
-                      >Add skill "<span
-                        class="font-semibold"
-                        x-text="textInput"
-                      ></span
+                      @click="addSkill(skillText)"
+                      >Add skill "<span class="font-semibold">{{
+                        skillText
+                      }}</span
                       >"</a
                     >
                   </div>
@@ -130,6 +131,8 @@
               </div>
               <!-- selections -->
               <div
+                v-for="(item, index) in userData.skills"
+                :key="index"
                 class="
                   bg-blue-100
                   inline-flex
@@ -143,8 +146,7 @@
               >
                 <span
                   class="ml-2 mr-1 leading-relaxed truncate max-w-xs px-1"
-                  x-text="tag"
-                  >Skill</span
+                  >{{ item }}</span
                 >
                 <button
                   type="button"
@@ -157,6 +159,7 @@
                     bg-blue-200
                     focus:outline-none
                   "
+                  @click="deleteSkill(index)"
                 >
                   <svg
                     class="w-6 h-6 fill-current mx-auto"
@@ -220,6 +223,12 @@
                 "
               >
                 Change
+                <input
+                  v-model="userData.avatar"
+                  type="image"
+                  class="hidden"
+                  alt="Avatar"
+                />
               </button>
             </div>
           </div>
@@ -327,12 +336,25 @@ export default {
       userData: {
         fullName: null,
         tagLine: null,
-        profilePic: null,
+        avatar: null,
         coverImage: null,
         bio: null,
-        skills: null,
+        skills: [],
       },
+
+      skillText: null,
     };
+  },
+
+  methods: {
+    addSkill(item) {
+      this.userData.skills.push(item);
+      this.skillText = null;
+    },
+
+    deleteSkill(index) {
+      this.userData.skills.splice(index, 1);
+    },
   },
 };
 </script>
