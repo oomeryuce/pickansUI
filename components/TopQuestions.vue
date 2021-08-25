@@ -6,8 +6,8 @@
         flex flex-row
         items-center
         justify-between
-        text-gray-900
-        dark:text-gray-200
+        text-theme-base-900
+        dark:text-theme-base-200
       "
     >
       <h2
@@ -31,7 +31,7 @@
             font-medium
             rounded
             hover:bg-bluish-gray-100
-            dark:hover:bg-brand-dark-grey-900
+            dark:hover:bg-theme-base-800
             text-brand-blue
           "
           type="button"
@@ -45,7 +45,7 @@
             font-medium
             rounded
             hover:bg-bluish-gray-100
-            dark:hover:bg-brand-dark-grey-900
+            dark:hover:bg-theme-base-800
             text-brand-blue
           "
           type="button"
@@ -59,7 +59,7 @@
             font-medium
             rounded
             hover:bg-bluish-gray-100
-            dark:hover:bg-brand-dark-grey-900
+            dark:hover:bg-theme-base-800
             text-brand-blue
           "
           type="button"
@@ -73,7 +73,7 @@
             font-medium
             rounded
             hover:bg-bluish-gray-100
-            dark:hover:bg-brand-dark-grey-900
+            dark:hover:bg-theme-base-800
             text-brand-blue
           "
           type="button"

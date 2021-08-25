@@ -19,7 +19,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-gray-800
+              dark:hover:bg-theme-base-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -49,7 +49,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-gray-800
+              dark:hover:bg-theme-base-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -79,7 +79,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-gray-800
+              dark:hover:bg-theme-base-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -109,7 +109,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-gray-800
+              dark:hover:bg-theme-base-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -139,7 +139,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-gray-800
+              dark:hover:bg-theme-base-200
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">

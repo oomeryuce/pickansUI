@@ -28,7 +28,7 @@
           p-2
           md:mb-2
           active
-          hover:bg-gray-900
+          hover:bg-theme-base-900
           rounded-lg
         "
         @click="changeMode"
@@ -53,7 +53,7 @@
         md:mb-2
         active
         hover:bg-white
-        dark:hover:bg-gray-900
+        dark:hover:bg-theme-base-900
         rounded-lg
       "
       @click="changeMode"

@@ -3,8 +3,8 @@
     class="
       relative
       bg-white
-      border-b-2 border-gray-300
-      text-gray-900
+      border-b-2 border-theme-base-100
+      text-theme-base-900
       z-20
       md:h-screen
     "

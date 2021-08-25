@@ -15,22 +15,22 @@
               ><span>Add Bio</span></a
             >
           </div>
-          <p class="mb-2 text-sm italic leading-snug text-bluish-gray-600">
+          <p class="mb-2 text-sm italic leading-snug text-theme-base-500">
             Looks like your bio is empty. Tell the world who you are by writing
             a short description about you.
           </p>
         </div>
         <div class="mb-2">
-          <span class="inline-block w-20 text-bluish-gray-600">Location: </span
+          <span class="inline-block w-20 text-theme-base-500">Location: </span
           ><span
-            class="font-medium text-bluish-gray-800 dark:text-bluish-gray-400"
+            class="font-medium text-bluish-gray-800 dark:text-theme-base-300"
             >Istanbul, Turkey</span
           >
         </div>
         <div class="mb-2">
-          <span class="inline-block w-20 text-bluish-gray-600">Joined: </span
+          <span class="inline-block w-20 text-theme-base-500">Joined: </span
           ><span
-            class="font-medium text-bluish-gray-800 dark:text-bluish-gray-400"
+            class="font-medium text-bluish-gray-800 dark:text-theme-base-300"
             >April 23, 2021</span
           >
         </div>

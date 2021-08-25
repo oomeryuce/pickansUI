@@ -3,7 +3,7 @@
     <template #content>
       <div class="p-4">
         <h2
-          class="mb-4 text-xl font-medium text-bluish-gray-700 dark:text-bluish-gray-400"
+          class="mb-4 text-xl font-medium text-theme-base-900 dark:text-theme-base-500"
         >
           Recent Activity
         </h2>
@@ -63,8 +63,8 @@
                 </g></svg
             ></a>
             <div class="flex-1">
-              <p class="mb-1 text-base text-bluish-gray-800">Joined Pickans</p>
-              <p class="text-sm text-bluish-gray-600">
+              <p class="mb-1 text-base text-theme-base-700 dark:text-theme-base-300">Joined Pickans</p>
+              <p class="text-sm text-theme-base-500">
                 <a href="/@sencer">April 23, 2021</a>
               </p>
             </div>

@@ -3,9 +3,8 @@
     <div
       class="
         bg-white bg-center bg-cover
-        border-l border-r
         profile-cover
-        dark:border-brand-grey-800 dark:bg-brand-grey-900
+        dark:border-theme-base-700
       "
       :class="!user.backGround ? 'bg-pickans-light' : ''"
       :style="
@@ -18,6 +17,7 @@
         pt-4
         mb-4
         bg-white
+        dark:bg-theme-base-900 dark:border-theme-base-700
         border-b
         rounded-bl-lg rounded-br-lg
         lg:px-16
@@ -41,7 +41,7 @@
             md:mb-0 md:-mt-40
             lg:mb-0 lg:w-40 lg:h-40
             md:mr-8
-            dark:bg-brand-grey-800 dark:border-brand-grey-800
+            dark:bg-theme-base-900 dark:border-theme-base-800
             xl:ml-48
           "
         >
@@ -63,13 +63,13 @@
               font-bold
               leading-tight
               tracking-tight
-              text-black
-              dark:text-white
+              text-theme-base-900
+              dark:text-theme-base-200
             "
           >
             <n-link :to="'/@' + user.username">{{ user.name }}</n-link>
           </h1>
-          <p class="mb-6 text-lg text-brand-grey-700 dark:text-brand-grey-300">
+          <p class="mb-6 text-lg text-theme-base-800 dark:text-theme-base-300">
             {{ user.proffesion }}
           </p>
         </div>
@@ -104,8 +104,8 @@
           text-sm
           font-bold
           uppercase
-          text-brand-grey-800
-          dark:text-brand-grey-400
+          text-theme-base-900
+          dark:text-theme-base-200
         "
       >
         <a
@@ -115,7 +115,7 @@
             px-6
             py-2
             border-b-2 border-transparent
-            dark:hover:bg-gray-700
+            dark:hover:bg-theme-base-700
             cursor-pointer
             uppercase
           "

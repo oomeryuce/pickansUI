@@ -11,12 +11,12 @@
       font-semibold
       leading-snug
       bg-white
-      dark:bg-gray-900
-      border
+      dark:bg-theme-base-900
+      border border-theme-base-100
       rounded-lg
-      dark:border-gray-800
+      dark:border-theme-base-700
       text-brand-grey-700
-      dark:text-gray-200
+      dark:text-theme-base-200
     "
   >
     <div class="flex flex-row flex-1 overflow-auto" style="overflow: initial">
@@ -35,7 +35,7 @@
           items-center
           active
           hover:bg-bluish-gray-100
-          dark:hover:bg-gray-800
+          dark:hover:bg-theme-base-800
           flex flex-row
           items-center
         "
@@ -59,7 +59,7 @@
           items-center
           active
           hover:bg-bluish-gray-100
-          dark:hover:bg-gray-800
+          dark:hover:bg-theme-base-800
           flex flex-row
           items-center
         "
@@ -82,7 +82,7 @@
           items-center
           active
           hover:bg-bluish-gray-100
-          dark:hover:bg-gray-800
+          dark:hover:bg-theme-base-800
           flex flex-row
           items-center
         "

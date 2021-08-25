@@ -6,9 +6,9 @@
         <div
           class="
             overflow-hidden
-            border
+            border border-theme-base-100
             rounded-t-lg
-            dark:border-brand-grey-800
+            dark:border-theme-base-700
             my-5
           "
         >

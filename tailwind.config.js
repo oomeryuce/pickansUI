@@ -50,34 +50,18 @@ module.exports = {
           800: "#256899",
           900: "#1e557d",
         },
-        "dark-gray": {
-          50: "#e4e4e4",
-          100: "#cbcbcb",
-          200: "#b2b2b2",
-          300: "#9a9a9a",
-          400: "#828282",
-          500: "#6b6b6b",
-          600: "#555555",
-          700: "#404040",
-          800: "#2c2c2c",
-          900: "#181818",
-        },
-        "spring-bud": {
-          50: "#e3e4ef",
-          100: "#c9c9e1",
-          200: "#aeafd4",
-          300: "#9496c8",
-          400: "#7b7cbe",
-          500: "#6466a0",
+        "theme-base": {
+          50: "#f4f7fa", // body bg color - light theme
+          100: "#e4e7eb", // border color - light theme
+          200: "#f3f4f6", // text color - dark theme
+          300: "#d1d5da", // darken text color - dark theme
+          400: "#ebeff5", // hover color - light theme
+          500: "#5272a3", // bluish text color - dark theme
           600: "#50517f",
-          700: "#3c3d60",
-          800: "#2a2a42",
-          900: "#181826",
+          700: "#374151", // border color - hover color - dark theme
+          800: "#1f2937", // body bg color - dark theme
+          900: "#111827", // div bg color - dark theme
         },
-      },
-      backgroundColor: {
-        "pickans-light": "#3EAEFF",
-        "pickans-darker": "#374052",
       },
       fontFamily: {
         sans: ["Inter", ...themes.fontFamily.sans],
@@ -91,6 +75,8 @@ module.exports = {
         },
       },
       backgroundColor: {
+        "pickans-light": "#3EAEFF",
+        "pickans-darker": "#374052",
         skin: {
           fill: withOpacity(`--color-fill`),
           "button-accent": withOpacity(`--color-button-accent`),

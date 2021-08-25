@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mb-2 bg-white dark:bg-gray-900 rounded-lg">
+  <div class="relative mb-2 bg-white dark:bg-theme-base-900 rounded-lg">
     <div class="relative">
       <div
         class="
@@ -12,7 +12,7 @@
           h-full
           px-5
           text-black
-          dark:text-gray-200
+          dark:text-theme-base-200
         "
       >
         <svg class="w-5 h-5 fill-current" viewBox="0 0 200 200" fill="none">
@@ -43,10 +43,10 @@
           bg-transparent
           outline-none
           rounded-lg
-          border border-gray-200
-          dark:border-gray-800
+          border border-theme-base-100
+          dark:border-theme-base-700
           focus:border-pickans-light focus:bg-white focus:px-5
-          dark:focus:bg-gray-900 dark:text-gray-200
+          dark:focus:bg-theme-base-900 dark:text-theme-base-200
           placeholder-grey-700
           dark:placeholder-gray-400
           focus:placeholder-grey-500
@@ -65,7 +65,7 @@
           h-full
           px-6
           text-black
-          dark:text-gray-200
+          dark:text-theme-base-200
         "
       >
         <div
@@ -74,8 +74,8 @@
             py-1
             font-semibold
             leading-none
-            border border-gray-200
-            dark:border-gray-800
+            border border-theme-base-100
+            dark:border-theme-base-700
             rounded
             text-grey-600
             dark:text-grey-400 dark:border-grey-700

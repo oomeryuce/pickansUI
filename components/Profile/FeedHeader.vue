@@ -10,9 +10,11 @@
       tracking-wider
       uppercase
       text-bluish-gray-800
-      dark:text-bluish-gray-400
+      dark:text-theme-base-200
       bg-white
-      border
+      dark:bg-theme-base-900
+      border border-theme-base-100
+      dark:border-theme-base-700
       rounded-lg
     "
   >
@@ -27,7 +29,7 @@
         py-2
         border-b-2
         hover:bg-bluish-gray-100
-        dark:hover:bg-bluish-gray-700
+        dark:hover:bg-theme-base-700
         border-pickans-light
       "
       >Recent</a
@@ -42,7 +44,7 @@
         py-2
         border-b-2 border-transparent
         hover:bg-bluish-gray-100
-        dark:hover:bg-bluish-gray-700
+        dark:hover:bg-theme-base-700
       "
       >Question</a
     ><a
@@ -56,7 +58,7 @@
         py-2
         border-b-2 border-transparent
         hover:bg-bluish-gray-100
-        dark:hover:bg-bluish-gray-700
+        dark:hover:bg-theme-base-700
       "
       >Answer</a
     >
@@ -71,7 +73,7 @@
         py-2
         border-b-2 border-transparent
         hover:bg-bluish-gray-100
-        dark:hover:bg-bluish-gray-700
+        dark:hover:bg-theme-base-700
       "
       >Blog</a
     >

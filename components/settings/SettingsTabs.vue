@@ -5,16 +5,15 @@
         p-4
         mb-2
         bg-white
-        border
+        border border-theme-base-100
         rounded-lg
-        dark:text-gray-400
-        dark:bg-brand-dark-grey-900
-        dark:border-brand-grey-800
+        text-gray-900
+        dark:text-theme-base-200
+        dark:bg-theme-base-900
+        dark:border-theme-base-700
       "
     >
-      <h1 class="text-2xl font-bold capitalize text-pickans-darker">
-        {{ active }} Settings
-      </h1>
+      <h1 class="text-2xl font-bold capitalize">{{ active }} Settings</h1>
     </div>
     <div
       class="
@@ -24,16 +23,16 @@
         overflow-auto
         text-sm
         font-bold
-        text-gray-700
+        text-theme-base-700
         uppercase
         bg-white
-        border
+        border border-theme-base-100
         rounded-lg
         whitespace-nowrap
         lg:items-start lg:flex-col
-        dark:bg-brand-dark-grey-900
-        dark:border-brand-grey-800
-        dark:text-gray-400
+        dark:text-theme-base-200
+        dark:bg-theme-base-900
+        dark:border-theme-base-700
       "
     >
       <a
@@ -49,7 +48,7 @@
         :class="
           active === 'profile'
             ? 'text-pickans-light'
-            : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-pickans-darker'
+            : 'hover:bg-theme-base-400 dark:hover:bg-theme-base-800 text-theme-base-900 dark:text-theme-base-300'
         "
         @click="changeTab('profile')"
         ><svg
@@ -73,7 +72,7 @@
         :class="
           active === 'account'
             ? 'text-pickans-light'
-            : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-pickans-darker'
+            : 'hover:bg-theme-base-400 dark:hover:bg-theme-base-800 text-theme-base-900 dark:text-theme-base-300'
         "
         @click="changeTab('account')"
         ><svg

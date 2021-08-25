@@ -9,14 +9,7 @@
     </div>
     <template #content>
       <div class="px-5 w-full">
-        <div
-          class="
-            flex flex-row
-            items-center
-            py-3
-            text-brand-black
-          "
-        >
+        <div class="flex flex-row items-center py-3 text-brand-black">
           <span
             class="mr-2 text-xl font-semibold opacity-75 text-bluish-gray-500"
             >01</span
@@ -30,9 +23,9 @@
               h-10
               mr-2
               overflow-hidden
-              border
+              border border-theme-base-100
               rounded-full
-              dark:border-gray-800
+              dark:border-theme-base-700
             "
             ><img
               class="block w-full"
@@ -52,8 +45,8 @@
           </div>
           <button
             class="
-              border border-gray-200
-              dark:border-gray-800
+              border border-theme-base-100
+              dark:border-theme-base-700
               p-2
               m-0
               rounded-md
@@ -69,14 +62,7 @@
             </svg>
           </button>
         </div>
-        <div
-          class="
-            flex flex-row
-            items-center
-            py-3
-            text-brand-black
-          "
-        >
+        <div class="flex flex-row items-center py-3 text-brand-black">
           <span
             class="mr-2 text-xl font-semibold opacity-75 text-bluish-gray-500"
             >02</span
@@ -90,9 +76,9 @@
               h-10
               mr-2
               overflow-hidden
-              border
+              border border-theme-base-100
               rounded-full
-              dark:border-gray-800
+              dark:border-theme-base-700
             "
             ><img
               class="block w-full"
@@ -112,8 +98,8 @@
           </div>
           <button
             class="
-              border border-gray-200
-              dark:border-gray-800
+              border border-theme-base-100
+              dark:border-theme-base-700
               p-2
               m-0
               rounded-md
@@ -129,14 +115,7 @@
             </svg>
           </button>
         </div>
-        <div
-          class="
-            flex flex-row
-            items-center
-            py-3
-            text-brand-black
-          "
-        >
+        <div class="flex flex-row items-center py-3 text-brand-black">
           <span
             class="mr-2 text-xl font-semibold opacity-75 text-bluish-gray-500"
             >03</span
@@ -150,9 +129,9 @@
               h-10
               mr-2
               overflow-hidden
-              border
+              border border-theme-base-100
               rounded-full
-              dark:border-gray-800
+              dark:border-theme-base-700
             "
             ><img
               class="block w-full"
@@ -172,8 +151,8 @@
           </div>
           <button
             class="
-              border border-gray-200
-              dark:border-gray-800
+              border border-theme-base-100
+              dark:border-theme-base-700
               p-2
               m-0
               rounded-md
@@ -189,14 +168,7 @@
             </svg>
           </button>
         </div>
-        <div
-          class="
-            flex flex-row
-            items-center
-            py-3
-            text-brand-black
-          "
-        >
+        <div class="flex flex-row items-center py-3 text-brand-black">
           <span
             class="mr-2 text-xl font-semibold opacity-75 text-bluish-gray-500"
             >04</span
@@ -210,9 +182,9 @@
               h-10
               mr-2
               overflow-hidden
-              border
+              border border-theme-base-100
               rounded-full
-              dark:border-gray-800
+              dark:border-theme-base-700
             "
             ><img
               class="block w-full"
@@ -232,8 +204,8 @@
           </div>
           <button
             class="
-              border border-gray-200
-              dark:border-gray-800
+              border border-theme-base-100
+              dark:border-theme-base-700
               p-2
               m-0
               rounded-md
@@ -252,7 +224,7 @@
       </div>
     </template>
     <template #footer>
-      <div class="p-5 border-t dark:border-gray-800">
+      <div class="p-5 border-t dark:border-theme-base-700">
         <a
           href="#"
           class="

@@ -9,8 +9,17 @@
         />
       </template>
       <template slot="feed">
-        <question-post />
-        <question-post />
+        <div
+          class="
+            overflow-hidden
+            border border-theme-base-100
+            rounded-t-lg
+            dark:border-theme-base-700
+          "
+        >
+          <question-post />
+          <question-post />
+        </div>
       </template>
       <template slot="rightSide">
         <UserSideBar :user-card="false" />

@@ -3,10 +3,11 @@
     class="
       mb-2
       bg-white
-      border
+      dark:bg-theme-base-900
+      border border-theme-base-100
       rounded-lg
       lg:flex-row
-      dark:bg-brand-dark-grey-900 dark:border-bluish-gray-800
+      dark:bg-theme-base-900 dark:border-theme-base-700
     "
   >
     <div
@@ -30,7 +31,7 @@
         flex flex-row
         items-start
         text-brand-black
-        dark:text-bluish-gray-100
+        dark:text-theme-base-200
       "
     >
       <div
@@ -41,7 +42,7 @@
           md:mb-0
           lg:mb-0
           w-full
-          dark:bg-bluish-gray-800 dark:border-bluish-gray-800
+          dark:bg-theme-base-800 dark:border-theme-base-700
         "
       >
         <a
@@ -76,6 +77,7 @@
         class="
           font-bold
           text-center text-bluish-gray-800 text-2xl
+          dark:text-theme-base-200
           flex flex-row
           content-center
           justify-center
@@ -88,6 +90,7 @@
         class="
           font-medium
           text-center text-bluish-gray-400 text-l
+          dark:text-theme-base-300
           flex flex-row
           content-center
           justify-center
@@ -100,6 +103,7 @@
         class="
           font-medium
           text-center text-bluish-gray-400 text-sm
+          dark:text-theme-base-300
           flex flex-row
           content-center
           justify-center

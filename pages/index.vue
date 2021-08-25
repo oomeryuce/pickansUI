@@ -1,6 +1,13 @@
 <template>
   <Home>
-    <div class="overflow-hidden border rounded-t-lg dark:border-gray-800">
+    <div
+      class="
+        overflow-hidden
+        border border-theme-base-100
+        rounded-t-lg
+        dark:border-theme-base-700
+      "
+    >
       <QuestionPost />
       <QuestionPost />
       <QuestionPost />

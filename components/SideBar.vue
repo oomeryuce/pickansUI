@@ -84,7 +84,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
-              dark:hover:bg-gray-900 dark:text-gray-200
+              dark:hover:bg-theme-base-900 dark:text-theme-base-200
               text-xl
               font-medium
               menu-item
@@ -117,7 +117,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
-              dark:hover:bg-gray-900 dark:text-gray-200
+              dark:hover:bg-theme-base-900 dark:text-theme-base-200
               text-xl
               font-medium
               menu-item
@@ -152,7 +152,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
-              dark:hover:bg-gray-900 dark:text-gray-200
+              dark:hover:bg-theme-base-900 dark:text-theme-base-200
               text-xl
               font-medium
               menu-item
@@ -187,7 +187,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
-              dark:hover:bg-gray-900 dark:text-gray-200
+              dark:hover:bg-theme-base-900 dark:text-theme-base-200
               text-xl
               font-medium
               menu-item
@@ -221,7 +221,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
-              dark:hover:bg-gray-900 dark:text-gray-200
+              dark:hover:bg-theme-base-900 dark:text-theme-base-200
               text-xl
               font-medium
               menu-item
@@ -254,7 +254,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
-              dark:hover:bg-gray-900 dark:text-gray-200
+              dark:hover:bg-theme-base-900 dark:text-theme-base-200
               text-xl
               font-medium
               menu-item
@@ -288,7 +288,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
-              dark:hover:bg-gray-900 dark:text-gray-200
+              dark:hover:bg-theme-base-900 dark:text-theme-base-200
               text-xl
               font-medium
               menu-item menu-item
@@ -337,7 +337,7 @@
                 notification-icon
                 active
                 hover:bg-white
-                dark:hover:bg-gray-900
+                dark:hover:bg-theme-base-900
               "
               ><svg viewBox="0 0 448 512">
                 <path
@@ -410,11 +410,11 @@
                   rounded-md
                   shadow-lg
                   bg-white
-                  dark:bg-gray-900
+                  dark:bg-theme-base-900
                   ring-1 ring-black ring-opacity-5
                   focus:outline-none
                   text-gray-700
-                  dark:text-gray-200
+                  dark:text-theme-base-200
                 "
               >
                 <div v-if="user" role="none">
@@ -425,7 +425,7 @@
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                      hover:bg-blue-100 hover:text-theme-base-900 hover:rounded
                     "
                     >Profile</n-link
                   >
@@ -437,7 +437,7 @@
                       py-2
                       hover:bg-blue-100
                       cursor-pointer
-                      hover:rounded hover:text-gray-900
+                      hover:rounded hover:text-theme-base-900
                     "
                     @click="signOut"
                     >Logout</a
@@ -451,7 +451,7 @@
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100 hover:rounded hover:text-gray-900
+                      hover:bg-blue-100 hover:rounded hover:text-theme-base-900
                     "
                     >Login</n-link
                   >
@@ -462,7 +462,7 @@
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100 hover:rounded hover:text-gray-900
+                      hover:bg-blue-100 hover:rounded hover:text-theme-base-900
                     "
                     >Sign Up</n-link
                   >
@@ -575,7 +575,7 @@
                 notification-icon
                 active
                 hover:bg-white
-                dark:hover:bg-gray-900
+                dark:hover:bg-theme-base-900
               "
               ><svg viewBox="0 0 448 512">
                 <path
@@ -656,12 +656,12 @@
                   rounded-md
                   shadow-lg
                   bg-white
-                  dark:bg-gray-900
+                  dark:bg-theme-base-900
                   ring-1 ring-black ring-opacity-5
                   focus:outline-none
                   z-20
                   text-gray-700
-                  dark:text-gray-200
+                  dark:text-theme-base-200
                 "
               >
                 <div v-if="user" role="none">
@@ -672,7 +672,7 @@
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                      hover:bg-blue-100 hover:text-theme-base-900 hover:rounded
                     "
                     >Profile</n-link
                   >
@@ -682,7 +682,7 @@
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                      hover:bg-blue-100 hover:text-theme-base-900 hover:rounded
                       cursor-pointer
                     "
                     @click="signOut"
@@ -697,7 +697,7 @@
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                      hover:bg-blue-100 hover:text-theme-base-900 hover:rounded
                     "
                     >Login</n-link
                   >
@@ -708,7 +708,7 @@
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                      hover:bg-blue-100 hover:text-theme-base-900 hover:rounded
                     "
                     >Sign Up</n-link
                   >
@@ -768,21 +768,23 @@
             mt-2
             text-sm
             font-semibold
-            text-gray-900
+            text-theme-base-900
             rounded-lg
             dark-mode:bg-gray-700
             dark-mode:hover:bg-gray-600
             dark-mode:focus:bg-gray-600
             dark-mode:focus:text-white
             dark-mode:hover:text-white
-            dark-mode:text-gray-200
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            dark-mode:text-theme-base-200
+            hover:text-theme-base-900
+            focus:text-theme-base-900
+            hover:bg-theme-base-200
+            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
           "
           to="#"
-          :class="activePage == 'feed' ? 'bg-gray-200' : 'bg-transparent'"
+          :class="
+            activePage === 'feed' ? 'bg-theme-base-200' : 'bg-transparent'
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -809,21 +811,23 @@
             mt-2
             text-sm
             font-semibold
-            text-gray-900
+            text-theme-base-900
             rounded-lg
             dark-mode:bg-gray-700
             dark-mode:hover:bg-gray-600
             dark-mode:focus:bg-gray-600
             dark-mode:focus:text-white
             dark-mode:hover:text-white
-            dark-mode:text-gray-200
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            dark-mode:text-theme-base-200
+            hover:text-theme-base-900
+            focus:text-theme-base-900
+            hover:bg-theme-base-200
+            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
           "
           to="#"
-          :class="activePage == 'explore' ? 'bg-gray-200' : 'bg-transparent'"
+          :class="
+            activePage === 'explore' ? 'bg-theme-base-200' : 'bg-transparent'
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -852,21 +856,23 @@
             mt-2
             text-sm
             font-semibold
-            text-gray-900
+            text-theme-base-900
             rounded-lg
             dark-mode:bg-gray-700
             dark-mode:hover:bg-gray-600
             dark-mode:focus:bg-gray-600
             dark-mode:focus:text-white
             dark-mode:hover:text-white
-            dark-mode:text-gray-200
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            dark-mode:text-theme-base-200
+            hover:text-theme-base-900
+            focus:text-theme-base-900
+            hover:bg-theme-base-200
+            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
           "
           to="#"
-          :class="activePage == 'category' ? 'bg-gray-200' : 'bg-transparent'"
+          :class="
+            activePage === 'category' ? 'bg-theme-base-200' : 'bg-transparent'
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -895,21 +901,23 @@
             mt-2
             text-sm
             font-semibold
-            text-gray-900
+            text-theme-base-900
             rounded-lg
             dark-mode:bg-gray-700
             dark-mode:hover:bg-gray-600
             dark-mode:focus:bg-gray-600
             dark-mode:focus:text-white
             dark-mode:hover:text-white
-            dark-mode:text-gray-200
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            dark-mode:text-theme-base-200
+            hover:text-theme-base-900
+            focus:text-theme-base-900
+            hover:bg-theme-base-200
+            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
           "
           to="#"
-          :class="activePage == 'experts' ? 'bg-gray-200' : 'bg-transparent'"
+          :class="
+            activePage === 'experts' ? 'bg-theme-base-200' : 'bg-transparent'
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -938,21 +946,23 @@
             mt-2
             text-sm
             font-semibold
-            text-gray-900
+            text-theme-base-900
             rounded-lg
             dark-mode:bg-gray-700
             dark-mode:hover:bg-gray-600
             dark-mode:focus:bg-gray-600
             dark-mode:focus:text-white
             dark-mode:hover:text-white
-            dark-mode:text-gray-200
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            dark-mode:text-theme-base-200
+            hover:text-theme-base-900
+            focus:text-theme-base-900
+            hover:bg-theme-base-200
+            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
           "
           to="#"
-          :class="activePage == 'saved' ? 'bg-gray-200' : 'bg-transparent'"
+          :class="
+            activePage === 'saved' ? 'bg-theme-base-200' : 'bg-transparent'
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -981,21 +991,23 @@
             mt-2
             text-sm
             font-semibold
-            text-gray-900
+            text-theme-base-900
             rounded-lg
             dark-mode:bg-gray-700
             dark-mode:hover:bg-gray-600
             dark-mode:focus:bg-gray-600
             dark-mode:focus:text-white
             dark-mode:hover:text-white
-            dark-mode:text-gray-200
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            dark-mode:text-theme-base-200
+            hover:text-theme-base-900
+            focus:text-theme-base-900
+            hover:bg-theme-base-200
+            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
           "
           to="#"
-          :class="activePage == 'search' ? 'bg-gray-200' : 'bg-transparent'"
+          :class="
+            activePage === 'search' ? 'bg-theme-base-200' : 'bg-transparent'
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1024,21 +1036,23 @@
             mt-2
             text-sm
             font-semibold
-            text-gray-900
+            text-theme-base-900
             rounded-lg
             dark-mode:bg-gray-700
             dark-mode:hover:bg-gray-600
             dark-mode:focus:bg-gray-600
             dark-mode:focus:text-white
             dark-mode:hover:text-white
-            dark-mode:text-gray-200
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+            dark-mode:text-theme-base-200
+            hover:text-theme-base-900
+            focus:text-theme-base-900
+            hover:bg-theme-base-200
+            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
           "
           to="#"
-          :class="activePage == 'more' ? 'bg-gray-200' : 'bg-transparent'"
+          :class="
+            activePage === 'more' ? 'bg-theme-base-200' : 'bg-transparent'
+          "
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

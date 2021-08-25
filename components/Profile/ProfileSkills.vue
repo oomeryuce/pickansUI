@@ -7,13 +7,20 @@
             mb-4
             text-xl
             font-medium
-            text-bluish-gray-700
-            dark:text-bluish-gray-400
+            text-theme-base-700
+            dark:text-theme-base-500
           "
         >
           My Skills
         </h2>
-        <div class="flex flex-row items-center">
+        <div
+          class="
+            flex flex-row
+            items-center
+            text-theme-base-900
+            dark:text-theme-base-200
+          "
+        >
           <a
             href="/settings#techstack"
             class="flex flex-row items-center button-transparent small"

@@ -2,11 +2,28 @@
   <div class="col-span-12">
     <form action="#" method="POST">
       <div class="shadow sm:rounded-md sm:overflow-hidden">
-        <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+        <div
+          class="
+            px-4
+            py-5
+            bg-white
+            rounded-t-lg
+            dark:bg-theme-base-900 dark:border-theme-base-700
+            border border-gray-200
+            space-y-6
+            sm:p-6
+          "
+        >
           <div class="col-span-3 sm:col-span-2">
             <label
               for="fullname"
-              class="block text-sm font-medium text-gray-700"
+              class="
+                block
+                text-sm
+                font-medium
+                text-theme-base-800
+                dark:text-theme-base-300
+              "
             >
               Full Name
             </label>
@@ -23,7 +40,10 @@
                   w-full
                   rounded-md
                   sm:text-sm
-                  border-gray-300
+                  border-theme-base-100
+                  dark:bg-theme-base-800
+                  dark:text-theme-base-300
+                  dark:border-theme-base-700
                 "
                 placeholder="John Doe"
               />
@@ -32,7 +52,13 @@
           <div class="col-span-3 sm:col-span-2">
             <label
               for="tagline"
-              class="block text-sm font-medium text-gray-700"
+              class="
+                block
+                text-sm
+                font-medium
+                text-theme-base-700text-theme-base-800
+                dark:text-theme-base-300
+              "
             >
               Profile Tagline
             </label>
@@ -49,7 +75,10 @@
                   w-full
                   rounded-md
                   sm:text-sm
-                  border-gray-300
+                  border-theme-base-100
+                  dark:bg-theme-base-800
+                  dark:text-theme-base-300
+                  dark:border-theme-base-700
                 "
                 placeholder="Engineer, Editor, Developer etc."
               />
@@ -57,7 +86,16 @@
           </div>
 
           <div>
-            <label for="bio" class="block text-sm font-medium text-gray-700">
+            <label
+              for="bio"
+              class="
+                block
+                text-sm
+                font-medium
+                text-theme-base-700text-theme-base-800
+                dark:text-theme-base-300
+              "
+            >
               About
             </label>
             <div class="mt-1">
@@ -73,20 +111,39 @@
                   block
                   w-full
                   sm:text-sm
-                  border border-gray-300
+                  border border-theme-base-100
                   rounded-md
+                  dark:bg-theme-base-800
+                  dark:text-theme-base-300
+                  dark:border-theme-base-700
                 "
                 placeholder="Say something about you."
               />
             </div>
-            <p class="mt-2 text-sm text-gray-500">
+            <p
+              class="mt-2 text-sm text-theme-base-300 dark:text-theme-base-700"
+            >
               Brief description for your profile.
             </p>
           </div>
 
           <div>
             <div class="relative">
+              <label
+                for="skills"
+                class="
+                  block
+                  text-sm
+                  font-medium
+                  text-theme-base-700text-theme-base-800
+                  dark:text-theme-base-300
+                  mb-1
+                "
+              >
+                Skills
+              </label>
               <input
+                id="skills"
                 v-model="skillText"
                 type="text"
                 class="
@@ -96,7 +153,10 @@
                   w-full
                   rounded-md
                   sm:text-sm
-                  border-gray-300
+                  border-theme-base-100
+                  dark:bg-theme-base-800
+                  dark:text-theme-base-300
+                  dark:border-theme-base-700
                 "
                 placeholder="Enter some skills"
               />
@@ -109,7 +169,7 @@
                       bg-white
                       rounded
                       shadow-lg
-                      border border-gray-300
+                      border border-theme-base-100
                     "
                   >
                     <a
@@ -177,7 +237,15 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700">
+            <label
+              class="
+                block
+                text-sm
+                font-medium
+                text-theme-base-900
+                dark:text-theme-base-300
+              "
+            >
               Photo
             </label>
             <div class="mt-1 flex items-center">
@@ -206,6 +274,9 @@
                 class="
                   ml-5
                   bg-white
+                  dark:bg-theme-base-800
+                  dark:text-theme-base-200
+                  dark:border-theme-base-700
                   py-2
                   px-3
                   border border-gray-300
@@ -234,7 +305,15 @@
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700">
+            <label
+              class="
+                block
+                text-sm
+                font-medium
+                text-theme-base-900
+                dark:text-theme-base-200
+              "
+            >
               Cover photo
             </label>
             <div
@@ -246,6 +325,7 @@
                 pt-5
                 pb-6
                 border-2 border-gray-300 border-dashed
+                dark:border-theme-base-700
                 rounded-md
               "
             >
@@ -264,17 +344,18 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <div class="flex text-sm text-gray-600">
+                <div
+                  class="flex text-sm text-gray-600 dark:text-theme-base-300"
+                >
                   <label
                     for="coverImage"
                     class="
                       relative
                       cursor-pointer
-                      bg-white
                       rounded-md
                       font-medium
                       text-pickans-light
-                      hover:text-pickans-darker
+                      hover:text-theme-base-500
                       focus-within:outline-none
                       focus-within:ring-2
                       focus-within:ring-offset-2
@@ -298,7 +379,7 @@
             </div>
           </div>
         </div>
-        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+        <div class="px-4 py-3 bg-gray-50 dark:bg-gray-700 text-right sm:px-6">
           <button
             type="submit"
             class="
@@ -313,7 +394,8 @@
               rounded-md
               text-white
               bg-pickans-light
-              hover:bg-pickans-darker
+              hover:bg-theme-base-500
+              dark:hover:bg-theme-base-800
               focus:outline-none
               focus:ring-2
               focus:ring-offset-2

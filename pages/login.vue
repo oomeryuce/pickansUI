@@ -69,7 +69,7 @@
               font-semibold
               leading-snug
               tracking-tight
-              text-bluish-gray-900
+              text-bluish-theme-base-900
               dark:text-bluish-gray-100
             "
           >
