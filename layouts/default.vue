@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-bluish-gray-50 antialiased min-h-screen dark:bg-dark-theme">
+  <div class="bg-bluish-gray-50 antialiased min-h-screen dark:bg-gray-800">
     <Nuxt />
   </div>
 </template>
