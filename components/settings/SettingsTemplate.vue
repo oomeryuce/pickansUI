@@ -16,18 +16,14 @@
       <SideBar active-page="settings" />
       <div
         class="
-          col-span-2
-          hidden
-          sm:hidden
-          md:block
-          lg:block
-          xl:block
-          md:pt-2 md:col-span-4
+          col-span-12
+          sm:col-span-12
+          md:col-span-4
           lg:col-span-3
           xl:col-span-2
         "
       >
-        <SettingsTabs :active="activeTab" @tab-change="tabChange"></SettingsTabs>
+        <SettingsTabs :active="activeTab" @tab-change="tabChange" />
       </div>
       <div
         class="col-span-12 md:pt-2 md:col-span-8 lg:col-span-7 xl:col-span-5"

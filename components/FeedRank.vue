@@ -2,7 +2,6 @@
   <div
     class="
       relative
-      z-30
       flex flex-row
       justify-between
       min-w-0
@@ -12,11 +11,12 @@
       font-semibold
       leading-snug
       bg-white
+      dark:bg-gray-900
       border
       rounded-lg
-      dark:bg-brand-dark-grey-800 dark:border-brand-grey-800
+      dark:border-gray-800
       text-brand-grey-700
-      dark:text-brand-grey-300
+      dark:text-gray-200
     "
   >
     <div class="flex flex-row flex-1 overflow-auto" style="overflow: initial">
@@ -35,7 +35,7 @@
           items-center
           active
           hover:bg-bluish-gray-100
-          dark:hover:bg-brand-dark-grey-700
+          dark:hover:bg-gray-800
           flex flex-row
           items-center
         "
@@ -59,7 +59,7 @@
           items-center
           active
           hover:bg-bluish-gray-100
-          dark:hover:bg-brand-dark-grey-700
+          dark:hover:bg-gray-800
           flex flex-row
           items-center
         "
@@ -82,7 +82,7 @@
           items-center
           active
           hover:bg-bluish-gray-100
-          dark:hover:bg-brand-dark-grey-700
+          dark:hover:bg-gray-800
           flex flex-row
           items-center
         "

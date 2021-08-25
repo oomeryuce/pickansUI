@@ -1,4 +1,7 @@
 {
+  "DarkModeButton": {
+    "description": "Auto imported from components/DarkModeButton.vue"
+  },
   "FeedHeader": {
     "description": "Auto imported from components/FeedHeader.vue"
   },
@@ -59,14 +62,14 @@
   "ProfileUserSideBar": {
     "description": "Auto imported from components/Profile/UserSideBar.vue"
   },
-  "HeroSimpleCentered": {
-    "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
-  },
   "AnimatePing": {
     "description": "Auto imported from components/animate/AnimatePing.vue"
   },
   "AlertsAlertComponent": {
     "description": "Auto imported from components/alerts/AlertComponent.vue"
+  },
+  "HeroSimpleCentered": {
+    "description": "Auto imported from components/hero/HeroSimpleCentered.vue"
   },
   "UIPickansCard": {
     "description": "Auto imported from components/UI/PickansCard.vue"
@@ -80,15 +83,6 @@
   "UIStarIcon": {
     "description": "Auto imported from components/UI/StarIcon.vue"
   },
-  "PostDetail": {
-    "description": "Auto imported from components/post/PostDetail.vue"
-  },
-  "PostList": {
-    "description": "Auto imported from components/post/PostList.vue"
-  },
-  "PostListItem": {
-    "description": "Auto imported from components/post/PostListItem.vue"
-  },
   "QuestionPost": {
     "description": "Auto imported from components/question/QuestionPost.vue"
   },
@@ -100,5 +94,14 @@
   },
   "SettingsTemplate": {
     "description": "Auto imported from components/settings/SettingsTemplate.vue"
+  },
+  "PostDetail": {
+    "description": "Auto imported from components/post/PostDetail.vue"
+  },
+  "PostList": {
+    "description": "Auto imported from components/post/PostList.vue"
+  },
+  "PostListItem": {
+    "description": "Auto imported from components/post/PostListItem.vue"
   }
 }

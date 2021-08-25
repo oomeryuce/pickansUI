@@ -33,6 +33,7 @@
             w-24
             h-24
             mb-4
+            -mt-14
             bg-white
             border-4 border-white
             rounded-full
@@ -97,13 +98,11 @@
       <div
         class="
           flex flex-row
-          items-center
-          justify-center
+          md:items-center md:justify-center
           mt-4
           overflow-auto
           text-sm
           font-bold
-          tracking-wider
           uppercase
           text-brand-grey-800
           dark:text-brand-grey-400

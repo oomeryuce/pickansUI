@@ -1,5 +1,6 @@
 import { wrapFunctional } from './utils'
 
+export { default as DarkModeButton } from '../../components/DarkModeButton.vue'
 export { default as FeedHeader } from '../../components/FeedHeader.vue'
 export { default as FeedRank } from '../../components/FeedRank.vue'
 export { default as FetchState } from '../../components/FetchState.vue'
@@ -20,21 +21,22 @@ export { default as ProfileTemplate } from '../../components/Profile/ProfileTemp
 export { default as ProfileUserCard } from '../../components/Profile/UserCard.vue'
 export { default as ProfileUserHero } from '../../components/Profile/UserHero.vue'
 export { default as ProfileUserSideBar } from '../../components/Profile/UserSideBar.vue'
-export { default as HeroSimpleCentered } from '../../components/hero/HeroSimpleCentered.vue'
 export { default as AnimatePing } from '../../components/animate/AnimatePing.vue'
 export { default as AlertsAlertComponent } from '../../components/alerts/AlertComponent.vue'
+export { default as HeroSimpleCentered } from '../../components/hero/HeroSimpleCentered.vue'
 export { default as UIPickansCard } from '../../components/UI/PickansCard.vue'
 export { default as UIPickansQuestionIcon } from '../../components/UI/PickansQuestionIcon.vue'
 export { default as UISearchBar } from '../../components/UI/SearchBar.vue'
 export { default as UIStarIcon } from '../../components/UI/StarIcon.vue'
-export { default as PostDetail } from '../../components/post/PostDetail.vue'
-export { default as PostList } from '../../components/post/PostList.vue'
-export { default as PostListItem } from '../../components/post/PostListItem.vue'
 export { default as QuestionPost } from '../../components/question/QuestionPost.vue'
 export { default as SettingsProfileSettings } from '../../components/settings/ProfileSettings.vue'
 export { default as SettingsTabs } from '../../components/settings/SettingsTabs.vue'
 export { default as SettingsTemplate } from '../../components/settings/SettingsTemplate.vue'
+export { default as PostDetail } from '../../components/post/PostDetail.vue'
+export { default as PostList } from '../../components/post/PostList.vue'
+export { default as PostListItem } from '../../components/post/PostListItem.vue'
 
+export const LazyDarkModeButton = import('../../components/DarkModeButton.vue' /* webpackChunkName: "components/dark-mode-button" */).then(c => wrapFunctional(c.default || c))
 export const LazyFeedHeader = import('../../components/FeedHeader.vue' /* webpackChunkName: "components/feed-header" */).then(c => wrapFunctional(c.default || c))
 export const LazyFeedRank = import('../../components/FeedRank.vue' /* webpackChunkName: "components/feed-rank" */).then(c => wrapFunctional(c.default || c))
 export const LazyFetchState = import('../../components/FetchState.vue' /* webpackChunkName: "components/fetch-state" */).then(c => wrapFunctional(c.default || c))
@@ -55,17 +57,17 @@ export const LazyProfileTemplate = import('../../components/Profile/ProfileTempl
 export const LazyProfileUserCard = import('../../components/Profile/UserCard.vue' /* webpackChunkName: "components/profile-user-card" */).then(c => wrapFunctional(c.default || c))
 export const LazyProfileUserHero = import('../../components/Profile/UserHero.vue' /* webpackChunkName: "components/profile-user-hero" */).then(c => wrapFunctional(c.default || c))
 export const LazyProfileUserSideBar = import('../../components/Profile/UserSideBar.vue' /* webpackChunkName: "components/profile-user-side-bar" */).then(c => wrapFunctional(c.default || c))
-export const LazyHeroSimpleCentered = import('../../components/hero/HeroSimpleCentered.vue' /* webpackChunkName: "components/hero-simple-centered" */).then(c => wrapFunctional(c.default || c))
 export const LazyAnimatePing = import('../../components/animate/AnimatePing.vue' /* webpackChunkName: "components/animate-ping" */).then(c => wrapFunctional(c.default || c))
 export const LazyAlertsAlertComponent = import('../../components/alerts/AlertComponent.vue' /* webpackChunkName: "components/alerts-alert-component" */).then(c => wrapFunctional(c.default || c))
+export const LazyHeroSimpleCentered = import('../../components/hero/HeroSimpleCentered.vue' /* webpackChunkName: "components/hero-simple-centered" */).then(c => wrapFunctional(c.default || c))
 export const LazyUIPickansCard = import('../../components/UI/PickansCard.vue' /* webpackChunkName: "components/u-i-pickans-card" */).then(c => wrapFunctional(c.default || c))
 export const LazyUIPickansQuestionIcon = import('../../components/UI/PickansQuestionIcon.vue' /* webpackChunkName: "components/u-i-pickans-question-icon" */).then(c => wrapFunctional(c.default || c))
 export const LazyUISearchBar = import('../../components/UI/SearchBar.vue' /* webpackChunkName: "components/u-i-search-bar" */).then(c => wrapFunctional(c.default || c))
 export const LazyUIStarIcon = import('../../components/UI/StarIcon.vue' /* webpackChunkName: "components/u-i-star-icon" */).then(c => wrapFunctional(c.default || c))
-export const LazyPostDetail = import('../../components/post/PostDetail.vue' /* webpackChunkName: "components/post-detail" */).then(c => wrapFunctional(c.default || c))
-export const LazyPostList = import('../../components/post/PostList.vue' /* webpackChunkName: "components/post-list" */).then(c => wrapFunctional(c.default || c))
-export const LazyPostListItem = import('../../components/post/PostListItem.vue' /* webpackChunkName: "components/post-list-item" */).then(c => wrapFunctional(c.default || c))
 export const LazyQuestionPost = import('../../components/question/QuestionPost.vue' /* webpackChunkName: "components/question-post" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsProfileSettings = import('../../components/settings/ProfileSettings.vue' /* webpackChunkName: "components/settings-profile-settings" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsTabs = import('../../components/settings/SettingsTabs.vue' /* webpackChunkName: "components/settings-tabs" */).then(c => wrapFunctional(c.default || c))
 export const LazySettingsTemplate = import('../../components/settings/SettingsTemplate.vue' /* webpackChunkName: "components/settings-template" */).then(c => wrapFunctional(c.default || c))
+export const LazyPostDetail = import('../../components/post/PostDetail.vue' /* webpackChunkName: "components/post-detail" */).then(c => wrapFunctional(c.default || c))
+export const LazyPostList = import('../../components/post/PostList.vue' /* webpackChunkName: "components/post-list" */).then(c => wrapFunctional(c.default || c))
+export const LazyPostListItem = import('../../components/post/PostListItem.vue' /* webpackChunkName: "components/post-list-item" */).then(c => wrapFunctional(c.default || c))

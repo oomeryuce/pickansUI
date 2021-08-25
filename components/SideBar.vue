@@ -84,6 +84,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
+              dark:hover:bg-gray-900 dark:text-gray-200
               text-xl
               font-medium
               menu-item
@@ -116,6 +117,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
+              dark:hover:bg-gray-900 dark:text-gray-200
               text-xl
               font-medium
               menu-item
@@ -150,6 +152,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
+              dark:hover:bg-gray-900 dark:text-gray-200
               text-xl
               font-medium
               menu-item
@@ -184,6 +187,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
+              dark:hover:bg-gray-900 dark:text-gray-200
               text-xl
               font-medium
               menu-item
@@ -217,6 +221,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
+              dark:hover:bg-gray-900 dark:text-gray-200
               text-xl
               font-medium
               menu-item
@@ -249,6 +254,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
+              dark:hover:bg-gray-900 dark:text-gray-200
               text-xl
               font-medium
               menu-item
@@ -282,6 +288,7 @@
               text-pickans-darker
               mb-2
               hover:bg-bluish-gray-100 hover:bg-white hover:rounded-xl
+              dark:hover:bg-gray-900 dark:text-gray-200
               text-xl
               font-medium
               menu-item menu-item
@@ -320,11 +327,18 @@
             mb-10
           "
         >
+          <dark-mode-button />
           <div class="relative mr-2 md:mr-0">
             <a
               href="/notifications"
               aria-label="Check notifications"
-              class="md:mb-2 notification-icon active hover:bg-white"
+              class="
+                md:mb-2
+                notification-icon
+                active
+                hover:bg-white
+                dark:hover:bg-gray-900
+              "
               ><svg viewBox="0 0 448 512">
                 <path
                   d="M224 480c-17.66 0-32-14.38-32-32.03h-32c0 35.31 28.72 64.03 64 64.03s64-28.72 64-64.03h-32c0 17.65-14.34 32.03-32 32.03zm209.38-145.19c-27.96-26.62-49.34-54.48-49.34-148.91 0-79.59-63.39-144.5-144.04-152.35V16c0-8.84-7.16-16-16-16s-16 7.16-16 16v17.56C127.35 41.41 63.96 106.31 63.96 185.9c0 94.42-21.39 122.29-49.35 148.91-13.97 13.3-18.38 33.41-11.25 51.23C10.64 404.24 28.16 416 48 416h352c19.84 0 37.36-11.77 44.64-29.97 7.13-17.82 2.71-37.92-11.26-51.22zM400 384H48c-14.23 0-21.34-16.47-11.32-26.01 34.86-33.19 59.28-70.34 59.28-172.08C95.96 118.53 153.23 64 224 64c70.76 0 128.04 54.52 128.04 121.9 0 101.35 24.21 138.7 59.28 172.08C421.38 367.57 414.17 384 400 384z"
@@ -361,11 +375,8 @@
                   rounded-full
                   md:w-12 md:h-12 md:my-4
                   profile-thumb
-                  hover:outline-none
-                  hover:ring-2
-                  hover:ring-offset-2
-                  hover:ring-offset-gray-100
-                  hover:ring-blue-200
+                  outline-none
+                  ring-2 ring-offset-2 ring-blue-200
                   focus:outline-none
                   focus:ring-2
                   focus:ring-offset-2
@@ -376,7 +387,7 @@
                 @click="menuShow = !menuShow"
               >
                 <img
-                  class="block w-full profile-thumb"
+                  class="block w-full profile-thumb bg-white"
                   :src="
                     user && user.photoUrl
                       ? user.photoUrl
@@ -399,26 +410,34 @@
                   rounded-md
                   shadow-lg
                   bg-white
+                  dark:bg-gray-900
                   ring-1 ring-black ring-opacity-5
                   focus:outline-none
+                  text-gray-700
+                  dark:text-gray-200
                 "
               >
                 <div v-if="user" role="none">
                   <n-link
                     id="menu-item-0"
                     to="/profile"
-                    class="text-gray-700 block px-4 py-2 hover:bg-blue-100"
+                    class="
+                      block
+                      px-4
+                      py-2
+                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                    "
                     >Profile</n-link
                   >
                   <a
                     id="menu-item-1"
                     class="
-                      text-gray-700
                       block
                       px-4
                       py-2
                       hover:bg-blue-100
                       cursor-pointer
+                      hover:rounded hover:text-gray-900
                     "
                     @click="signOut"
                     >Logout</a
@@ -428,13 +447,23 @@
                   <n-link
                     id="menu-item-0"
                     to="/login"
-                    class="text-gray-700 block px-4 py-2 hover:bg-blue-100"
+                    class="
+                      block
+                      px-4
+                      py-2
+                      hover:bg-blue-100 hover:rounded hover:text-gray-900
+                    "
                     >Login</n-link
                   >
                   <n-link
                     id="menu-item-0"
                     to="/login"
-                    class="text-gray-700 block px-4 py-2 hover:bg-blue-100"
+                    class="
+                      block
+                      px-4
+                      py-2
+                      hover:bg-blue-100 hover:rounded hover:text-gray-900
+                    "
                     >Sign Up</n-link
                   >
                 </div>
@@ -542,7 +571,12 @@
             <a
               href="/notifications"
               aria-label="Check notifications"
-              class="notification-icon active hover:bg-white"
+              class="
+                notification-icon
+                active
+                hover:bg-white
+                dark:hover:bg-gray-900
+              "
               ><svg viewBox="0 0 448 512">
                 <path
                   d="M224 480c-17.66 0-32-14.38-32-32.03h-32c0 35.31 28.72 64.03 64 64.03s64-28.72 64-64.03h-32c0 17.65-14.34 32.03-32 32.03zm209.38-145.19c-27.96-26.62-49.34-54.48-49.34-148.91 0-79.59-63.39-144.5-144.04-152.35V16c0-8.84-7.16-16-16-16s-16 7.16-16 16v17.56C127.35 41.41 63.96 106.31 63.96 185.9c0 94.42-21.39 122.29-49.35 148.91-13.97 13.3-18.38 33.41-11.25 51.23C10.64 404.24 28.16 416 48 416h352c19.84 0 37.36-11.77 44.64-29.97 7.13-17.82 2.71-37.92-11.26-51.22zM400 384H48c-14.23 0-21.34-16.47-11.32-26.01 34.86-33.19 59.28-70.34 59.28-172.08C95.96 118.53 153.23 64 224 64c70.76 0 128.04 54.52 128.04 121.9 0 101.35 24.21 138.7 59.28 172.08C421.38 367.57 414.17 384 400 384z"
@@ -579,11 +613,8 @@
                   rounded-full
                   md:w-12 md:h-12
                   profile-thumb
-                  hover:outline-none
-                  hover:ring-2
-                  hover:ring-offset-2
-                  hover:ring-offset-gray-100
-                  hover:ring-blue-200
+                  outline-none
+                  ring-2 ring-offset-2 ring-blue-200
                   focus:outline-none
                   focus:ring-2
                   focus:ring-offset-2
@@ -594,7 +625,7 @@
                 @click="menuShow = !menuShow"
               >
                 <img
-                  class="block w-full profile-thumb"
+                  class="block w-full profile-thumb bg-white"
                   :src="
                     user && user.photoUrl
                       ? user.photoUrl
@@ -625,26 +656,33 @@
                   rounded-md
                   shadow-lg
                   bg-white
+                  dark:bg-gray-900
                   ring-1 ring-black ring-opacity-5
                   focus:outline-none
                   z-20
+                  text-gray-700
+                  dark:text-gray-200
                 "
               >
                 <div v-if="user" role="none">
                   <n-link
                     id="menu-item-0"
                     to="/profile"
-                    class="text-gray-700 block px-4 py-2 hover:bg-blue-100"
+                    class="
+                      block
+                      px-4
+                      py-2
+                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                    "
                     >Profile</n-link
                   >
                   <a
                     id="menu-item-1"
                     class="
-                      text-gray-700
                       block
                       px-4
                       py-2
-                      hover:bg-blue-100
+                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
                       cursor-pointer
                     "
                     @click="signOut"
@@ -655,13 +693,23 @@
                   <n-link
                     id="menu-item-0"
                     to="/login"
-                    class="text-gray-700 block px-4 py-2 hover:bg-blue-100"
+                    class="
+                      block
+                      px-4
+                      py-2
+                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                    "
                     >Login</n-link
                   >
                   <n-link
                     id="menu-item-0"
                     to="/login"
-                    class="text-gray-700 block px-4 py-2 hover:bg-blue-100"
+                    class="
+                      block
+                      px-4
+                      py-2
+                      hover:bg-blue-100 hover:text-gray-900 hover:rounded
+                    "
                     >Sign Up</n-link
                   >
                 </div>

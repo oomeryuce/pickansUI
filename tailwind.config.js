@@ -11,6 +11,7 @@ const withOpacity =
   };
 
 module.exports = {
+  darkMode: "class",
   theme: {
     extend: {
       gridTemplateColumns: {
@@ -22,6 +23,7 @@ module.exports = {
         "pickans-darker": "#374052",
         "pickans-red": "#ff664e",
         github: "#333333",
+        "dark-theme": "#0e131f",
         "fb-variant": "#3b5898",
         "lnkin-variant": "#0076b5",
         "bluish-gray": {
@@ -47,6 +49,30 @@ module.exports = {
           700: "#2f83bf",
           800: "#256899",
           900: "#1e557d",
+        },
+        "dark-gray": {
+          50: "#e4e4e4",
+          100: "#cbcbcb",
+          200: "#b2b2b2",
+          300: "#9a9a9a",
+          400: "#828282",
+          500: "#6b6b6b",
+          600: "#555555",
+          700: "#404040",
+          800: "#2c2c2c",
+          900: "#181818",
+        },
+        "spring-bud": {
+          50: "#e3e4ef",
+          100: "#c9c9e1",
+          200: "#aeafd4",
+          300: "#9496c8",
+          400: "#7b7cbe",
+          500: "#6466a0",
+          600: "#50517f",
+          700: "#3c3d60",
+          800: "#2a2a42",
+          900: "#181826",
         },
       },
       backgroundColor: {

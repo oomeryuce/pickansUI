@@ -3,10 +3,11 @@
     class="
       mb-2
       bg-white
+      text-gray-900
       border
       rounded-lg
       lg:flex-row
-      dark:bg-brand-dark-grey-900 dark:border-brand-grey-800
+      dark:bg-gray-900 dark:border-gray-800 dark:text-gray-200
     "
   >
     <div
@@ -16,14 +17,14 @@
         text-base
         font-medium
         border-b
-        dark:border-brand-grey-800
+        dark:border-gray-800
         text-brand-black
-        dark:text-brand-grey-300
+        dark:text-gray-200
       "
     >
       <slot name="header"></slot>
     </div>
-    <div class="text-brand-black dark:text-brand-grey-100">
+    <div class="text-gray-900 dark:text-gray-200">
       <slot v-if="$slots.content" name="content"></slot>
     </div>
 

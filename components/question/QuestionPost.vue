@@ -3,7 +3,7 @@
     class="
       bg-white
       w-full
-      dark:bg-brand-dark-grey-800 dark:border-brand-grey-800
+      dark:bg-gray-900 dark:border-gray-800
       border-b
       py-5
       px-4
@@ -16,12 +16,27 @@
         src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
       />
       <div class="p-2">
-        <div class="text-gray-800 font-semibold text-sm">Sencer SOYLU</div>
-        <div class="text-gray-600 text-xs">CTO of Pickans</div>
+        <div class="text-gray-900 dark:text-gray-300 font-semibold text-sm">
+          Sencer SOYLU
+        </div>
+        <div class="text-gray-700 dark:text-gray-200 text-xs">
+          CTO of Pickans
+        </div>
       </div>
-      <p class="text-gray-800 p-2 text-xs flex-1 font-medium">asked 2h ago</p>
+      <p
+        class="text-gray-700 dark:text-gray-200 p-2 text-xs flex-1 font-medium"
+      >
+        asked 2h ago
+      </p>
 
-      <p class="leading-none items-center text-s text-bluish-gray-800">
+      <p
+        class="
+          leading-none
+          items-center
+          text-s text-gray-900
+          dark:text-gray-300
+        "
+      >
         Category
       </p>
       <div class="items-center ml-2">
@@ -37,10 +52,10 @@
               p-2
               rounded
               hover:bg-bluish-gray-100
-              dark:hover:bg-brand-dark-grey-700
+              dark:hover:bg-gray-700
               tooltip-handle tooltip-left-aligned
-              text-brand-grey-700
-              dark:text-brand-grey-300
+              text-gray-700
+              dark:text-gray-200
             "
             type="button"
           >
@@ -62,7 +77,7 @@
           leading-snug
           tracking-tight
           text-brand-black
-          dark:text-brand-grey-100
+          dark:text-gray-100
         "
       >
         <a
@@ -85,7 +100,7 @@
           tracking-tight
           break-words
           text-brand-grey-700
-          dark:text-brand-grey-400
+          dark:text-gray-300
         "
       >
         <a
@@ -114,8 +129,8 @@
               items-center
               mr-8
               font-semibold
-              text-brand-grey-700
-              dark:text-brand-grey-300
+              text-gray-900
+              dark:text-gray-200
             "
             ><svg class="w-6 h-6 mr-2 fill-current" viewBox="0 0 512 512">
               <path
@@ -133,8 +148,8 @@
                 items-center
                 mr-1
                 font-medium
-                text-brand-grey-700
-                dark:text-brand-grey-300
+                text-gray-900
+                dark:text-gray-200
               "
               ><div class="fill-current mr-2 w-6 h-6">
                 <PickansQuestionIcon />
@@ -154,10 +169,14 @@
               src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
             />
             <div class="p-2">
-              <div class="text-gray-800 font-semibold text-sm">
+              <div
+                class="text-gray-900 dark:text-gray-300 font-semibold text-sm"
+              >
                 Sencer SOYLU
               </div>
-              <div class="text-gray-600 text-xs">CTO of Pickans</div>
+              <div class="text-gray-700 dark:text-gray-200 text-xs">
+                CTO of Pickans
+              </div>
             </div>
           </div>
         </div>

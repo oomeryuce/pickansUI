@@ -1,6 +1,15 @@
 <template>
   <PickansCard>
-    <div slot="header" class="flex flex-row items-center justify-between">
+    <div
+      slot="header"
+      class="
+        flex flex-row
+        items-center
+        justify-between
+        text-gray-900
+        dark:text-gray-200
+      "
+    >
       <h2
         class="flex flex-row items-center lg:text-lg xl:text-xl font-extrabold"
       >

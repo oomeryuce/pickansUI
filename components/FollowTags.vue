@@ -19,7 +19,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-brand-dark-grey-900
+              dark:hover:bg-gray-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -35,7 +35,6 @@
                 font-medium
                 tracking-tight
                 text-center text-brand-grey-800
-                dark:text-brand-grey-200
                 overflow-ellipsis
               "
             >
@@ -50,7 +49,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-brand-dark-grey-900
+              dark:hover:bg-gray-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -66,7 +65,6 @@
                 font-medium
                 tracking-tight
                 text-center text-brand-grey-800
-                dark:text-brand-grey-200
                 overflow-ellipsis
               "
             >
@@ -81,7 +79,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-brand-dark-grey-900
+              dark:hover:bg-gray-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -97,7 +95,6 @@
                 font-medium
                 tracking-tight
                 text-center text-brand-grey-800
-                dark:text-brand-grey-200
                 overflow-ellipsis
               "
             >
@@ -112,7 +109,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-brand-dark-grey-900
+              dark:hover:bg-gray-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -128,7 +125,6 @@
                 font-medium
                 tracking-tight
                 text-center text-brand-grey-800
-                dark:text-brand-grey-200
                 overflow-ellipsis
               "
             >
@@ -143,7 +139,7 @@
               w-1/2
               p-3
               hover:bg-bluish-gray-100
-              dark:hover:bg-brand-dark-grey-900
+              dark:hover:bg-gray-800
               undefined
             "
             ><div class="flex-shrink-0 w-10 h-10 mb-3">
@@ -159,7 +155,6 @@
                 font-medium
                 tracking-tight
                 text-center text-brand-grey-800
-                dark:text-brand-grey-200
                 overflow-ellipsis
               "
             >

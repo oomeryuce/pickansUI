@@ -14,7 +14,7 @@
     "
   >
     <SideBar active-page="more" />
-    <div class="col-span-12 md:col-span-9 lg:col-span-10 xl:col-span-7">
+    <div class="col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-7">
       <div class="col-12">
         <slot name="top"></slot>
       </div>

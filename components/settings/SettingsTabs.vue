@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-12">
+  <div class="col-span-12 mt-2">
     <div
       class="
         p-4
@@ -12,11 +12,13 @@
         dark:border-brand-grey-800
       "
     >
-      <h1 class="text-2xl font-bold text-pickans-darker">User Settings</h1>
+      <h1 class="text-2xl font-bold capitalize text-pickans-darker">
+        {{ active }} Settings
+      </h1>
     </div>
     <div
       class="
-        flex flex-row
+        flex flex-col
         items-end
         mb-2
         overflow-auto

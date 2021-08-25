@@ -15,7 +15,6 @@
             items-center
             py-3
             text-brand-black
-            dark:text-brand-grey-100
           "
         >
           <span
@@ -33,7 +32,7 @@
               overflow-hidden
               border
               rounded-full
-              dark:border-brand-grey-800
+              dark:border-gray-800
             "
             ><img
               class="block w-full"
@@ -52,7 +51,14 @@
             </h2>
           </div>
           <button
-            class="border p-2 m-0 rounded-md hover:shadow-lg"
+            class="
+              border border-gray-200
+              dark:border-gray-800
+              p-2
+              m-0
+              rounded-md
+              hover:shadow-lg
+            "
             type="button"
             data-title="Follow blog"
           >
@@ -69,7 +75,6 @@
             items-center
             py-3
             text-brand-black
-            dark:text-brand-grey-100
           "
         >
           <span
@@ -87,7 +92,7 @@
               overflow-hidden
               border
               rounded-full
-              dark:border-brand-grey-800
+              dark:border-gray-800
             "
             ><img
               class="block w-full"
@@ -106,7 +111,14 @@
             </h2>
           </div>
           <button
-            class="border p-2 m-0 rounded-md hover:shadow-lg"
+            class="
+              border border-gray-200
+              dark:border-gray-800
+              p-2
+              m-0
+              rounded-md
+              hover:shadow-lg
+            "
             type="button"
             data-title="Follow blog"
           >
@@ -123,7 +135,6 @@
             items-center
             py-3
             text-brand-black
-            dark:text-brand-grey-100
           "
         >
           <span
@@ -141,7 +152,7 @@
               overflow-hidden
               border
               rounded-full
-              dark:border-brand-grey-800
+              dark:border-gray-800
             "
             ><img
               class="block w-full"
@@ -160,7 +171,14 @@
             </h2>
           </div>
           <button
-            class="border p-2 m-0 rounded-md hover:shadow-lg"
+            class="
+              border border-gray-200
+              dark:border-gray-800
+              p-2
+              m-0
+              rounded-md
+              hover:shadow-lg
+            "
             type="button"
             data-title="Follow blog"
           >
@@ -177,7 +195,6 @@
             items-center
             py-3
             text-brand-black
-            dark:text-brand-grey-100
           "
         >
           <span
@@ -195,7 +212,7 @@
               overflow-hidden
               border
               rounded-full
-              dark:border-brand-grey-800
+              dark:border-gray-800
             "
             ><img
               class="block w-full"
@@ -214,7 +231,14 @@
             </h2>
           </div>
           <button
-            class="border p-2 m-0 rounded-md hover:shadow-lg"
+            class="
+              border border-gray-200
+              dark:border-gray-800
+              p-2
+              m-0
+              rounded-md
+              hover:shadow-lg
+            "
             type="button"
             data-title="Follow blog"
           >
@@ -228,7 +252,7 @@
       </div>
     </template>
     <template #footer>
-      <div class="p-5 border-t dark:border-brand-grey-800">
+      <div class="p-5 border-t dark:border-gray-800">
         <a
           href="#"
           class="
@@ -237,7 +261,6 @@
             font-bold
             btn-access-dashboard
             text-bluish-gray-500
-            dark:text-brand-grey-400
           "
           ><svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 496 512">
             <path
