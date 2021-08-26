@@ -19,6 +19,8 @@
           right-0
           mt-2
           ml-10
+          text-theme-base-900
+          dark:text-theme-base-200
           button-transparent
           lg:right-auto lg:left-0 lg:mt-10
           font-medium
@@ -27,9 +29,11 @@
           px-3
           rounded-lg
           border border-transparent
-          hover:bg-bluish-gray-100
+          hover:bg-theme-base-300
+          dark:hover:bg-theme-base-900
         "
         type="button"
+        @click="$router.push('/')"
       >
         <svg class="w-8 h-8 fill-current" viewBox="0 0 320 512">
           <path
@@ -47,14 +51,19 @@
           shadow-lg
           md:mx-20
           lg:w-2/3
-          dark:bg-brand-dark-grey-800 dark:border-bluish-gray-800
+          dark:bg-theme-base-900 dark:border-theme-base-700
         "
       >
         <div
           class="px-4 py-8 leading-snug lg:w-3/4 lg:mx-auto lg:px-12 lg:py-12"
         >
           <div
-            class="mb-8 text-brand-black dark:text-white justify-items-center"
+            class="
+              mb-8
+              text-theme-base-900
+              dark:text-theme-base-200
+              justify-items-center
+            "
           >
             <img
               src="~/static/img/pickans_beta_logo.png"
@@ -69,8 +78,8 @@
               font-semibold
               leading-snug
               tracking-tight
-              text-bluish-theme-base-900
-              dark:text-bluish-gray-100
+              text-theme-base-900
+              dark:text-theme-base-200
             "
           >
             Sign in / Create an account
@@ -88,7 +97,8 @@
                 rounded-lg
                 outline-none
                 p-4
-                border border-current border-bluish-gray-300
+                border border-theme-base-100
+                dark:border-theme-base-700 dark:text-theme-base-300
                 placeholder-bluish-gray-400
               "
               placeholder="Enter your email address"
@@ -110,7 +120,8 @@
                     rounded-lg
                     outline-none
                     p-4
-                    border border-current border-bluish-gray-300
+                    border border-theme-base-100
+                    dark:border-theme-base-700 dark:text-theme-base-300
                     placeholder-bluish-gray-400
                   "
                   placeholder="Password"
@@ -132,7 +143,8 @@
                     rounded-lg
                     outline-none
                     p-4
-                    border border-current border-bluish-gray-300
+                    border border-theme-base-100
+                    dark:border-theme-base-700 dark:text-theme-base-300
                     placeholder-bluish-gray-400
                   "
                   placeholder="Password"
@@ -149,7 +161,8 @@
                     rounded-lg
                     outline-none
                     p-4
-                    border border-current border-bluish-gray-300
+                    border border-theme-base-100
+                    dark:border-theme-base-700 dark:text-theme-base-300
                     placeholder-bluish-gray-400
                   "
                   placeholder="Password Confirm"
@@ -163,7 +176,8 @@
                 px-5
                 bg-pickans-light
                 rounded-lg
-                border
+                border border-theme-base-100
+                dark:border-theme-base-700
                 text-lg
                 leading-snug
                 font-bold
@@ -218,8 +232,8 @@
               text-base
               font-medium
               leading-tight
-              text-bluish-gray-700
-              dark:text-bluish-gray-400
+              text-theme-base-800
+              dark:text-theme-base-300
             "
           >
             Or, connect with
@@ -237,7 +251,7 @@
                 text-white
                 border
                 rounded-lg
-                dark:border-bluish-gray-800
+                dark:border-theme-base-700
                 bg-github
               "
               @click="signUserInGithub"
@@ -260,7 +274,7 @@
                 bg-white
                 border
                 rounded-lg
-                dark:border-bluish-gray-800
+                dark:border-theme-base-700
               "
               @click="signUserInGoogle"
             >
@@ -302,7 +316,7 @@
                 text-white
                 border
                 rounded-lg
-                dark:border-bluish-gray-800
+                dark:border-theme-base-700
                 bg-fb-variant
               "
             >
@@ -324,7 +338,7 @@
                 text-white
                 border
                 rounded-lg
-                dark:border-bluish-gray-800
+                dark:border-theme-base-700
                 bg-lnkin-variant
               "
             >
