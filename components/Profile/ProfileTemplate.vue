@@ -14,7 +14,10 @@
     "
   >
     <SideBar active-page="more" />
-    <div class="col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-7">
+    <div
+      v-if="userDetail && !userDetail.error && !loading"
+      class="col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-7"
+    >
       <div class="col-12">
         <slot name="top"></slot>
       </div>
@@ -27,11 +30,21 @@
         </div>
       </div>
     </div>
+    <div
+      v-else-if="userDetail && userDetail.error"
+      class="col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-7"
+    >
+      <user-not-found />
+    </div>
+    <div v-else class="col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-7">
+      <place-holder-loading />
+    </div>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "@nuxtjs/composition-api";
+import { mapState } from "vuex";
 import SideBar from "~/components/SideBar.vue";
 // import FeedHeader from '~/components/Profile/FeedHeader.vue'
 // import FeedEnd from '~/components/Profile/FeedEnd.vue'
@@ -40,6 +53,16 @@ export default defineComponent({
   name: "ProfileTemplate",
   components: {
     SideBar,
+  },
+
+  computed: {
+    ...mapState({
+      userDetail: (state) => state.users.userDetail,
+    }),
+
+    loading() {
+      return this.$store.getters["shared/loading"];
+    },
   },
 });
 </script>

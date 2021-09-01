@@ -395,6 +395,7 @@ export default defineComponent({
       isEmailExist: (state) => state.users.isEmailExist,
       loading: (state) => state.shared.loading,
       error: (state) => state.shared.error,
+      userData: (state) => state.users.userData,
     }),
   },
 
@@ -430,6 +431,10 @@ export default defineComponent({
     },
   },
 
+  async mounted() {
+    await this.getUserData("fSh4OPO1bMR03LEwZl9flfD7LY12");
+  },
+
   methods: {
     ...mapActions({
       emailCheck: "users/emailCheck",
@@ -439,6 +444,7 @@ export default defineComponent({
       signUserInFacebook: "users/signUserInFacebook",
       signUserInGithub: "users/signUserInGithub",
       clearError: "shared/clearError",
+      getUserData: "users/getUserData",
     }),
 
     async checkEmail() {

@@ -387,7 +387,7 @@
                 @click="menuShow = !menuShow"
               >
                 <img
-                  class="block w-full profile-thumb bg-white"
+                  class="block w-full profile-thumb bg-transparent"
                   :src="
                     user && user.photoUrl
                       ? user.photoUrl
@@ -420,7 +420,7 @@
                 <div v-if="user" role="none">
                   <n-link
                     id="menu-item-0"
-                    to="/profile"
+                    :to="userData ? `/@${userData.userName}` : '/profile'"
                     class="
                       block
                       px-4
@@ -625,7 +625,7 @@
                 @click="menuShow = !menuShow"
               >
                 <img
-                  class="block w-full profile-thumb bg-white"
+                  class="block w-full profile-thumb bg-transparent"
                   :src="
                     user && user.photoUrl
                       ? user.photoUrl
@@ -667,7 +667,7 @@
                 <div v-if="user" role="none">
                   <n-link
                     id="menu-item-0"
-                    to="/profile"
+                    :to="userData ? `/@${userData.userName}` : '/profile'"
                     class="
                       block
                       px-4
@@ -1103,6 +1103,10 @@ export default {
     user() {
       return this.$store.getters["users/user"];
     },
+
+    userData() {
+      return this.$store.getters["users/userData"];
+    },
   },
 
   beforeMount() {
@@ -1130,7 +1134,6 @@ export default {
             el2 !== target &&
             !el2.contains(target)
           ) {
-            console.log("test");
             this.menuShow = false;
           }
         }

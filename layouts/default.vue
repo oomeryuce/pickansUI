@@ -25,6 +25,7 @@ export default defineComponent({
   computed: {
     ...mapGetters({
       user: "users/user",
+      userData: "users/userData",
       theme: "shared/theme",
     }),
   },
@@ -33,6 +34,9 @@ export default defineComponent({
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.$store.dispatch("users/autoSignIn", user, { root: true });
+        if (!this.userData) {
+          this.getUserData(user.uid);
+        }
       }
     });
     await this.getTheme();
@@ -41,6 +45,7 @@ export default defineComponent({
   methods: {
     ...mapActions({
       getTheme: "shared/getTheme",
+      getUserData: "users/getUserData",
     }),
   },
 });

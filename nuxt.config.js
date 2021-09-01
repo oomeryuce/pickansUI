@@ -96,7 +96,17 @@ export default {
         emulatorPort: 9099,
         emulatorHost: 'http://localhost', */
       },
-      // firestore: true,
+      firestore: {
+        memoryOnly: false, // default
+        chunkName: "Test",
+        // chunkName: process.env.NODE_ENV !== "production" ? "firebase-auth" : "[id]", // default
+        // enablePersistence: true,
+        // emulatorPort: 8080,
+        // emulatorHost: "localhost",
+        settings: {
+          // Firestore Settings - currently only works in SPA mode
+        },
+      },
       // functions: true,
       // storage: true,
       // database: true,

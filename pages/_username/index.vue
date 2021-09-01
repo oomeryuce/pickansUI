@@ -4,7 +4,7 @@
       <template slot="top">
         <UserHero
           :active="activeTab"
-          :user="dummyUser"
+          :user="userData"
           @tab-change="changeTab"
         />
       </template>
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 import UserSideBar from "~/components/Profile/UserSideBar";
 import UserHero from "~/components/Profile/UserHero";
 export default {
@@ -37,11 +38,10 @@ export default {
   data() {
     return {
       activeTab: "profile",
-      dummyUser: {
-        username: "sencer",
-        name: "Sencer Soylu",
-        avatar:
-          "https://cdn.hashnode.com/res/hashnode/image/upload/v1619177937853/AKybvMQKA.jpeg?w=400&amp;h=400&amp;fit=crop&amp;crop=faces&amp;auto=compress",
+      userData: {
+        username: null,
+        name: null,
+        avatar: null,
 
         proffesion: "CTO of Pickans",
         bio: "Test",
@@ -50,7 +50,33 @@ export default {
     };
   },
 
+  computed: {
+    ...mapState({
+      userDetail: (state) => state.users.userDetail,
+    }),
+  },
+
+  watch: {
+    userDetail(newData) {
+      if (newData) {
+        this.userData.avatar = newData.photoUrl ? newData.photoUrl : "";
+        this.userData.name = newData.displayName ? newData.displayName : "";
+        this.userData.username = newData.userName ? newData.userName : "";
+      }
+    },
+  },
+
+  beforeMount() {
+    const param = this.$route.params.username;
+    const userName = param.split("@")[1];
+    this.getUserByUsername(userName);
+  },
+
   methods: {
+    ...mapActions({
+      getUserByUsername: "users/getUserByUsername",
+    }),
+
     changeTab(newTab) {
       this.activeTab = newTab;
     },

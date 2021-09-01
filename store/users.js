@@ -3,10 +3,18 @@ import firebase from "firebase/app";
 export const state = () => ({
   user: null,
   isEmailExist: null,
+  userData: null,
+  userDetail: null,
 });
 export const mutations = {
   setUser(state, payload) {
     state.user = payload;
+  },
+  setUserData(state, payload) {
+    state.userData = payload;
+  },
+  setUserDetail(state, payload) {
+    state.userDetail = payload;
   },
   setEmailStatus(state, payload) {
     state.isEmailExist = payload;
@@ -16,8 +24,53 @@ export const getters = {
   user(state) {
     return state.user;
   },
+  userData(state) {
+    return state.userData;
+  },
 };
 export const actions = {
+  async getUserData({ commit }, uid) {
+    commit("shared/setLoading", true, { root: true });
+    await this.$fire.firestore
+      .collection("users")
+      .doc(uid)
+      .get()
+      .then((user) => {
+        commit("shared/setLoading", false, { root: true });
+        commit("setUserData", user.data());
+      })
+      .catch((error) => {
+        commit("shared/setLoading", false, { root: true });
+        commit("shared/setError", error, { root: true });
+        console.log(error);
+      });
+  },
+  async getUserByUsername({ commit }, userName) {
+    commit("shared/setLoading", true, { root: true });
+    await this.$fire.firestore
+      .collection("users")
+      .where("userName", "==", userName)
+      .get()
+      .then((user) => {
+        let response;
+        user.forEach((doc) => {
+          response = doc.data();
+        });
+        if (response) {
+          commit("setUserDetail", response);
+        } else {
+          commit("setUserDetail", {
+            error: true,
+          });
+        }
+        commit("shared/setLoading", false, { root: true });
+      })
+      .catch((error) => {
+        commit("shared/setLoading", false, { root: true });
+        commit("shared/setError", error, { root: true });
+        console.log(error);
+      });
+  },
   emailCheck({ commit }, payload) {
     commit("shared/setLoading", true, { root: true });
     commit("shared/clearError", null, { root: true });
