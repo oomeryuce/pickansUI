@@ -22,14 +22,18 @@
         </div>
       </template>
       <template slot="rightSide">
-        <UserSideBar :user-card="false" />
+        <UserSideBar
+          :is-auth-user="isAuthUser"
+          :data="userData"
+          :user-card="false"
+        />
       </template>
     </profile-template>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapState, mapGetters } from "vuex";
 import UserSideBar from "~/components/Profile/UserSideBar";
 import UserHero from "~/components/Profile/UserHero";
 export default {
@@ -43,8 +47,8 @@ export default {
         name: null,
         avatar: null,
 
-        proffesion: "CTO of Pickans",
-        bio: "Test",
+        proffesion: "",
+        bio: "",
         backGround: "",
       },
     };
@@ -54,6 +58,14 @@ export default {
     ...mapState({
       userDetail: (state) => state.users.userDetail,
     }),
+
+    ...mapGetters({
+      user: "users/user",
+    }),
+
+    isAuthUser() {
+      return false;
+    },
   },
 
   watch: {
@@ -62,6 +74,11 @@ export default {
         this.userData.avatar = newData.photoUrl ? newData.photoUrl : "";
         this.userData.name = newData.displayName ? newData.displayName : "";
         this.userData.username = newData.userName ? newData.userName : "";
+        this.userData.bio = newData.bio ? newData.bio : "";
+        this.userData.proffesion = newData.tagline ? newData.tagline : "";
+        if (this.user.email === this.userDetail.email) {
+          this.isAuthUser = true;
+        }
       }
     },
   },

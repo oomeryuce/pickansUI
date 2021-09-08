@@ -45,6 +45,40 @@ export const actions = {
         console.log(error);
       });
   },
+  async updateUserData({ commit, dispatch }, payload) {
+    commit("shared/setLoading", true, { root: true });
+    await this.$fire.firestore
+      .collection("users")
+      .doc(payload.uid)
+      .update({
+        userName: payload.data.userName,
+        displayName: payload.data.fullName,
+        tagline: payload.data.tagLine,
+        bio: payload.data.bio,
+      })
+      .then((user) => {
+        commit("shared/setLoading", false, { root: true });
+        dispatch("getUserData", payload.uid);
+      })
+      .catch((error) => {
+        commit("shared/setLoading", false, { root: true });
+        commit("shared/setError", error, { root: true });
+        console.log(error);
+      });
+    /* await this.$fire.firestore
+      .collection("users")
+      .doc(uid)
+      .get()
+      .then((user) => {
+        commit("shared/setLoading", false, { root: true });
+        commit("setUserData", user.data());
+      })
+      .catch((error) => {
+        commit("shared/setLoading", false, { root: true });
+        commit("shared/setError", error, { root: true });
+        console.log(error);
+      }); */
+  },
   async getUserByUsername({ commit }, userName) {
     commit("shared/setLoading", true, { root: true });
     await this.$fire.firestore

@@ -1,7 +1,7 @@
 <template>
   <div>
     <UserCard v-show="userCard" />
-    <ProfileInfo />
+    <ProfileInfo :is-auth-user="isAuthUser" :data="data" />
     <ProfileCounters />
     <ProfileSkills />
     <ProfileRecentActivity />
@@ -31,6 +31,14 @@ export default defineComponent({
     userCard: {
       type: Boolean,
       default: true,
+    },
+
+    data: {
+      type: Object,
+    },
+
+    isAuthUser: {
+      type: Boolean,
     },
   },
 });

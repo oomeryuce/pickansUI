@@ -47,10 +47,14 @@
         >
           <n-link
             :to="'/@' + user.username"
-            class="block w-full h-auto relative undefined"
+            class="block w-full h-auto relative fill-current"
             data-title="false"
             ><img
-              :src="user.avatar"
+              :src="
+                user.avatar
+                  ? user.avatar
+                  : require('~/assets/svg/profile-user.svg')
+              "
               :alt="user.name + '\'s photo'"
               class="block w-full rounded-full relative"
           /></n-link>
@@ -67,7 +71,9 @@
               dark:text-theme-base-200
             "
           >
-            <n-link :to="'/@' + user.username">{{ user.name }}</n-link>
+            <n-link :to="'/@' + user.username" class="capitalize">
+              {{ user.name }}
+            </n-link>
           </h1>
           <p class="mb-6 text-lg text-theme-base-800 dark:text-theme-base-300">
             {{ user.proffesion }}

@@ -1,6 +1,7 @@
 <template>
   <div class="col-span-12">
-    <form action="#" method="POST">
+    <place-holder-loading v-if="!userDetail || loading" />
+    <form v-else action="#" method="POST">
       <div class="shadow sm:rounded-md sm:overflow-hidden">
         <div
           class="
@@ -46,6 +47,55 @@
                   dark:border-theme-base-700
                 "
                 placeholder="John Doe"
+              />
+            </div>
+          </div>
+          <div class="col-span-3 sm:col-span-2">
+            <label
+              for="username"
+              class="
+                block
+                text-sm
+                font-medium
+                text-theme-base-800
+                dark:text-theme-base-300
+              "
+            >
+              User Name
+            </label>
+            <div class="mt-1 flex rounded-md shadow-sm">
+              <span
+                class="
+                  inline-flex
+                  items-center
+                  px-3
+                  rounded-l-md
+                  sm:text-sm
+                  border-theme-base-100
+                  dark:bg-theme-base-800
+                  dark:text-theme-base-300
+                  dark:border-theme-base-700
+                "
+              >
+                @
+              </span>
+              <input
+                id="username"
+                v-model="userData.userName"
+                type="text"
+                class="
+                  focus:ring-pickans-light focus:border-pickans-light
+                  flex-1
+                  block
+                  w-full
+                  rounded-r-md
+                  sm:text-sm
+                  border-theme-base-100
+                  dark:bg-theme-base-800
+                  dark:text-theme-base-300
+                  dark:border-theme-base-700
+                "
+                placeholder="johndoe"
               />
             </div>
           </div>
@@ -259,7 +309,13 @@
                   bg-gray-100
                 "
               >
+                <img
+                  v-if="userDetail.avatar"
+                  :src="userDetail.avatar"
+                  alt="avatar"
+                />
                 <svg
+                  v-else
                   class="h-full w-full text-gray-300"
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -381,7 +437,7 @@
         </div>
         <div class="px-4 py-3 bg-gray-50 dark:bg-gray-700 text-right sm:px-6">
           <button
-            type="submit"
+            type="button"
             class="
               inline-flex
               justify-center
@@ -401,6 +457,7 @@
               focus:ring-offset-2
               focus:ring-pickans-light
             "
+            @click="submit"
           >
             Save
           </button>
@@ -411,12 +468,15 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "ProfileSettings",
   data() {
     return {
       userData: {
         fullName: null,
+        userName: null,
         tagLine: null,
         avatar: null,
         coverImage: null,
@@ -428,7 +488,38 @@ export default {
     };
   },
 
+  computed: {
+    ...mapGetters({
+      userDetail: "users/userData",
+      user: "users/user",
+      loading: "shared/loading",
+    }),
+  },
+
+  watch: {
+    userDetail(newData) {
+      this.userData.fullName = newData.displayName;
+      this.userData.userName = newData.userName;
+      this.userData.bio = newData.bio;
+      this.userData.tagLine = newData.tagline;
+      this.userData.avatar = newData.profileUrl;
+    },
+  },
+
+  beforeMount() {
+    if (this.userDetail) {
+      this.userData.fullName = this.userDetail.displayName;
+      this.userData.userName = this.userDetail.userName;
+      this.userData.bio = this.userDetail.bio;
+      this.userData.tagLine = this.userDetail.tagline;
+    }
+  },
+
   methods: {
+    ...mapActions({
+      updateUserData: "users/updateUserData",
+    }),
+
     addSkill(item) {
       this.userData.skills.push(item);
       this.skillText = null;
@@ -436,6 +527,14 @@ export default {
 
     deleteSkill(index) {
       this.userData.skills.splice(index, 1);
+    },
+
+    async submit() {
+      const payload = {
+        uid: this.user.id,
+        data: this.userData,
+      };
+      await this.updateUserData(payload);
     },
   },
 };
