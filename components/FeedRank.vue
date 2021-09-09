@@ -9,14 +9,9 @@
       mb-2
       text-sm
       font-semibold
-      leading-snug
-      bg-white
-      dark:bg-theme-base-900
-      border border-theme-base-100
-      rounded-lg
-      dark:border-theme-base-700
-      text-brand-grey-700
-      dark:text-theme-base-200
+      shadow-md
+      bg-base-100
+      rounded-box
     "
   >
     <div class="flex flex-row flex-1 overflow-auto" style="overflow: initial">

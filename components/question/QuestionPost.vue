@@ -1,15 +1,5 @@
 <template>
-  <div
-    class="
-      bg-white
-      w-full
-      dark:bg-theme-base-900 dark:border-theme-base-700
-      border-b
-      py-5
-      px-4
-      md:px-5
-    "
-  >
+  <div class="shadow-md bg-base-100 border-b py-5 px-4">
     <div class="flex flex-row items-center flex-1 mb-5">
       <img
         class="w-10 h-10 object-cover rounded-full border-2 border-indigo-500"

@@ -1,13 +1,6 @@
 <template>
   <Home>
-    <div
-      class="
-        overflow-hidden
-        border border-theme-base-100
-        rounded-t-lg
-        dark:border-theme-base-700
-      "
-    >
+    <div class="overflow-hidden rounded-t-box shadow-md mb-3">
       <QuestionPost />
       <QuestionPost />
       <QuestionPost />

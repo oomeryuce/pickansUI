@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mb-2 bg-white dark:bg-theme-base-900 rounded-lg">
+  <div class="relative mb-4 shadow-md bg-base-100 rounded-box">
     <div class="relative">
       <div
         class="
@@ -42,15 +42,14 @@
           duration-100
           bg-transparent
           outline-none
-          rounded-lg
-          border border-theme-base-100
-          dark:border-theme-base-700
-          focus:border-pickans-light focus:bg-white focus:px-5
+          focus:bg-white focus:px-5
           dark:focus:bg-theme-base-900 dark:text-theme-base-200
           placeholder-grey-700
           dark:placeholder-gray-400
           focus:placeholder-grey-500
           dark:focus:placeholder-grey-500 dark:placeholder-grey-200
+          border-none
+          rounded-box
         "
         placeholder="Search Pickans"
       />

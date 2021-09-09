@@ -24,6 +24,7 @@ export default defineComponent({
     return {
       htmlAttrs: {
         class: [this.theme],
+        "data-theme": [this.theme],
       },
     };
   },

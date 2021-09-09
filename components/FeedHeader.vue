@@ -7,12 +7,10 @@
       px-6
       py-5
       mb-2
-      bg-white
-      dark:bg-theme-base-900
-      border border-theme-base-100
-      rounded-lg
       lg:flex-row
-      dark:bg-brand-dark-grey-900 dark:border-theme-base-700
+      shadow-md
+      bg-base-100
+      rounded-box
     "
   >
     <div class="pr-4 mb-4 text-center lg:flex-1 lg:mb-0 lg:text-left">

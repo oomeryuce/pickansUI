@@ -1,27 +1,6 @@
 <template>
-  <div
-    class="
-      mb-2
-      bg-white
-      text-theme-base-900
-      border border-theme-base-100
-      rounded-lg
-      lg:flex-row
-      dark:bg-theme-base-900 dark:border-theme-base-700 dark:text-theme-base-200
-    "
-  >
-    <div
-      v-if="$slots.header"
-      class="
-        p-5
-        text-base
-        font-medium
-        border-b
-        dark:border-theme-base-700
-        text-brand-black
-        dark:text-theme-base-200
-      "
-    >
+  <div class="shadow-md bg-base-100 mb-4 rounded-box">
+    <div v-if="$slots.header" class="p-5 font-medium border-b">
       <slot name="header"></slot>
     </div>
     <div class="text-theme-base-900 dark:text-theme-base-200">

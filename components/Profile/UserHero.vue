@@ -1,31 +1,13 @@
 <template>
   <div v-if="user" class="w-full max-w-full">
     <div
-      class="
-        bg-white bg-center bg-cover
-        profile-cover
-        dark:border-theme-base-700
-      "
+      class="bg-white bg-center bg-cover profile-cover"
       :class="!user.backGround ? 'bg-pickans-light' : ''"
       :style="
         user.backGround ? `background-image: url(${user.backGround})` : ''
       "
     ></div>
-    <div
-      class="
-        px-4
-        pt-4
-        mb-4
-        bg-white
-        dark:bg-theme-base-900 dark:border-theme-base-700
-        border-b
-        rounded-bl-lg rounded-br-lg
-        lg:px-16
-        dark:bg-brand-dark-grey-900
-        lg:border-l lg:border-r
-        dark:border-brand-grey-800
-      "
-    >
+    <div class="px-4 pt-4 mb-4 bg-base-100 rounded-b-box lg:px-16 shadow-md">
       <div class="flex flex-row flex-wrap items-center">
         <div
           class="
@@ -80,25 +62,12 @@
           </p>
         </div>
         <div class="flex items-start justify-items-start">
-          <a
-            href="#"
-            class="
-              flex flex-row
-              items-center
-              justify-center
-              px-14
-              py-1.5
-              font-semibold
-              tracking-wider
-              text-white
-              uppercase
-              rounded
-              shadow
-              bg-pickans-light
-            "
+          <button
+            type="button"
+            class="btn btn-primary font-semibold px-10 rounded-md text-lg"
           >
-            <span class="inline-block">Ask Me!</span></a
-          >
+            Ask Me!
+          </button>
         </div>
       </div>
       <div
