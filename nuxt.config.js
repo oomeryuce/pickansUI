@@ -26,7 +26,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: "~plugins/vuelidate", ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -43,6 +43,8 @@ export default {
     "@nuxt/image",
     // https://google-fonts.nuxtjs.org/setup
     "@nuxtjs/google-fonts",
+    // https://momentjs.com/docs/
+    "@nuxtjs/moment",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -52,7 +52,7 @@
           <span class="inline-block w-20 text-theme-base-500">Joined: </span
           ><span
             class="font-medium text-bluish-gray-800 dark:text-theme-base-300"
-            >April 23, 2021</span
+            >{{ $moment(data.createdAt).format("ll") }}</span
           >
         </div>
       </div></template

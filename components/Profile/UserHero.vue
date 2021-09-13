@@ -58,11 +58,12 @@
             </n-link>
           </h1>
           <p class="mb-6 text-lg text-theme-base-800 dark:text-theme-base-300">
-            {{ user.proffesion }}
+            {{ user.title }}
           </p>
         </div>
         <div class="flex items-start justify-items-start">
           <button
+            v-show="!isAuthUser"
             type="button"
             class="btn btn-primary font-semibold px-10 rounded-md text-lg"
           >
@@ -120,6 +121,11 @@ export default {
     active: {
       type: String,
       default: "profile",
+    },
+
+    isAuthUser: {
+      type: Boolean,
+      default: false,
     },
   },
 

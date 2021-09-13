@@ -1,6 +1,8 @@
 <template>
   <div class="container mx-auto">
+    <complete-register v-if="newUser" />
     <div
+      v-else
       class="
         z-50
         flex flex-row
@@ -82,6 +84,7 @@
           </p>
           <div class="flex flex-row flex-wrap items-center mb-5">
             <input
+              id="email"
               v-model="loginData.email"
               type="email"
               placeholder="Enter your email address"
@@ -209,6 +212,7 @@
               GitHub
             </button>
             <button
+              id="google"
               type="button"
               class="
                 col-span-2
@@ -289,7 +293,7 @@
 
 <script>
 import { defineComponent } from "@nuxtjs/composition-api";
-import { mapState, mapActions } from "vuex";
+import { mapState, mapActions, mapGetters } from "vuex";
 export default defineComponent({
   name: "Login",
   components: {},
@@ -314,6 +318,7 @@ export default defineComponent({
       },
 
       checkLogin: false,
+      newUser: false,
     };
   },
 
@@ -323,11 +328,14 @@ export default defineComponent({
 
   computed: {
     ...mapState({
-      user: (state) => state.users.user,
       isEmailExist: (state) => state.users.isEmailExist,
-      loading: (state) => state.shared.loading,
       error: (state) => state.shared.error,
-      userData: (state) => state.users.userData,
+    }),
+
+    ...mapGetters({
+      user: "users/user",
+      userData: "users/userData",
+      loading: "shared/loading",
     }),
   },
 
@@ -337,6 +345,15 @@ export default defineComponent({
         this.alert.type = "error";
         this.alert.title = "Sign In Error";
         this.alert.content = newValue.message;
+      }
+    },
+
+    async user() {
+      if (this.user) {
+        await this.getUserData(this.user.id);
+        if (!this.userData) {
+          this.newUser = true;
+        }
       }
     },
 
@@ -363,9 +380,7 @@ export default defineComponent({
     },
   },
 
-  async mounted() {
-    await this.getUserData("fSh4OPO1bMR03LEwZl9flfD7LY12");
-  },
+  async mounted() {},
 
   methods: {
     ...mapActions({
@@ -393,6 +408,10 @@ export default defineComponent({
     async submit() {
       await this.clearAlerts();
       const checkData = this.checkLogin;
+      if (!this.loginData.email) {
+        document.getElementById("email").focus();
+        return false;
+      }
       if (!checkData) {
         await this.checkEmail();
         return false;
@@ -425,6 +444,7 @@ export default defineComponent({
               email: this.loginData.email,
               password: this.signUpData.password,
             });
+            this.newUser = true;
             if (!this.error) {
               this.alert.type = "success";
               this.alert.title = "Signed Up";

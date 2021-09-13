@@ -9,7 +9,7 @@
         </h2>
         <div class="widget-body recent-activity-body">
           <div class="flex flex-row items-start mb-4">
-            <a href="/@sencer" class="mt-2 mr-4 text-accent-blue-500"
+            <div class="mt-2 mr-4 text-accent-blue-500"
               ><svg class="w-5 h-5 fill-current" viewBox="0 0 500 500">
                 <g transform="translate(0 20)" fill="none" fill-rule="evenodd">
                   <path
@@ -61,11 +61,11 @@
                     fill="#EBE5DF"
                   ></path>
                 </g></svg
-            ></a>
+            ></div>
             <div class="flex-1">
               <p class="mb-1 text-base text-theme-base-700 dark:text-theme-base-300">Joined Pickans</p>
               <p class="text-sm text-theme-base-500">
-                <a href="/@sencer">April 23, 2021</a>
+                <span>{{ $moment(data.createdAt).format("ll") }}</span>
               </p>
             </div>
           </div>
@@ -82,5 +82,10 @@ import PickansCard from '~/components/UI/PickansCard.vue'
 export default defineComponent({
   name: 'ProfileRecentActivty',
   components: { PickansCard },
+  props: {
+    data: {
+      type: Object,
+    }
+  }
 })
 </script>

@@ -32,14 +32,20 @@ export default defineComponent({
   computed: {
     ...mapGetters({
       theme: "shared/theme",
+      userData: "users/userData",
     }),
   },
 
   async created() {
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(async (user) => {
       if (user) {
-        this.$store.dispatch("users/autoSignIn", user, { root: true });
-        this.$router.push("/");
+        await this.getUserData(user.uid);
+      }
+      if (user && this.userData) {
+        await this.$store.dispatch("users/autoSignIn", user, { root: true });
+        await this.$router.push("/");
+      } else if (user && !this.userData) {
+        await this.$store.dispatch("users/autoSignIn", user, { root: true });
       }
     });
     await this.getTheme();
@@ -48,6 +54,7 @@ export default defineComponent({
   methods: {
     ...mapActions({
       getTheme: "shared/getTheme",
+      getUserData: "users/getUserData",
     }),
   },
 });

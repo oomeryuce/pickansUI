@@ -5,6 +5,7 @@
         <UserHero
           :active="activeTab"
           :user="userData"
+          :is-auth-user="isAuthUser"
           @tab-change="changeTab"
         />
       </template>
@@ -35,12 +36,13 @@ export default {
   data() {
     return {
       activeTab: "profile",
+      isAuthUser: false,
       userData: {
         username: null,
         name: null,
         avatar: null,
-
-        proffesion: "",
+        createdAt: null,
+        title: "",
         bio: "",
         backGround: "",
       },
@@ -55,20 +57,17 @@ export default {
     ...mapGetters({
       user: "users/user",
     }),
-
-    isAuthUser() {
-      return false;
-    },
   },
 
   watch: {
     userDetail(newData) {
-      if (newData) {
+      if (newData && !newData.error) {
         this.userData.avatar = newData.photoUrl ? newData.photoUrl : "";
-        this.userData.name = newData.displayName ? newData.displayName : "";
+        this.userData.name = newData.fullName ? newData.fullName : "";
         this.userData.username = newData.userName ? newData.userName : "";
         this.userData.bio = newData.bio ? newData.bio : "";
-        this.userData.proffesion = newData.tagline ? newData.tagline : "";
+        this.userData.title = newData.title ? newData.title : "";
+        this.userData.createdAt = newData.createdAt ? newData.createdAt : "";
         if (this.user.email === this.userDetail.email) {
           this.isAuthUser = true;
         }

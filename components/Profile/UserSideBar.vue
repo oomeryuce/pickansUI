@@ -4,7 +4,7 @@
     <ProfileInfo :is-auth-user="isAuthUser" :data="data" />
     <ProfileCounters />
     <ProfileSkills />
-    <ProfileRecentActivity />
+    <ProfileRecentActivity :data="data" />
   </div>
 </template>
 
@@ -35,6 +35,7 @@ export default defineComponent({
 
     data: {
       type: Object,
+      default: null,
     },
 
     isAuthUser: {

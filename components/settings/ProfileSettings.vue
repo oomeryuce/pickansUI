@@ -3,47 +3,34 @@
     <place-holder-loading v-if="!userDetail || loading" />
     <form v-else action="#" method="POST">
       <div class="p-4 shadow-md bg-base-100 rounded-t-box space-y-6">
-        <div class="col-span-3 sm:col-span-2">
-          <div class="form-control">
-            <label for="fullname" class="label">
-              <span class="font-medium text-sm">Full Name</span>
-            </label>
-            <input
-              id="fullname"
-              v-model="userData.fullName"
-              type="text"
-              placeholder="John Doe"
-              class="input input-primary input-info bg-base-200"
-            />
-          </div>
-        </div>
-        <div class="col-span-3 sm:col-span-2">
-          <div class="form-control">
-            <label for="username" class="label">
-              <span class="font-medium text-sm">User Name</span>
-            </label>
-            <div class="relative">
-              <span class="absolute top-0 left-0 rounded-r-none btn btn-primary"
-                >@</span
-              >
-              <input
-                id="username"
-                v-model="userData.userName"
-                type="text"
-                placeholder="johndoe"
-                class="w-full pl-20 input input-primary input-info bg-base-200"
-              />
-            </div>
-          </div>
-        </div>
+        <FormInputs
+          :value="$v.fullName.$model"
+          placeholder="John Doe"
+          input-type="text"
+          label="Full Name"
+          :error="$v.fullName.$error"
+          :required="true"
+          error-message="Please fill the field!"
+          @input="(e) => ($v.fullName.$model = e)"
+        />
+        <FormInputs
+          :value="$v.userName.$model"
+          placeholder="johndoe"
+          input-type="username"
+          label="User Name"
+          :error="$v.userName.$error"
+          :required="true"
+          error-message="Please fill the field!"
+          @input="(e) => ($v.userName.$model = e)"
+        />
         <div class="col-span-3 sm:col-span-2">
           <div class="form-control">
             <label for="tagline" class="label">
-              <span class="font-medium text-sm">Profile Tagline</span>
+              <span class="font-medium text-sm">Profile Title</span>
             </label>
             <input
               id="tagline"
-              v-model="userData.tagLine"
+              v-model="title"
               type="text"
               placeholder="Engineer, Editor, Developer etc."
               class="input input-primary input-info bg-base-200"
@@ -58,7 +45,7 @@
             </label>
             <textarea
               id="bio"
-              v-model="userData.bio"
+              v-model="bio"
               class="textarea h-24 textarea-bordered textarea-info bg-base-200"
               placeholder="Say something about you."
             ></textarea>
@@ -118,7 +105,7 @@
             </div>
             <!-- selections -->
             <div
-              v-for="(item, index) in userData.skills"
+              v-for="(item, index) in skills"
               :key="index"
               class="
                 inline-flex
@@ -297,23 +284,36 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
+import { minLength, required } from "vuelidate/lib/validators";
+import FormInputs from "~/components/UI/FormInputs";
 
 export default {
   name: "ProfileSettings",
+  components: { FormInputs },
   data() {
     return {
-      userData: {
-        fullName: null,
-        userName: null,
-        tagLine: null,
-        avatar: null,
-        // coverImage: null,
-        bio: null,
-        skills: [],
-      },
+      fullName: null,
+      userName: null,
+      title: null,
+      avatar: null,
+      // coverImage: null,
+      bio: null,
+      skills: [],
 
       skillText: null,
     };
+  },
+
+  validations: {
+    fullName: {
+      required,
+      minLength: minLength(5),
+    },
+
+    userName: {
+      required,
+      minLength: minLength(4),
+    },
   },
 
   computed: {
@@ -326,20 +326,20 @@ export default {
 
   watch: {
     userDetail(newData) {
-      this.userData.fullName = newData.displayName;
-      this.userData.userName = newData.userName;
-      this.userData.bio = newData.bio;
-      this.userData.tagLine = newData.tagline;
-      this.userData.avatar = newData.profileUrl;
+      this.$v.fullName.$model = newData.fullName;
+      this.$v.userName.$model = newData.userName;
+      this.bio = newData.bio ? newData.bio : "";
+      this.title = newData.title ? newData.title : "";
+      this.avatar = newData.profileUrl ? newData.profileUrl : "";
     },
   },
 
   beforeMount() {
     if (this.userDetail) {
-      this.userData.fullName = this.userDetail.displayName;
-      this.userData.userName = this.userDetail.userName;
-      this.userData.bio = this.userDetail.bio;
-      this.userData.tagLine = this.userDetail.tagline;
+      this.$v.fullName.$model = this.userDetail.displayName;
+      this.$v.userName.$model = this.userDetail.userName;
+      this.bio = this.userDetail.bio ? this.userDetail.bio : "";
+      this.title = this.userDetail.title ? this.userDetail.title : "";
     }
   },
 
@@ -349,12 +349,12 @@ export default {
     }),
 
     addSkill(item) {
-      this.userData.skills.push(item);
+      this.skills.push(item);
       this.skillText = null;
     },
 
     deleteSkill(index) {
-      this.userData.skills.splice(index, 1);
+      this.skills.splice(index, 1);
     },
 
     avatarChange() {
@@ -365,7 +365,12 @@ export default {
     async submit() {
       const payload = {
         uid: this.user.id,
-        data: this.userData,
+        data: {
+          fullName: this.fullName,
+          userName: this.userName,
+          title: this.title,
+          bio: this.bio,
+        },
       };
       await this.updateUserData(payload);
     },
