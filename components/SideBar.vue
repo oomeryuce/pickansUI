@@ -44,7 +44,7 @@
           </n-link>
 
           <div class="px-1 mb-5 xl:mb-8 w-full">
-            <button class="btn btn-primary w-full rounded-md" type="button">
+            <n-link class="btn btn-primary w-full rounded-md" to="/ask">
               <svg class="inline-block w-6 h-8 mr-1.5 fill-current">
                 <path
                   id="Path"
@@ -55,7 +55,7 @@
                   d="M7.45682755,24.0004932 C6.05277997,24.030446 4.9736606,25.1446906 5.00048953,26.5464823 C5.02731846,27.9183211 6.17500067,29.0235799 7.54625733,28.9996176 C8.93838094,28.9726601 10.0234623,27.8494296 9.99961435,26.4626144 C9.96980443,25.0548322 8.84597016,23.9735357 7.45682755,24.0004932 Z"
                 ></path></svg
               ><span class="inline-block font-semibold text-lg">Ask</span>
-            </button>
+            </n-link>
           </div>
 
           <!-- Menu options -->
@@ -707,14 +707,14 @@
     <SearchBar class="block sm:block md:hidden lg:hidden xl:hidden" />
     <div
       v-if="open"
-      class="z-40 absolute bg-white h-full w-full top-0 left-0 py-20 px-2"
+      class="z-40 absolute bg-base-100 h-full w-full top-0 left-0 py-20 px-2"
     >
       <nav
         :class="{ block: open, hidden: !open }"
         class="flex-grow md:block md:pb-0 md:overflow-y-auto"
       >
-        <div class="flex justify-center w-full">
-          <button class="btn" type="button">
+        <div class="flex justify-around w-full py-2">
+          <n-link class="btn btn-primary rounded-md" to="/ask">
             <svg class="w-6 h-7 mr-1.5 fill-current">
               <path
                 id="Path"
@@ -725,321 +725,158 @@
                 d="M7.45682755,24.0004932 C6.05277997,24.030446 4.9736606,25.1446906 5.00048953,26.5464823 C5.02731846,27.9183211 6.17500067,29.0235799 7.54625733,28.9996176 C8.93838094,28.9726601 10.0234623,27.8494296 9.99961435,26.4626144 C9.96980443,25.0548322 8.84597016,23.9735357 7.45682755,24.0004932 Z"
               ></path></svg
             ><span class="inline-block">Ask</span>
-          </button>
+          </n-link>
+          <dark-mode-button class="z-50" />
         </div>
-        <n-link
-          class="
-            flex
-            items-center
-            py-2
-            px-1
-            mt-2
-            text-sm
-            font-semibold
-            text-theme-base-900
-            rounded-lg
-            dark-mode:bg-gray-700
-            dark-mode:hover:bg-gray-600
-            dark-mode:focus:bg-gray-600
-            dark-mode:focus:text-white
-            dark-mode:hover:text-white
-            dark-mode:text-theme-base-200
-            hover:text-theme-base-900
-            focus:text-theme-base-900
-            hover:bg-theme-base-200
-            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
-          "
-          to="#"
-          :class="
-            activePage === 'feed' ? 'bg-theme-base-200' : 'bg-transparent'
-          "
+        <ul
+          class="menu overflow-y-auto space-y-2 bg-base-100 text-base-content"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="w-6 h-6 mr-2"
-          >
-            <path
-              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zM96 144a16 16 0 0 1 16-16h128a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H112a16 16 0 0 1-16-16zm96 224a16 16 0 0 1-16 16h-64a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16zm160-96a16 16 0 0 1-16 16H112a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h224a16 16 0 0 1 16 16z"
-              opacity=".4"
-            />
-            <path
-              d="M112 192h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm64 128h-64a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm160-96H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h224a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
-              class="fa-primary"
-            />
-          </svg>
-          <div>My Feed</div>
-        </n-link>
-        <n-link
-          class="
-            flex
-            items-center
-            py-2
-            px-1
-            mt-2
-            text-sm
-            font-semibold
-            text-theme-base-900
-            rounded-lg
-            dark-mode:bg-gray-700
-            dark-mode:hover:bg-gray-600
-            dark-mode:focus:bg-gray-600
-            dark-mode:focus:text-white
-            dark-mode:hover:text-white
-            dark-mode:text-theme-base-200
-            hover:text-theme-base-900
-            focus:text-theme-base-900
-            hover:bg-theme-base-200
-            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
-          "
-          to="#"
-          :class="
-            activePage === 'explore' ? 'bg-theme-base-200' : 'bg-transparent'
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 496 512"
-            class="w-6 h-6 mr-2"
-          >
-            <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+          <li>
+            <n-link to="/" class="bg-base-200 rounded-md text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="w-6 h-6 mr-2"
+              >
+                <path
+                  d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zM96 144a16 16 0 0 1 16-16h128a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H112a16 16 0 0 1-16-16zm96 224a16 16 0 0 1-16 16h-64a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16zm160-96a16 16 0 0 1-16 16H112a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h224a16 16 0 0 1 16 16z"
+                  opacity=".4"
+                />
+                <path
+                  d="M112 192h128a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm64 128h-64a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm160-96H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h224a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+                  class="fa-primary"
+                />
+              </svg>
+              <div>My Feed</div>
+            </n-link>
+          </li>
+          <li>
+            <n-link to="/" class="bg-base-200 rounded-md text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+                class="w-6 h-6 mr-2"
+              >
+                <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
 
-            <path
-              d="M248,8C111,8,0,119,0,256S111,504,248,504,496,393,496,256,385,8,248,8ZM374.14,156.05l-66,144.35a31.94,31.94,0,0,1-15.77,15.77L148,382.17c-16.65,7.61-33.81-9.55-26.2-26.2l66-144.35a31.94,31.94,0,0,1,15.77-15.77l144.34-66c16.66-7.6,33.81,9.55,26.2,26.2Z"
-              opacity=".4"
-            />
-            <path
-              d="M348,129.85l-144.34,66a31.94,31.94,0,0,0-15.77,15.77L121.89,356c-7.61,16.65,9.55,33.81,26.2,26.2l144.34-66a32,32,0,0,0,15.77-15.8l66-144.35c7.55-16.65-9.6-33.8-26.2-26.2ZM270.63,278.62a32,32,0,1,1,0-45.25h0A32,32,0,0,1,270.63,278.62Z"
-              class="fa-primary"
-            />
-          </svg>
-          <div>Explore</div>
-        </n-link>
-        <n-link
-          class="
-            flex
-            items-center
-            py-2
-            px-1
-            mt-2
-            text-sm
-            font-semibold
-            text-theme-base-900
-            rounded-lg
-            dark-mode:bg-gray-700
-            dark-mode:hover:bg-gray-600
-            dark-mode:focus:bg-gray-600
-            dark-mode:focus:text-white
-            dark-mode:hover:text-white
-            dark-mode:text-theme-base-200
-            hover:text-theme-base-900
-            focus:text-theme-base-900
-            hover:bg-theme-base-200
-            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
-          "
-          to="#"
-          :class="
-            activePage === 'category' ? 'bg-theme-base-200' : 'bg-transparent'
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="w-6 h-6 mr-2"
-          >
-            <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                <path
+                  d="M248,8C111,8,0,119,0,256S111,504,248,504,496,393,496,256,385,8,248,8ZM374.14,156.05l-66,144.35a31.94,31.94,0,0,1-15.77,15.77L148,382.17c-16.65,7.61-33.81-9.55-26.2-26.2l66-144.35a31.94,31.94,0,0,1,15.77-15.77l144.34-66c16.66-7.6,33.81,9.55,26.2,26.2Z"
+                  opacity=".4"
+                />
+                <path
+                  d="M348,129.85l-144.34,66a31.94,31.94,0,0,0-15.77,15.77L121.89,356c-7.61,16.65,9.55,33.81,26.2,26.2l144.34-66a32,32,0,0,0,15.77-15.8l66-144.35c7.55-16.65-9.6-33.8-26.2-26.2ZM270.63,278.62a32,32,0,1,1,0-45.25h0A32,32,0,0,1,270.63,278.62Z"
+                  class="fa-primary"
+                />
+              </svg>
+              <div>Explore</div>
+            </n-link>
+          </li>
+          <li>
+            <n-link to="/" class="bg-base-200 rounded-md text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="w-6 h-6 mr-2"
+              >
+                <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
 
-            <path
-              d="M202.46 32.19a11.5 11.5 0 0 0-2.11-.19h-40.63a12 12 0 0 0-11.81 9.89L132.53 128h65l14.62-81.89a12 12 0 0 0-9.69-13.92zM72.19 465.89a12 12 0 0 0 9.7 13.92A11.5 11.5 0 0 0 84 480h40.64a12 12 0 0 0 11.81-9.89L186.11 192h-65zm163.65 0a12 12 0 0 0 9.7 13.92 11.5 11.5 0 0 0 2.11.19h40.63a12 12 0 0 0 11.82-9.89L315.47 384h-65zm130.27-433.7A11.5 11.5 0 0 0 364 32h-40.63a12 12 0 0 0-11.82 9.89L261.89 320h65l48.92-273.89a12 12 0 0 0-9.7-13.92z"
-              opacity=".4"
-            />
-            <path
-              d="M44.18 191.81a11.5 11.5 0 0 0 2.11.19H285l11-64H53.43a12 12 0 0 0-11.81 9.89l-7.14 40a12 12 0 0 0 9.7 13.92zM7.33 329.89l-7.14 40a12 12 0 0 0 9.7 13.92A11.5 11.5 0 0 0 12 384h75l11-64H19.15a12 12 0 0 0-11.82 9.89zm430.78-201.7A11.5 11.5 0 0 0 436 128h-75l-11 64h78.85a12 12 0 0 0 11.82-9.89l7.14-40a12 12 0 0 0-9.7-13.92zm-34.29 192a11.5 11.5 0 0 0-2.11-.19H163l-11 64h242.57a12 12 0 0 0 11.81-9.89l7.14-40a12 12 0 0 0-9.7-13.92z"
-              class="fa-primary"
-            />
-          </svg>
-          <div>Category</div>
-        </n-link>
-        <n-link
-          class="
-            flex
-            items-center
-            py-2
-            px-1
-            mt-2
-            text-sm
-            font-semibold
-            text-theme-base-900
-            rounded-lg
-            dark-mode:bg-gray-700
-            dark-mode:hover:bg-gray-600
-            dark-mode:focus:bg-gray-600
-            dark-mode:focus:text-white
-            dark-mode:hover:text-white
-            dark-mode:text-theme-base-200
-            hover:text-theme-base-900
-            focus:text-theme-base-900
-            hover:bg-theme-base-200
-            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
-          "
-          to="#"
-          :class="
-            activePage === 'experts' ? 'bg-theme-base-200' : 'bg-transparent'
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 512"
-            class="w-6 h-6 mr-2"
-          >
-            <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                <path
+                  d="M202.46 32.19a11.5 11.5 0 0 0-2.11-.19h-40.63a12 12 0 0 0-11.81 9.89L132.53 128h65l14.62-81.89a12 12 0 0 0-9.69-13.92zM72.19 465.89a12 12 0 0 0 9.7 13.92A11.5 11.5 0 0 0 84 480h40.64a12 12 0 0 0 11.81-9.89L186.11 192h-65zm163.65 0a12 12 0 0 0 9.7 13.92 11.5 11.5 0 0 0 2.11.19h40.63a12 12 0 0 0 11.82-9.89L315.47 384h-65zm130.27-433.7A11.5 11.5 0 0 0 364 32h-40.63a12 12 0 0 0-11.82 9.89L261.89 320h65l48.92-273.89a12 12 0 0 0-9.7-13.92z"
+                  opacity=".4"
+                />
+                <path
+                  d="M44.18 191.81a11.5 11.5 0 0 0 2.11.19H285l11-64H53.43a12 12 0 0 0-11.81 9.89l-7.14 40a12 12 0 0 0 9.7 13.92zM7.33 329.89l-7.14 40a12 12 0 0 0 9.7 13.92A11.5 11.5 0 0 0 12 384h75l11-64H19.15a12 12 0 0 0-11.82 9.89zm430.78-201.7A11.5 11.5 0 0 0 436 128h-75l-11 64h78.85a12 12 0 0 0 11.82-9.89l7.14-40a12 12 0 0 0-9.7-13.92zm-34.29 192a11.5 11.5 0 0 0-2.11-.19H163l-11 64h242.57a12 12 0 0 0 11.81-9.89l7.14-40a12 12 0 0 0-9.7-13.92z"
+                  class="fa-primary"
+                />
+              </svg>
+              <div>Category</div>
+            </n-link>
+          </li>
+          <li>
+            <n-link to="/" class="bg-base-200 rounded-md text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+                class="w-6 h-6 mr-2"
+              >
+                <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
 
-            <path
-              d="M96 224a64 64 0 1 0-64-64 64 64 0 0 0 64 64zm448 0a64 64 0 1 0-64-64 64 64 0 0 0 64 64zm32 32h-64a63.78 63.78 0 0 0-45.07 18.59A146.54 146.54 0 0 1 542.06 384H608a32 32 0 0 0 32-32v-32a64 64 0 0 0-64-64zm-512 0a64 64 0 0 0-64 64v32a32 32 0 0 0 32 32h65.94a146.54 146.54 0 0 1 75.13-109.41A63.78 63.78 0 0 0 128 256zM320 32l-48 24-48-24v80h192V32l-48 24z"
-              opacity=".4"
-            />
-            <path
-              d="M320 256a96 96 0 0 0 96-96v-16H224v16a96 96 0 0 0 96 96zm76.8 32h-8.31c-20.84 10-43.89 16-68.49 16s-47.64-6-68.49-16h-8.31A115.2 115.2 0 0 0 128 403.2V432a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48v-28.8A115.2 115.2 0 0 0 396.8 288z"
-              class="fa-primary"
-            />
-          </svg>
-          <div>Experts</div>
-        </n-link>
-        <n-link
-          class="
-            flex
-            items-center
-            py-2
-            px-1
-            mt-2
-            text-sm
-            font-semibold
-            text-theme-base-900
-            rounded-lg
-            dark-mode:bg-gray-700
-            dark-mode:hover:bg-gray-600
-            dark-mode:focus:bg-gray-600
-            dark-mode:focus:text-white
-            dark-mode:hover:text-white
-            dark-mode:text-theme-base-200
-            hover:text-theme-base-900
-            focus:text-theme-base-900
-            hover:bg-theme-base-200
-            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
-          "
-          to="#"
-          :class="
-            activePage === 'saved' ? 'bg-theme-base-200' : 'bg-transparent'
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 384 512"
-            class="w-6 h-6 mr-2"
-          >
-            <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                <path
+                  d="M96 224a64 64 0 1 0-64-64 64 64 0 0 0 64 64zm448 0a64 64 0 1 0-64-64 64 64 0 0 0 64 64zm32 32h-64a63.78 63.78 0 0 0-45.07 18.59A146.54 146.54 0 0 1 542.06 384H608a32 32 0 0 0 32-32v-32a64 64 0 0 0-64-64zm-512 0a64 64 0 0 0-64 64v32a32 32 0 0 0 32 32h65.94a146.54 146.54 0 0 1 75.13-109.41A63.78 63.78 0 0 0 128 256zM320 32l-48 24-48-24v80h192V32l-48 24z"
+                  opacity=".4"
+                />
+                <path
+                  d="M320 256a96 96 0 0 0 96-96v-16H224v16a96 96 0 0 0 96 96zm76.8 32h-8.31c-20.84 10-43.89 16-68.49 16s-47.64-6-68.49-16h-8.31A115.2 115.2 0 0 0 128 403.2V432a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48v-28.8A115.2 115.2 0 0 0 396.8 288z"
+                  class="fa-primary"
+                />
+              </svg>
+              <div>Experts</div>
+            </n-link>
+          </li>
+          <li>
+            <n-link to="/" class="bg-base-200 rounded-md text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="w-6 h-6 mr-2"
+              >
+                <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
 
-            <path
-              d="M384 48v464L192 400 0 512V48A48 48 0 0 1 48 0h32v326.11a16 16 0 0 0 23.16 14.31L192 296l88.84 44.42A16 16 0 0 0 304 326.11V0h32a48 48 0 0 1 48 48z"
-              opacity=".4"
-            />
-            <path
-              d="M304 0v326.11a16 16 0 0 1-23.16 14.31L192 296l-88.84 44.42A16 16 0 0 1 80 326.11V0z"
-              class="fa-primary"
-            />
-          </svg>
-          <div>Saved</div>
-        </n-link>
-        <n-link
-          class="
-            flex
-            items-center
-            py-2
-            px-1
-            mt-2
-            text-sm
-            font-semibold
-            text-theme-base-900
-            rounded-lg
-            dark-mode:bg-gray-700
-            dark-mode:hover:bg-gray-600
-            dark-mode:focus:bg-gray-600
-            dark-mode:focus:text-white
-            dark-mode:hover:text-white
-            dark-mode:text-theme-base-200
-            hover:text-theme-base-900
-            focus:text-theme-base-900
-            hover:bg-theme-base-200
-            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
-          "
-          to="#"
-          :class="
-            activePage === 'search' ? 'bg-theme-base-200' : 'bg-transparent'
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            class="w-6 h-6 mr-2"
-          >
-            <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                <path
+                  d="M384 48v464L192 400 0 512V48A48 48 0 0 1 48 0h32v326.11a16 16 0 0 0 23.16 14.31L192 296l88.84 44.42A16 16 0 0 0 304 326.11V0h32a48 48 0 0 1 48 48z"
+                  opacity=".4"
+                />
+                <path
+                  d="M304 0v326.11a16 16 0 0 1-23.16 14.31L192 296l-88.84 44.42A16 16 0 0 1 80 326.11V0z"
+                  class="fa-primary"
+                />
+              </svg>
+              <div>Saved</div>
+            </n-link>
+          </li>
+          <li>
+            <n-link to="/" class="bg-base-200 rounded-md text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="w-6 h-6 mr-2"
+              >
+                <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
 
-            <path
-              d="M208 80a128 128 0 1 1-90.51 37.49A127.15 127.15 0 0 1 208 80m0-80C93.12 0 0 93.12 0 208s93.12 208 208 208 208-93.12 208-208S322.88 0 208 0z"
-              opacity=".4"
-            />
-            <path
-              d="M504.9 476.7L476.6 505a23.9 23.9 0 0 1-33.9 0L343 405.3a24 24 0 0 1-7-17V372l36-36h16.3a24 24 0 0 1 17 7l99.7 99.7a24.11 24.11 0 0 1-.1 34z"
-              class="fa-primary"
-            />
-          </svg>
-          <div>Search</div>
-        </n-link>
-        <n-link
-          class="
-            flex
-            items-center
-            py-2
-            px-1
-            mt-2
-            text-sm
-            font-semibold
-            text-theme-base-900
-            rounded-lg
-            dark-mode:bg-gray-700
-            dark-mode:hover:bg-gray-600
-            dark-mode:focus:bg-gray-600
-            dark-mode:focus:text-white
-            dark-mode:hover:text-white
-            dark-mode:text-theme-base-200
-            hover:text-theme-base-900
-            focus:text-theme-base-900
-            hover:bg-theme-base-200
-            focus:bg-theme-base-200 focus:outline-none focus:shadow-outline
-          "
-          to="#"
-          :class="
-            activePage === 'more' ? 'bg-theme-base-200' : 'bg-transparent'
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="h-6 w-6 mr-2"
-          >
-            <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                <path
+                  d="M208 80a128 128 0 1 1-90.51 37.49A127.15 127.15 0 0 1 208 80m0-80C93.12 0 0 93.12 0 208s93.12 208 208 208 208-93.12 208-208S322.88 0 208 0z"
+                  opacity=".4"
+                />
+                <path
+                  d="M504.9 476.7L476.6 505a23.9 23.9 0 0 1-33.9 0L343 405.3a24 24 0 0 1-7-17V372l36-36h16.3a24 24 0 0 1 17 7l99.7 99.7a24.11 24.11 0 0 1-.1 34z"
+                  class="fa-primary"
+                />
+              </svg>
+              <div>Search</div>
+            </n-link>
+          </li>
+          <li>
+            <n-link to="/" class="bg-base-200 rounded-md text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="h-6 w-6 mr-2"
+              >
+                <!-- Font Awesome Pro 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
 
-            <path
-              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-51.37 182.31L232.06 348.16a10.38 10.38 0 0 1-16.12 0L99.37 214.31C92.17 206 97.28 192 107.43 192h233.14c10.15 0 15.26 14 8.06 22.31z"
-              opacity=".4"
-            />
-            <path
-              d="M348.63 214.31L232.06 348.16a10.38 10.38 0 0 1-16.12 0L99.37 214.31C92.17 206 97.28 192 107.43 192h233.14c10.15 0 15.26 14 8.06 22.31z"
-              class="fa-primary"
-            />
-          </svg>
-          <div>More</div>
-        </n-link>
+                <path
+                  d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48zm-51.37 182.31L232.06 348.16a10.38 10.38 0 0 1-16.12 0L99.37 214.31C92.17 206 97.28 192 107.43 192h233.14c10.15 0 15.26 14 8.06 22.31z"
+                  opacity=".4"
+                />
+                <path
+                  d="M348.63 214.31L232.06 348.16a10.38 10.38 0 0 1-16.12 0L99.37 214.31C92.17 206 97.28 192 107.43 192h233.14c10.15 0 15.26 14 8.06 22.31z"
+                  class="fa-primary"
+                />
+              </svg>
+              <div>More</div>
+            </n-link>
+          </li>
+        </ul>
       </nav>
     </div>
   </div>
@@ -1052,10 +889,10 @@ export default {
   name: "SideBar",
   components: { SearchBar },
   props: {
-    activePage: {
-      type: String,
-      default: "feed",
-    },
+    /* activePage: {
+        type: String,
+        default: "feed",
+      }, */
   },
 
   data() {

@@ -28,8 +28,8 @@
 
 <script>
 import { mapActions, mapState, mapGetters } from "vuex";
-import UserSideBar from "~/components/Profile/UserSideBar";
-import UserHero from "~/components/Profile/UserHero";
+import UserSideBar from "~/components/profile/UserSideBar";
+import UserHero from "~/components/profile/UserHero";
 export default {
   name: "Index",
   components: { UserSideBar, UserHero },
@@ -68,7 +68,7 @@ export default {
         this.userData.bio = newData.bio ? newData.bio : "";
         this.userData.title = newData.title ? newData.title : "";
         this.userData.createdAt = newData.createdAt ? newData.createdAt : "";
-        if (this.user.email === this.userDetail.email) {
+        if (this.user && this.user.email === this.userDetail.email) {
           this.isAuthUser = true;
         }
       }
@@ -78,7 +78,11 @@ export default {
   beforeMount() {
     const param = this.$route.params.username;
     const userName = param.split("@")[1];
-    this.getUserByUsername(userName);
+    if (userName) {
+      this.getUserByUsername(userName);
+    } else {
+      this.$router.push("/404");
+    }
   },
 
   methods: {

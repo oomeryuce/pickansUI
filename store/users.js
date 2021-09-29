@@ -129,13 +129,13 @@ export const actions = {
         console.log(error);
       });
   },
-  signUserUp({ commit }, payload) {
+  async signUserUp({ commit }, payload) {
     commit("shared/setLoading", true, { root: true });
     commit("shared/clearError", null, { root: true });
-    firebase
+    await firebase
       .auth()
       .createUserWithEmailAndPassword(payload.email, payload.password)
-      .then((user) => {
+      .then(async (user) => {
         commit("shared/setLoading", false, { root: true });
         const newUser = {
           id: user.uid,
@@ -143,6 +143,17 @@ export const actions = {
           email: user.email,
           photoUrl: user.photoURL,
         };
+        await firebase
+          .auth()
+          .currentUser.sendEmailVerification()
+          .then(() => {
+            console.log("Email sent!");
+          })
+          .catch((error) => {
+            commit("shared/setLoading", false, { root: true });
+            commit("shared/setError", error, { root: true });
+            console.log(error);
+          });
         commit("setUser", newUser);
       })
       .catch((error) => {

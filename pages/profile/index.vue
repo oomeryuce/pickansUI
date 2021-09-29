@@ -18,14 +18,14 @@
         <profile-feed-end />
       </template>
       <template slot="rightSide">
-        <UserSideBar />
+        <UserSideBar :user-card="true" />
       </template>
     </profile-template>
   </div>
 </template>
 
 <script>
-import UserSideBar from "~/components/Profile/UserSideBar";
+import UserSideBar from "~/components/profile/UserSideBar";
 
 export default {
   name: "ProfilePage",
