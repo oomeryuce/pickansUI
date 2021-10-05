@@ -296,7 +296,6 @@ export default {
         data: {
           question: this.data.question,
           attachments: this.data.attachments,
-          price: this.data.price,
           privacy: this.data.privacy,
           difficulty: this.difficulty,
           priceRatio: this.priceRatio,

@@ -69,18 +69,18 @@
           <li class="py-3 flex justify-between items-center">
             <span>Price</span>
             <div
-              class="badge badge-outline"
+              class="badge badge-outline capitalize"
               :class="
-                details.price < 5
+                details.difficulty < 5
                   ? 'badge-info'
-                  : details.price < 10
+                  : details.difficulty < 10
                   ? 'badge-success'
-                  : details.price < 15
+                  : details.difficulty < 15
                   ? 'badge-warning'
                   : 'badge-error'
               "
             >
-              {{ details.price }}$
+              {{ details.difficulty + (details.difficulty > 0 ? "$" : "") }}
             </div>
           </li>
           <li class="py-3 flex justify-between items-center">
@@ -97,7 +97,7 @@
                   : 'badge-error'
               "
             >
-              {{ previewIncome }}$
+              {{ previewIncome + (previewIncome > 0 ? "$" : "") }}
             </div>
           </li>
           <li class="py-3 flex justify-between items-center">
@@ -132,7 +132,6 @@ export default {
   data() {
     return {
       details: {
-        price: null,
         privacy: null,
         difficulty: null,
         priceRatio: null,
@@ -148,15 +147,19 @@ export default {
   computed: {
     // eslint-disable-next-line vue/return-in-computed-property
     previewIncome() {
-      if (this.data) {
-        return this.data.price - (this.data.price / 100) * this.data.priceRatio;
+      if (this.data && this.data.difficulty > 0) {
+        return (
+          this.data.difficulty -
+          (this.data.difficulty / 100) * this.data.priceRatio
+        );
+      } else {
+        return "Offer";
       }
     },
   },
 
   beforeMount() {
     if (this.data) {
-      this.details.price = this.data.price;
       this.details.privacy = this.data.privacy;
       this.details.difficulty = this.data.difficulty;
       this.details.priceRatio = this.data.priceRatio;

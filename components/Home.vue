@@ -17,8 +17,6 @@
       <div
         class="col-span-12 md:pt-2 md:col-span-8 lg:col-span-7 xl:col-span-5"
       >
-        <FeedHeader />
-        <FeedRank />
         <slot></slot>
       </div>
       <div
@@ -45,8 +43,6 @@
 
 <script>
 import { defineComponent } from "@nuxtjs/composition-api";
-import FeedHeader from "~/components/FeedHeader.vue";
-import FeedRank from "~/components/FeedRank.vue";
 import FollowTags from "~/components/FollowTags.vue";
 // import QuestionPost from '~/components/question/QuestionPost.vue'
 import SideBar from "~/components/SideBar.vue";
@@ -60,13 +56,11 @@ export default defineComponent({
   components: {
     // QuestionPost,
     SideBar,
-    FeedHeader,
     // PickansCard,
     SearchBar,
     TopQuestions,
     TrendingExperts,
     FollowTags,
-    FeedRank,
   },
 });
 </script>

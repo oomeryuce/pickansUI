@@ -103,13 +103,15 @@ export default {
     };
   },
 
+  beforeMount() {
+    this.description = this.data.question;
+  },
+
   methods: {
     addFiles(event) {
-      // console.log(event.target.files);
       for (const item of event.target.files) {
         this.atachments.push(item);
       }
-      console.log(this.atachments);
     },
 
     fileToSrc(file, index) {

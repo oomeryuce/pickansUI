@@ -136,7 +136,6 @@ export const actions = {
       .auth()
       .createUserWithEmailAndPassword(payload.email, payload.password)
       .then(async (user) => {
-        commit("shared/setLoading", false, { root: true });
         const newUser = {
           id: user.uid,
           name: user.displayName,
@@ -155,6 +154,7 @@ export const actions = {
             console.log(error);
           });
         commit("setUser", newUser);
+        commit("shared/setLoading", false, { root: true });
       })
       .catch((error) => {
         commit("shared/setLoading", false, { root: true });

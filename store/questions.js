@@ -4,10 +4,10 @@ export const state = () => ({
   questionData: {
     question: "Test question",
     attachments: [],
-    price: 10,
     privacy: true,
     difficulty: 10,
     priceRatio: 25,
+    preview: 3,
     answerType: "media",
     deadLine: 240,
     donate: true,

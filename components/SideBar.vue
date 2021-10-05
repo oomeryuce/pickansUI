@@ -344,7 +344,7 @@
                   shadow-lg
                   bg-pickans-red
                 "
-                >5</span
+                >{{ notificationCount }}</span
               ></a
             >
           </div>
@@ -582,7 +582,7 @@
                   shadow-lg
                   bg-pickans-red
                 "
-                >5</span
+                >{{ notificationCount }}</span
               ></a
             >
           </div>
@@ -911,6 +911,10 @@ export default {
 
     userData() {
       return this.$store.getters["users/userData"];
+    },
+
+    notificationCount() {
+      return this.$store.getters["notifications/notificationCount"];
     },
   },
 
