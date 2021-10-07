@@ -10,11 +10,11 @@
 
 <script>
 import { defineComponent } from "@nuxtjs/composition-api";
-import ProfileCounters from "~/components/profile/ProfileCounters.vue";
-import ProfileInfo from "~/components/profile/ProfileInfo.vue";
-import ProfileSkills from "~/components/profile/ProfileSkills.vue";
-import UserCard from "~/components/profile/UserCard.vue";
-import ProfileRecentActivity from "~/components/profile/ProfileRecentActivity.vue";
+import ProfileCounters from "~/components/Profile/ProfileCounters.vue";
+import ProfileInfo from "~/components/Profile/ProfileInfo.vue";
+import ProfileSkills from "~/components/Profile/ProfileSkills.vue";
+import UserCard from "~/components/Profile/UserCard.vue";
+import ProfileRecentActivity from "~/components/Profile/ProfileRecentActivity.vue";
 
 export default defineComponent({
   name: "UserSideBar",

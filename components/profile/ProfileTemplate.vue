@@ -46,8 +46,8 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 import { mapState } from "vuex";
 import SideBar from "~/components/SideBar.vue";
-// import FeedHeader from '~/components/profile/FeedHeader.vue'
-// import FeedEnd from '~/components/profile/FeedEnd.vue'
+// import FeedHeader from '~/components/Profile/FeedHeader.vue'
+// import FeedEnd from '~/components/Profile/FeedEnd.vue'
 
 export default defineComponent({
   name: "ProfileTemplate",
