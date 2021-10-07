@@ -18,14 +18,35 @@
       v-if="userDetail && !userDetail.error && !loading"
       class="col-span-12 md:col-span-12 lg:col-span-10 xl:col-span-7"
     >
-      <div class="col-12">
+      <div class="col-span-12">
         <slot name="top"></slot>
       </div>
-      <div class="flex flex-row items-start flex-grow-0 w-full max-w-full py-2">
-        <div class="flex-1 w-full max-w-full lg:w-auto">
+      <div
+        class="
+          col-span-12
+          grid grid-cols-12
+          flex flex-row
+          items-start
+          flex-grow-0
+          py-2
+        "
+      >
+        <div
+          class="
+            col-span-12
+            lg:col-span-7
+            xl:col-span-8
+            flex-1
+            w-full
+            max-w-full
+            lg:w-auto
+          "
+        >
           <slot name="feed"></slot>
         </div>
-        <div class="flex-shrink-0 hidden w-84 xl:w-96 lg:block lg:pl-5">
+        <div
+          class="col-span-5 xl:col-span-4 flex-shrink-0 hidden lg:block lg:pl-5"
+        >
           <slot name="rightSide"></slot>
         </div>
       </div>
@@ -46,8 +67,8 @@
 import { defineComponent } from "@nuxtjs/composition-api";
 import { mapState } from "vuex";
 import SideBar from "~/components/SideBar.vue";
-// import FeedHeader from '~/components/Profile/FeedHeader.vue'
-// import FeedEnd from '~/components/Profile/FeedEnd.vue'
+// import FeedHeader from '~/components/profile/FeedHeader.vue'
+// import FeedEnd from '~/components/profile/FeedEnd.vue'
 
 export default defineComponent({
   name: "ProfileTemplate",

@@ -60,7 +60,7 @@
             </div>
           </div>
           <p v-else class="text-xs">No attachment(s) added yet.</p>
-          <label class="btn btn-primary w-full lg:w-1/3">
+          <label class="btn btn-primary w-full lg:w-1/2 xl:w-1/3">
             <span class="text-base leading-normal">
               Add Attachment(<span class="lowercase">s</span>)
             </span>

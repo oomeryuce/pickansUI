@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from "@nuxtjs/composition-api";
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapState } from "vuex";
 import firebase from "firebase";
 
 export default defineComponent({
@@ -24,14 +24,14 @@ export default defineComponent({
   },
 
   computed: {
-    ...mapGetters({
-      user: "users/user",
-      userData: "users/userData",
-      theme: "shared/theme",
+    ...mapState({
+      userData: (state) => state.users.userData,
+      user: (state) => state.users.user,
+      theme: (state) => state.shared.theme,
     }),
   },
 
-  async created() {
+  async beforeMount() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.$store.dispatch("users/autoSignIn", user, { root: true });
@@ -41,6 +41,15 @@ export default defineComponent({
       }
     });
     await this.getTheme();
+  },
+
+  mounted() {
+    const self = this;
+    setTimeout(function () {
+      if (self.user && !self.userData) {
+        self.$router.push("/register");
+      }
+    }, 1000);
   },
 
   methods: {
