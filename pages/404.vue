@@ -1,5 +1,5 @@
 <template>
-  <DefaultLayout>
+  <DefaultStructure :right="false">
     <div class="h-screen flex flex-col justify-center items-center text-center">
       <svg
         id="404-Dave"
@@ -179,14 +179,14 @@
       </p>
       <n-link to="/" class="btn btn-primary font-bold">Go Home</n-link>
     </div>
-  </DefaultLayout>
+  </DefaultStructure>
 </template>
 
 <script>
-import DefaultLayout from "~/components/UI/DefaultLayout";
+import { DefaultStructure } from "~/nuxt-dist/components";
 export default {
   name: "Error",
-  components: { DefaultLayout },
+  components: { DefaultStructure },
 };
 </script>
 

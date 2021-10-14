@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <DefaultStructure :right="false">
     <div
       class="
         relative
@@ -13,34 +13,24 @@
         overflow-y-auto
       "
     >
-      <SideBar active-page="settings" />
-      <div
-        class="
-          col-span-12
-          sm:col-span-12
-          md:col-span-4
-          lg:col-span-3
-          xl:col-span-2
-        "
-      >
+      <div class="col-span-12 sm:col-span-12 md:col-span-4 xl:col-span-2">
         <SettingsTabs :active="activeTab" @tab-change="tabChange" />
       </div>
-      <div
-        class="col-span-12 md:pt-2 md:col-span-8 lg:col-span-7 xl:col-span-5"
-      >
+      <div class="col-span-12 md:pt-2 md:col-span-8 xl:col-span-6">
         <ProfileSettings v-if="activeTab === 'profile'" />
         <slot></slot>
       </div>
     </div>
-  </div>
+  </DefaultStructure>
 </template>
 
 <script>
+import { DefaultStructure } from "~/nuxt-dist/components";
 import SettingsTabs from "~/components/settings/SettingsTabs";
 import ProfileSettings from "~/components/settings/ProfileSettings";
 export default {
   name: "SettingsTemplate",
-  components: { SettingsTabs, ProfileSettings },
+  components: { SettingsTabs, ProfileSettings, DefaultStructure },
   data() {
     return {
       activeTab: "profile",

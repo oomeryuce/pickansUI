@@ -14,7 +14,7 @@ import ProfileCounters from "~/components/Profile/ProfileCounters.vue";
 import ProfileInfo from "~/components/Profile/ProfileInfo.vue";
 import ProfileSkills from "~/components/Profile/ProfileSkills.vue";
 import UserCard from "~/components/Profile/UserCard.vue";
-import ProfileRecentActivity from "~/components/Profile/ProfileRecentActivity.vue";
+import ProfileRecentActivity from "~/components/profile/ProfileRecentActivity.vue";
 
 export default defineComponent({
   name: "UserSideBar",

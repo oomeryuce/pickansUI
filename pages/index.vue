@@ -1,5 +1,5 @@
 <template>
-  <Home>
+  <DefaultStructure>
     <FeedHeader />
     <FeedRank />
     <div class="overflow-hidden rounded-t-box shadow-md mb-3">
@@ -8,18 +8,18 @@
       <QuestionPost />
       <QuestionPost />
     </div>
-  </Home>
+  </DefaultStructure>
 </template>
 
 <script>
-import Home from "~/components/Home.vue";
+import DefaultStructure from "~/components/DefaultStructure";
 import FeedHeader from "~/components/FeedHeader";
 import FeedRank from "~/components/FeedRank";
 
 export default {
   name: "HomePage",
   components: {
-    Home,
+    DefaultStructure,
     FeedHeader,
     FeedRank,
   },

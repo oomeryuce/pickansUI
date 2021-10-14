@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="bg-bluish-gray-50 antialiased min-h-screen dark:bg-theme-base-800"
-  >
+  <div class="bg-base-200 antialiased min-h-screen">
     <Nuxt />
   </div>
 </template>

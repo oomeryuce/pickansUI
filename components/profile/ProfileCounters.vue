@@ -7,8 +7,8 @@
             <p class="mb-px font-medium text-theme-base-500 text-sm">
               Followers
             </p>
-            <a
-              href="/@sencer/followers"
+            <n-link
+              to="/@sencer/followers"
               title="0"
               class="
                 text-2xl
@@ -17,7 +17,7 @@
                 dark:text-theme-base-300
                 text-sm
               "
-              >0</a
+              >0</n-link
             >
           </div>
           <div
@@ -32,8 +32,8 @@
               Following
             </p>
             <p class="big-num">
-              <a
-                href="/@sencer/following"
+              <n-link
+                to="/@sencer/following"
                 title="1"
                 class="
                   text-2xl
@@ -42,7 +42,7 @@
                   dark:text-theme-base-300
                   text-sm
                 "
-                >1</a
+                >1</n-link
               >
             </p>
           </div>

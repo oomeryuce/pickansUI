@@ -1,25 +1,14 @@
 <template>
-  <div class="container mx-auto">
-    <div
-      class="
-        relative
-        grid grid-cols-12
-        gap-2
-        px-2
-        mx-auto
-        md:gap-4
-        xl:grid-cols-8
-        2xl:px-5
-        overflow-y-auto
-      "
-    >
-      <SideBar active-page="feed" />
+  <div>
+    <SideBar active-page="feed">
       <div
-        class="col-span-12 md:pt-2 md:col-span-8 lg:col-span-7 xl:col-span-5"
+        class="col-span-12 md:pt-2"
+        :class="{ 'md:col-span-8 lg:col-span-8 xl:col-span-6': right }"
       >
         <slot></slot>
       </div>
       <div
+        v-if="right"
         class="
           col-span-2
           hidden
@@ -28,7 +17,7 @@
           lg:block
           xl:block
           md:pt-2 md:col-span-4
-          lg:col-span-3
+          lg:col-span-4
           xl:col-span-2
         "
       >
@@ -37,7 +26,7 @@
         <TrendingExperts />
         <FollowTags />
       </div>
-    </div>
+    </SideBar>
   </div>
 </template>
 
@@ -61,6 +50,13 @@ export default defineComponent({
     TopQuestions,
     TrendingExperts,
     FollowTags,
+  },
+
+  props: {
+    right: {
+      type: Boolean,
+      default: true,
+    },
   },
 });
 </script>
