@@ -34,7 +34,7 @@
 <script>
 // import { PropType, defineComponent } from '@nuxtjs/composition-api'
 import { defineComponent } from "@nuxtjs/composition-api";
-// test
+
 export default defineComponent({
   name: "Profile",
 });
