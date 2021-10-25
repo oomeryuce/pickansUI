@@ -79,7 +79,7 @@
               >
                 Joined Pickans
               </p>
-              <p v-if="data" class="text-sm text-theme-base-500">
+              <p class="text-sm text-theme-base-500">
                 <span>{{ $moment(data.createdAt).format("ll") }}</span>
               </p>
             </div>

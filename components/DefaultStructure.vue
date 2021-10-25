@@ -2,7 +2,7 @@
   <div>
     <SideBar active-page="feed">
       <div
-        class="col-span-12 md:pt-2"
+        class="col-span-12 md:pt-2 min-h-screen"
         :class="{ 'md:col-span-8 lg:col-span-8 xl:col-span-6': right }"
       >
         <slot></slot>

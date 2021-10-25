@@ -226,16 +226,7 @@
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
         <div
-          class="
-            flex flex-col
-            h-full
-            justify-between
-            pt-2
-            bg-transparent
-            w-80
-            lg:w-auto
-            pl-2
-          "
+          class="flex flex-col h-full justify-between pt-2 w-80 lg:w-auto pl-2"
           :class="{ 'bg-base-200': open }"
         >
           <div>
@@ -411,18 +402,8 @@
               </li>
             </ul>
           </div>
-          <div
-            class="
-              flex flex-row
-              items-center
-              flex-shrink-0
-              md:flex-col
-              text-brand-grey-800
-              dark:text-brand-grey-300
-              mb-10
-            "
-          >
-            <dark-mode-button />
+          <div class="flex flex-col items-center flex-shrink-0 mb-10">
+            <dark-mode-button class="-mt-28 lg:mt-0" />
             <div class="relative mr-2 md:mr-0 hidden lg:block">
               <a
                 href="/notifications"
@@ -459,7 +440,7 @@
               >
             </div>
             <div class="w-auto hidden lg:block">
-              <div class="dropdown dropdown-top dropdown-hover">
+              <div class="dropdown dropdown-right dropdown-end dropdown-hover">
                 <div tabindex="0" class="avatar">
                   <div
                     class="

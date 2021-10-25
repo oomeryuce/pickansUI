@@ -11,13 +11,13 @@
         >
           <div
             v-if="notification.user.pictureUrl"
-            class="rounded-btn w-24 h-24"
+            class="rounded-btn w-20 h-20"
           >
             <img :src="notification.user.pictureUrl" />
           </div>
           <div
             v-else
-            class="bg-primary text-neutral-content rounded-btn w-24 h-24"
+            class="bg-primary text-neutral-content rounded-btn w-20 h-20"
           >
             <span class="text-3xl uppercase">{{
               getFirstChars(notification.user.name)

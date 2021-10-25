@@ -25,7 +25,7 @@ export const state = () => ({
       user: {
         name: "Test user 2",
         pictureUrl:
-          "https://lh3.googleusercontent.com/a/AATXAJwYSQsULUt4_faRclsZiKAwJecC31zFrpbhk-z6=s96-c",
+          "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
         online: false,
       },
     },
@@ -65,7 +65,7 @@ export const state = () => ({
       user: {
         name: "Test user 5",
         pictureUrl:
-          "https://lh3.googleusercontent.com/a/AATXAJwYSQsULUt4_faRclsZiKAwJecC31zFrpbhk-z6=s96-c",
+          "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
         online: false,
       },
     },
@@ -118,7 +118,7 @@ export const state = () => ({
       user: {
         name: "Test user 9",
         pictureUrl:
-          "https://lh3.googleusercontent.com/a/AATXAJwYSQsULUt4_faRclsZiKAwJecC31zFrpbhk-z6=s96-c",
+          "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
         online: false,
       },
     },
