@@ -93,7 +93,7 @@
 <script>
 import { defineComponent } from "@nuxtjs/composition-api";
 import PickansCard from "~/components/UI/PickansCard.vue";
-
+// test
 export default defineComponent({
   name: "ProfileRecentActivty",
   components: { PickansCard },
