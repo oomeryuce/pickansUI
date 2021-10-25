@@ -2,10 +2,10 @@
   <div>
     <div v-show="activeTab === 1">
       <div class="p-4">
-        <label>Difficulty</label>
+        <label>{{ $t("questions.settings.difficulty.title") }}</label>
         <div class="bg-base-100 rounded-box shadow-md p-4 m-4">
           <p class="mb-3">
-            What is your offer to question difficulty level and price?
+            {{ $t("questions.settings.difficulty.desc") }}
           </p>
           <div class="btn-group">
             <button
@@ -15,7 +15,7 @@
               :class="difficulty === 5 ? 'btn-active' : ''"
               @click="difficulty = 5"
             >
-              Easy
+              {{ $t("questions.settings.difficulty.easy") }}
             </button>
             <button
               data-tip="10$"
@@ -24,7 +24,7 @@
               :class="difficulty === 10 ? 'btn-active' : ''"
               @click="difficulty = 10"
             >
-              Medium
+              {{ $t("questions.settings.difficulty.medium") }}
             </button>
             <button
               data-tip="20$"
@@ -33,24 +33,24 @@
               :class="difficulty === 20 ? 'btn-active' : ''"
               @click="difficulty = 20"
             >
-              Hard
+              {{ $t("questions.settings.difficulty.hard") }}
             </button>
             <button
-              data-tip="Offer to expert"
+              :data-tip="$t('questions.settings.difficulty.offerToExpert')"
               type="button"
               class="btn capitalize tooltip tooltip-bottom"
               :class="difficulty === 'offer' ? 'btn-active' : ''"
               @click="difficulty = 'offer'"
             >
-              Offer
+              {{ $t("questions.settings.difficulty.offer") }}
             </button>
           </div>
         </div>
       </div>
       <div class="p-4">
-        <label>Preview Price Ratio</label>
+        <label>{{ $t("questions.settings.priceRatio.title") }}</label>
         <div class="bg-base-100 rounded-box shadow-md p-4 m-4">
-          <p class="mb-3">Sharing of the each preview income</p>
+          <p class="mb-3">{{ $t("questions.settings.priceRatio.desc") }}</p>
           <div class="grid grid-cols-4 flex items-center">
             <input
               v-model="priceRatio"
@@ -61,7 +61,9 @@
               class="range range-primary col-span-3 p-3"
             />
             <div class="stat">
-              <div class="stat-title">Price Ratio</div>
+              <div class="stat-title">
+                {{ $t("questions.settings.priceRatio.pr") }}
+              </div>
               <div class="stat-value">{{ priceRatio }}%</div>
               <div class="stat-desc">
                 {{
@@ -75,9 +77,9 @@
         </div>
       </div>
       <div class="p-4">
-        <label>Preview</label>
+        <label>{{ $t("questions.settings.preview.title") }}</label>
         <div class="bg-base-100 rounded-box shadow-md p-4 m-4">
-          <p class="mb-3">How many people preview your answer</p>
+          <p class="mb-3">{{ $t("questions.settings.preview.desc") }}</p>
           <div class="btn-group">
             <button
               :data-tip="calculatePrice(200) + '$'"
@@ -121,9 +123,11 @@
     </div>
     <div v-show="activeTab === 2">
       <div class="p-4">
-        <label>Answer Type</label>
+        <label>{{ $t("questions.settings.answerType.title") }}</label>
         <div class="bg-base-100 rounded-box shadow-md p-4 m-4">
-          <p class="mb-3">Choose answer type of question</p>
+          <p class="mb-3">
+            {{ $t("questions.settings.answerType.desc") }}
+          </p>
           <div class="btn-group">
             <button
               type="button"
@@ -131,7 +135,7 @@
               :class="answerType === 'text' ? 'btn-active' : ''"
               @click="answerType = 'text'"
             >
-              Text
+              {{ $t("questions.settings.answerType.text") }}
             </button>
             <button
               type="button"
@@ -139,7 +143,7 @@
               :class="answerType === 'media' ? 'btn-active' : ''"
               @click="answerType = 'media'"
             >
-              Media
+              {{ $t("questions.settings.answerType.media") }}
             </button>
             <button
               type="button"
@@ -147,15 +151,15 @@
               :class="answerType === 'audio' ? 'btn-active' : ''"
               @click="answerType = 'audio'"
             >
-              Audio
+              {{ $t("questions.settings.answerType.audio") }}
             </button>
           </div>
         </div>
       </div>
       <div class="p-4">
-        <label>Deadline</label>
+        <label>{{ $t("questions.settings.deadLine.title") }}</label>
         <div class="bg-base-100 rounded-box shadow-md p-4 m-4">
-          <p class="mb-3">Deadline of the answering question</p>
+          <p class="mb-3">{{ $t("questions.settings.deadLine.desc") }}</p>
           <div class="grid grid-cols-4 flex items-center">
             <input
               v-model="deadLine"
@@ -165,21 +169,25 @@
               class="range range-primary col-span-3 p-3"
             />
             <div class="stat">
-              <div class="stat-title">Deadline</div>
+              <div class="stat-title">
+                {{ $t("questions.settings.deadLine.title") }}
+              </div>
               <div class="stat-value">
                 {{ deadLine === "500" ? "∞" : deadLine }}
               </div>
-              <div class="stat-desc">Hours</div>
+              <div class="stat-desc">
+                {{ $t("questions.settings.deadLine.hours") }}
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="p-4">
-        <label>Donate</label>
+        <label>{{ $t("questions.settings.donate.title") }}</label>
         <div class="bg-base-100 rounded-box shadow-md p-4 m-4">
           <div class="grid grid-cols-4">
             <span class="col-span-3 flex items-center">
-              Do you want to donate your question preview income to charities?
+              {{ $t("questions.settings.donate.desc") }}
             </span>
             <div class="flex justify-end">
               <input
@@ -194,7 +202,7 @@
                 class="select select-bordered select-primary w-full"
               >
                 <option :value="null" disabled="disabled" selected="selected">
-                  Charities
+                  {{ $t("questions.settings.donate.charities") }}
                 </option>
                 <option :value="1">Charitie 1</option>
                 <option :value="2">Charitie 2</option>
@@ -202,7 +210,7 @@
               </select>
               <div class="grid grid-cols-4 flex items-center">
                 <div class="col-span-3 flex flex-col">
-                  <span>Sharing of the income with charities</span>
+                  <span>{{ $t("questions.settings.donate.ratioDesc") }}</span>
                   <input
                     v-model="donateRatio"
                     type="range"
@@ -219,7 +227,9 @@
                   </div>
                 </div>
                 <div class="stat">
-                  <div class="stat-title">Donate Ratio</div>
+                  <div class="stat-title">
+                    {{ $t("questions.settings.donate.donateRatio") }}
+                  </div>
                   <div class="stat-value">{{ donateRatio }}%</div>
                 </div>
               </div>

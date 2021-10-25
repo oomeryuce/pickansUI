@@ -5,7 +5,7 @@
         <div class="flex flex-row">
           <div class="w-1/4 p-2">
             <p class="mb-px font-medium text-theme-base-500 text-sm">
-              Followers
+              {{ $t("profile.profileCounter.followers") }}
             </p>
             <n-link
               to="/@sencer/followers"
@@ -29,7 +29,7 @@
             "
           >
             <p class="mb-px font-medium text-theme-base-500 text-sm">
-              Following
+              {{ $t("profile.profileCounter.following") }}
             </p>
             <p class="big-num">
               <n-link
@@ -55,7 +55,7 @@
             "
           >
             <p class="mb-px font-medium text-theme-base-500 text-sm">
-              Question
+              {{ $t("profile.profileCounter.question") }}
             </p>
             <p
               class="
@@ -77,7 +77,9 @@
               dark:border-theme-base-700
             "
           >
-            <p class="mb-px font-medium text-theme-base-500 text-sm">Answer</p>
+            <p class="mb-px font-medium text-theme-base-500 text-sm">
+              {{ $t("profile.profileCounter.answer") }}
+            </p>
             <p
               class="
                 text-2xl

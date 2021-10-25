@@ -78,14 +78,14 @@
               dark:text-theme-base-200
             "
           >
-            Sign in / Create an account
+            {{ $t("login.title") }}
           </p>
           <div class="flex flex-row flex-wrap items-center mb-5">
             <input
               id="email"
               v-model="loginData.email"
               type="email"
-              placeholder="Enter your email address"
+              :placeholder="$t('login.emailPlaceholder')"
               class="
                 input input-lg input-primary input-info
                 bg-base-200
@@ -101,7 +101,7 @@
                 <input
                   v-model="loginData.password"
                   type="password"
-                  placeholder="Password"
+                  :placeholder="$t('login.passPlaceholder')"
                   class="
                     input input-lg input-primary input-info
                     bg-base-200
@@ -117,7 +117,7 @@
                 <input
                   v-model="signUpData.password"
                   type="password"
-                  placeholder="Password"
+                  :placeholder="$t('login.passPlaceholder')"
                   class="
                     input input-lg input-primary input-info
                     bg-base-200
@@ -128,7 +128,7 @@
                 <input
                   v-model="signUpData.passwordConfirm"
                   type="password"
-                  placeholder="Password Confirm"
+                  :placeholder="$t('login.passConPlaceholder')"
                   class="
                     input input-lg input-primary input-info
                     bg-base-200
@@ -165,7 +165,7 @@
                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                 ></path>
               </svg>
-              Submit
+              {{ $t("login.submit") }}
             </button>
           </div>
 
@@ -186,7 +186,7 @@
               dark:text-theme-base-300
             "
           >
-            Or, connect with
+            {{ $t("login.title2") }}
           </h1>
           <div class="grid grid-cols-2 gap-4 flex-wrap items-center">
             <div class="col-span-2 md:col-span-1">
@@ -320,8 +320,10 @@ export default defineComponent({
     };
   },
 
-  head: {
-    title: "Login",
+  head() {
+    return {
+      title: this.$t("login.headTitle"),
+    };
   },
 
   computed: {
@@ -341,7 +343,7 @@ export default defineComponent({
     error(newValue, oldValue) {
       if (newValue && newValue !== oldValue) {
         this.alert.type = "error";
-        this.alert.title = "Sign In Error";
+        this.alert.title = this.$t("login.signErrorMessage");
         this.alert.content = newValue.message;
       }
     },
@@ -363,9 +365,8 @@ export default defineComponent({
           const element = document.getElementById("google");
           element.classList.add("ring-2", "ring-blue-400", "ring-opacity-75");
           this.alert.type = "warning";
-          this.alert.title = "Sign In With Google";
-          this.alert.content =
-            "You can sign in with google. Please click google button down below!";
+          this.alert.title = this.$t("login.googleWarnTitle");
+          this.alert.content = this.$t("login.googleRetirectMessage");
         } else {
           const element = document.getElementById("google");
           element.classList.remove(
@@ -420,8 +421,10 @@ export default defineComponent({
           await this.signUserIn(this.loginData);
           if (this.user) {
             this.alert.type = "success";
-            this.alert.title = `Welcome ${this.user.name || "User"}!`;
-            this.alert.content = "You are redirecting...";
+            this.alert.title = `${this.$t("login.welcome1")} ${
+              this.user.name || this.$t("login.welcome2")
+            }!`;
+            this.alert.content = this.$t("login.redirectMessage");
             await this.$router.push("/");
           }
         }
@@ -442,20 +445,19 @@ export default defineComponent({
             });
             if (!this.error) {
               this.alert.type = "success";
-              this.alert.title = "Signed Up";
-              this.alert.content =
-                "Welcome to the Pickans! You are redirecting...";
+              this.alert.title = this.$t("login.successSingUpTitle");
+              this.alert.content = this.$t("login.successSingUpContent");
             }
             await this.$router.push("/register");
           } else {
             this.alert.type = "error";
-            this.alert.title = "Password Error!";
-            this.alert.content = "Passwords does not match.";
+            this.alert.title = this.$t("login.passErrorTitle");
+            this.alert.content = this.$t("login.passErrorContent");
           }
         } else {
           this.alert.type = "error";
-          this.alert.title = "Sign Up Field Error!";
-          this.alert.content = "Please fill all fields to sign up.";
+          this.alert.title = this.$t("login.singUpErrorTitle");
+          this.alert.content = this.$t("login.singUpErrorContent");
         }
       }
     },

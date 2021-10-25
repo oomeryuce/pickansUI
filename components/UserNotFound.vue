@@ -43,11 +43,15 @@
           dark:text-theme-base-200
         "
       >
-        <h1 class="text-4xl font-extrabold">User Not Found!</h1>
+        <h1 class="text-4xl font-extrabold">
+          {{ $t("profile.userNotFound.title") }}
+        </h1>
       </div>
     </div>
     <div class="flex w-full justify-center py-3">
-      <n-link to="/" class="btn btn-primary">Go Home</n-link>
+      <n-link to="/" class="btn btn-primary">
+        {{ $t("profile.userNotFound.button") }}
+      </n-link>
     </div>
   </div>
 </template>

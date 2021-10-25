@@ -67,7 +67,7 @@
             type="button"
             class="btn btn-primary font-semibold px-10 rounded-md text-lg"
           >
-            Ask Me!
+            {{ $t("profile.userHero.askMe") }}
           </button>
         </div>
       </div>
@@ -86,7 +86,7 @@
       >
         <a
           v-for="tab in tabItems"
-          :key="tab.key"
+          :key="tab.id"
           class="
             px-6
             py-2
@@ -96,11 +96,11 @@
             uppercase
           "
           :class="
-            active === tab.title
+            active === tab.key
               ? 'border-blue-300'
               : 'hover:bg-gray-50 hover:border-gray-300'
           "
-          @click="changeTab(tab.title)"
+          @click="changeTab(tab.key)"
         >
           {{ tab.title }}
         </a>
@@ -133,24 +133,29 @@ export default {
     return {
       tabItems: [
         {
-          key: 0,
-          title: "profile",
+          id: 0,
+          title: this.$t("profile.userHero.tabs.profile"),
+          key: "profile",
         },
         {
-          key: 1,
-          title: "questions",
+          id: 1,
+          title: this.$t("profile.userHero.tabs.questions"),
+          key: "questions",
         },
         {
-          key: 2,
-          title: "answers",
+          id: 2,
+          title: this.$t("profile.userHero.tabs.answers"),
+          key: "answers",
         },
         {
-          key: 3,
-          title: "followers",
+          id: 3,
+          title: this.$t("profile.userHero.tabs.followers"),
+          key: "followers",
         },
         {
-          key: 4,
-          title: "following",
+          id: 4,
+          title: this.$t("profile.userHero.tabs.following"),
+          key: "following",
         },
       ],
     };

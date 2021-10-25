@@ -175,9 +175,11 @@
         </g>
       </svg>
       <p class="text-2xl font-bold my-3">
-        The page you are looking for not found!
+        {{ $t("notFound.title") }}
       </p>
-      <n-link to="/" class="btn btn-primary font-bold">Go Home</n-link>
+      <n-link to="/" class="btn btn-primary font-bold">
+        {{ $t("notFound.button") }}
+      </n-link>
     </div>
   </DefaultStructure>
 </template>

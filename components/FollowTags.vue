@@ -4,7 +4,7 @@
       <h2
         class="flex flex-row items-center lg:text-lg xl:text-xl font-extrabold"
       >
-        Tags to follow
+        {{ $t("followTags.title") }}
       </h2>
     </div>
     <template #content>

@@ -25,7 +25,7 @@
           font-medium
         "
       >
-        asked 2h ago
+        {{ $t("questionPost.time") }}
       </p>
 
       <p
@@ -36,7 +36,7 @@
           dark:text-theme-base-300
         "
       >
-        Category
+        {{ $t("questionPost.category") }}
       </p>
       <div class="items-center ml-2">
         <div class="relative">
@@ -153,7 +153,7 @@
               ><div class="fill-current mr-2 w-6 h-6">
                 <PickansQuestionIcon />
               </div>
-              <span>Comment</span></a
+              <span>{{ $t("questionPost.comment") }}</span></a
             >
           </div>
           <div class="flex flex-row-reverse items-center justify-items-end">

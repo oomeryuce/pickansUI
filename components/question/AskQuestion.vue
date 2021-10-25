@@ -1,19 +1,21 @@
 <template>
   <PickansCard v-if="data">
     <template #header>
-      <h2 class="text-xl font-bold">Ask Question</h2>
+      <h2 class="text-xl font-bold">{{ $t("questions.ask.title") }}</h2>
     </template>
     <template #content>
       <div class="grid grid-cols-1 gap-4 p-4 space-y-4">
         <FormInputs
           :value="description"
           input-type="textarea"
-          label="Description"
-          placeholder="Describe your question..."
+          :label="$t('questions.description')"
+          :placeholder="$t('questions.descPlaceHolder')"
           :required="true"
         />
         <div class="flex flex-col space-y-3">
-          <span class="text-sm">Attachments</span>
+          <span class="text-sm">
+            {{ $t("questions.ask.attachments") }}
+          </span>
           <div v-if="atachments.length > 0" class="grid grid-cols-6 gap-4">
             <div
               v-for="(file, index) in atachments"
@@ -59,10 +61,12 @@
               </small>
             </div>
           </div>
-          <p v-else class="text-xs">No attachment(s) added yet.</p>
+          <p v-else class="text-xs">
+            {{ $t("questions.ask.noAttach") }}
+          </p>
           <label class="btn btn-primary w-full lg:w-1/2 xl:w-1/3">
             <span class="text-base leading-normal">
-              Add Attachment(<span class="lowercase">s</span>)
+              {{ $t("questions.ask.addAttach") }}
             </span>
             <input
               type="file"
@@ -74,7 +78,9 @@
           </label>
         </div>
         <div class="flex justify-end">
-          <button type="button" class="btn btn-primary">Ask</button>
+          <button type="button" class="btn btn-primary">
+            {{ $t("questions.ask.ask") }}
+          </button>
         </div>
       </div>
     </template>

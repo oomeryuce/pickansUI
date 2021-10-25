@@ -28,10 +28,13 @@
         <div class="hidden lg:flex"></div>
         <div class="col-span-7 lg:col-span-5 space-y-8">
           <div>
-            <small class="font-bold text-gray-500">CREATE YOUR ACCOUNT</small>
+            <small class="font-bold text-gray-500">
+              {{ $t("register.title") }}
+            </small>
             <p class="font-bold text-xl">
-              🤘 Let's <code class="text-green-500">git init</code> your Pickans
-              journey
+              🤘 {{ $t("register.subTitle1") }}
+              <code class="text-green-500">git init</code>
+              {{ $t("register.subTitle2") }}
             </p>
           </div>
           <div class="grid grid-cols-6 gap-4">
@@ -46,58 +49,64 @@
               "
             >
               <div class="grid grid-cols-4 items-center">
-                <small class="font-semibold hidden lg:flex">Full name</small>
+                <small class="font-semibold hidden lg:flex">
+                  {{ $t("register.fullNameLabel") }}
+                </small>
                 <div class="col-span-4 lg:col-span-3">
                   <FormInputs
                     :value="$v.fullName.$model"
-                    placeholder="John Doe"
+                    :placeholder="$t('register.fullNamePlaceHolder')"
                     input-type="text"
-                    :label="isMobile ? 'Full name' : ''"
+                    :label="isMobile ? $t('register.fillFieldError') : ''"
                     :error="$v.fullName.$error"
                     :required="true"
-                    error-message="Please fill the field!"
+                    :error-message="$t('register.fillFieldError')"
                     @input="(e) => ($v.fullName.$model = e)"
                   />
                 </div>
               </div>
               <div class="grid grid-cols-4 items-center">
                 <small class="font-semibold hidden lg:flex">
-                  Pickans Username
+                  {{ $t("register.userNameLabel") }}
                 </small>
                 <div class="col-span-4 lg:col-span-3">
                   <FormInputs
                     :value="$v.userName.$model"
-                    placeholder="johndoe"
+                    :placeholder="$t('register.userNamePlaceHolder')"
                     input-type="username"
-                    :label="isMobile ? 'Pickans Username' : ''"
+                    :label="isMobile ? $t('register.userNameLabel') : ''"
                     :error="$v.userName.$error"
                     :required="true"
-                    error-message="Please fill the field!"
+                    :error-message="$t('register.fillFieldError')"
                     @input="(e) => ($v.userName.$model = e)"
                   />
                 </div>
               </div>
               <div class="grid grid-cols-4 items-center">
-                <small class="font-semibold hidden lg:flex">Title</small>
+                <small class="font-semibold hidden lg:flex">
+                  {{ $t("register.titleLabel") }}
+                </small>
                 <div class="col-span-4 lg:col-span-3">
                   <FormInputs
                     :value="title"
-                    placeholder="Engineer, Editor, Developer etc."
+                    :placeholder="$t('register.titlePlaceHolder')"
                     input-type="text"
-                    :label="isMobile ? 'Title' : ''"
+                    :label="isMobile ? $t('register.titleLabel') : ''"
                     @input="(e) => (title = e)"
                   />
                 </div>
               </div>
               <div class="grid grid-cols-4 items-center">
-                <small class="font-semibold hidden lg:flex">About</small>
+                <small class="font-semibold hidden lg:flex">
+                  {{ $t("register.bioLabel") }}
+                </small>
                 <div class="col-span-4 lg:col-span-3">
                   <FormInputs
                     :value="bio"
-                    placeholder="Say something about you."
+                    :placeholder="$t('register.bioLabel')"
                     input-type="textarea"
-                    description="Brief description for your profile."
-                    :label="isMobile ? 'About' : ''"
+                    :description="$t('register.bioDescription')"
+                    :label="isMobile ? $t('register.bioLabel') : ''"
                     @input="(e) => (bio = e)"
                   />
                 </div>
@@ -118,12 +127,12 @@
                       d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     ></path>
                   </svg>
-                  <label>Please fill the required fields!</label>
+                  <label>{{ $t("register.fillReqFieldsMessage") }}</label>
                 </div>
               </div>
               <div class="lg:w-1/2 text-xs pt-8">
                 <small>
-                  By continuing to the next step, you agree to Pickans's
+                  {{ $t("register.policy1") }}
                   <a
                     href="#"
                     target="_blank"
@@ -133,9 +142,9 @@
                       dark:hover:text-white
                     "
                   >
-                    privacy policy
+                    {{ $t("register.policy2") }}
                   </a>
-                  and
+                  {{ $t("register.policy3") }}
                   <a
                     href="#"
                     target="_blank"
@@ -145,9 +154,9 @@
                       dark:hover:text-white
                     "
                   >
-                    terms of use
+                    {{ $t("register.policy4") }}
                   </a>
-                  .
+                  {{ $t("register.policy5") }}.
                 </small>
               </div>
             </div>
@@ -193,8 +202,11 @@
                     hidden
                   />
                 </div>
-                <small class="link link-hover mt-2" @click="avatarChange">
-                  Change Photo
+                <small
+                  class="link link-hover mt-2 text-center"
+                  @click="avatarChange"
+                >
+                  {{ $t("register.photoLabel") }}
                 </small>
               </div>
               <button
@@ -224,7 +236,7 @@
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   ></path>
                 </svg>
-                Next
+                {{ $t("register.next") }}
                 <svg
                   fill="none"
                   viewBox="0 0 24 24"

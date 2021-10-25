@@ -24,7 +24,7 @@
       <div class="w-5 h-5 mr-3 -mt-0.5">
         <StarIcon />
       </div>
-      <div>Rising Expert</div>
+      <div>{{ $t("profile.userCard.rExpert") }}</div>
     </div>
     <div
       class="
@@ -131,7 +131,9 @@
             bg-pickans-light
           "
         >
-          <span class="inline-block">Ask Me !</span></a
+          <span class="inline-block">
+            {{ $t("profile.userCard.askMe") }}
+          </span></a
         >
       </div>
     </div>

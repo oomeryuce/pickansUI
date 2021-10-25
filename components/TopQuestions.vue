@@ -13,7 +13,7 @@
       <h2
         class="flex flex-row items-center lg:text-lg xl:text-xl font-extrabold"
       >
-        Top question
+        {{ $t("topQuestions.title") }}
       </h2>
       <div
         class="
@@ -24,7 +24,7 @@
         "
       >
         <button
-          title="1 week"
+          :title="`1 ${$t('topQuestions.week')}`"
           class="
             p-1
             ml-2
@@ -36,9 +36,9 @@
           "
           type="button"
         >
-          1w</button
+          1{{ $t("topQuestions.weekShort") }}</button
         ><button
-          title="1 month"
+          :title="`1 ${$t('topQuestions.month')}`"
           class="
             p-1
             ml-2
@@ -50,9 +50,9 @@
           "
           type="button"
         >
-          1m</button
+          1{{ $t("topQuestions.monthShort") }}</button
         ><button
-          title="3 months"
+          :title="`3 ${$t('topQuestions.month')}`"
           class="
             p-1
             ml-2
@@ -64,9 +64,9 @@
           "
           type="button"
         >
-          3m</button
+          3{{ $t("topQuestions.monthShort") }}</button
         ><button
-          title="6 months"
+          :title="`6 ${$t('topQuestions.month')}`"
           class="
             p-1
             ml-2
@@ -78,7 +78,7 @@
           "
           type="button"
         >
-          6m
+          6{{ $t("topQuestions.monthShort") }}
         </button>
       </div>
     </div>

@@ -11,7 +11,7 @@
             dark:text-theme-base-500
           "
         >
-          Recent Activity
+          {{ $t("profile.activity.recent") }}
         </h2>
         <div class="widget-body recent-activity-body">
           <div class="flex flex-row items-start mb-4">
@@ -77,7 +77,7 @@
                   dark:text-theme-base-300
                 "
               >
-                Joined Pickans
+                {{ $t("profile.activity.joined") }}
               </p>
               <p class="text-sm text-theme-base-500">
                 <span>{{ $moment(data.createdAt).format("ll") }}</span>

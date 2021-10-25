@@ -118,7 +118,26 @@ export default {
       // remoteConfig: true,
     },
   },
-
+  // i18n config
+  i18n: {
+    locales: [
+      {
+        name: "English",
+        code: "en",
+        iso: "en-EN",
+        file: "en.js",
+      },
+      {
+        name: "Türkçe",
+        code: "tr",
+        iso: "tr-TR",
+        file: "tr.js",
+      },
+    ],
+    langDir: "languages/",
+    defaultLocale: "en",
+    strategy: "no_prefix",
+  },
   googleFonts: {
     download: true,
     display: "swap", // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'

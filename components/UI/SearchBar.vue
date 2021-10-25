@@ -51,7 +51,7 @@
           border-none
           rounded-box
         "
-        placeholder="Search Pickans"
+        :placeholder="$t('searchBar.placeHolder')"
       />
       <div
         class="

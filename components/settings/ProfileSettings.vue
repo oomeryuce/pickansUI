@@ -5,34 +5,36 @@
       <div class="p-4 shadow-md bg-base-100 rounded-t-box space-y-6">
         <FormInputs
           :value="$v.fullName.$model"
-          placeholder="John Doe"
+          :placeholder="$t('settings.profile.fullName.placeHolder')"
           input-type="text"
-          label="Full Name"
+          :label="$t('settings.profile.fullName.title')"
           :error="$v.fullName.$error"
           :required="true"
-          error-message="Please fill the field!"
+          :error-message="$t('settings.profile.fullName.errorMessage')"
           @input="(e) => ($v.fullName.$model = e)"
         />
         <FormInputs
           :value="$v.userName.$model"
-          placeholder="johndoe"
+          :placeholder="$t('settings.profile.userName.placeholder')"
           input-type="username"
-          label="User Name"
+          :label="$t('settings.profile.userName.title')"
           :error="$v.userName.$error"
           :required="true"
-          error-message="Please fill the field!"
+          :error-message="$t('settings.profile.userName.errorMessage')"
           @input="(e) => ($v.userName.$model = e)"
         />
         <div class="col-span-3 sm:col-span-2">
           <div class="form-control">
             <label for="tagline" class="label">
-              <span class="font-medium text-sm">Profile Title</span>
+              <span class="font-medium text-sm">
+                {{ $t("settings.profile.userTitle.title") }}
+              </span>
             </label>
             <input
               id="tagline"
               v-model="title"
               type="text"
-              placeholder="Engineer, Editor, Developer etc."
+              :placeholder="$t('settings.profile.userTitle.placeHolder')"
               class="input input-primary input-info bg-base-200"
             />
           </div>
@@ -41,17 +43,19 @@
         <div>
           <div class="form-control">
             <label for="bio" class="label">
-              <span class="text-sm font-medium">About</span>
+              <span class="text-sm font-medium">
+                {{ $t("settings.profile.bio.title") }}
+              </span>
             </label>
             <textarea
               id="bio"
               v-model="bio"
               class="textarea h-24 textarea-bordered textarea-info bg-base-200"
-              placeholder="Say something about you."
+              :placeholder="$t('settings.profile.bio.placeHolder')"
             ></textarea>
           </div>
           <p class="mt-2 text-xs text-theme-base-300 dark:text-theme-base-700">
-            Brief description for your profile.
+            {{ $t("settings.profile.bio.desc") }}
           </p>
         </div>
 
@@ -59,13 +63,15 @@
           <div class="relative">
             <div class="form-control">
               <label for="skills" class="label">
-                <span class="font-medium text-sm">Skills</span>
+                <span class="font-medium text-sm">
+                  {{ $t("settings.profile.skills.title") }}
+                </span>
               </label>
               <input
                 id="skills"
                 v-model="skillText"
                 type="text"
-                placeholder="Enter some skills"
+                :placeholder="$t('settings.profile.skills.placeHolder')"
                 autocomplete="off"
                 class="input input-primary input-info bg-base-200"
               />
@@ -95,9 +101,9 @@
                       bg-base-200
                     "
                     @click="addSkill(skillText)"
-                    >Add skill "<span class="font-semibold">{{
-                      skillText
-                    }}</span
+                    >{{ $t("settings.profile.skills.add") }} "<span
+                      class="font-semibold"
+                      >{{ skillText }}</span
                     >"</a
                   >
                 </div>
@@ -155,7 +161,7 @@
               dark:text-theme-base-300
             "
           >
-            Photo
+            {{ $t("settings.profile.photo.title") }}
           </label>
           <div class="mt-1 flex items-center">
             <span
@@ -189,7 +195,7 @@
               type="button"
               @click="avatarChange"
             >
-              Change
+              {{ $t("settings.profile.photo.title2") }}
             </button>
             <input id="avatar" name="avatar" type="file" alt="avatar" hidden />
           </div>
@@ -275,7 +281,7 @@
         class="bg-base-200 px-4 py-3 text-right sm:px-6 rounded-b-box shadow-md"
       >
         <button class="btn btn-primary py-0 ml-3" type="button" @click="submit">
-          Save
+          {{ $t("settings.save") }}
         </button>
       </div>
     </form>

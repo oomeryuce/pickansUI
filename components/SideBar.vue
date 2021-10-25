@@ -168,7 +168,7 @@
                     py-2
                     hover:bg-blue-100 hover:text-theme-base-900 hover:rounded
                   "
-                  >Profile</n-link
+                  >{{ $t("sidebar.userMenu.profile") }}</n-link
                 >
                 <a
                   id="menu-item-1"
@@ -181,7 +181,7 @@
                     hover:rounded hover:text-theme-base-900
                   "
                   @click="signOut"
-                  >Logout</a
+                  >{{ $t("sidebar.userMenu.logout") }}</a
                 >
               </div>
               <div v-else role="none">
@@ -194,7 +194,7 @@
                     py-2
                     hover:bg-blue-100 hover:rounded hover:text-theme-base-900
                   "
-                  >Login</n-link
+                  >{{ $t("sidebar.userMenu.login") }}</n-link
                 >
                 <n-link
                   id="menu-item-0"
@@ -205,7 +205,7 @@
                     py-2
                     hover:bg-blue-100 hover:rounded hover:text-theme-base-900
                   "
-                  >Sign Up</n-link
+                  >{{ $t("sidebar.userMenu.signUp") }}</n-link
                 >
               </div>
             </div>
@@ -250,8 +250,11 @@
                   <path
                     id="Path"
                     d="M7.45682755,24.0004932 C6.05277997,24.030446 4.9736606,25.1446906 5.00048953,26.5464823 C5.02731846,27.9183211 6.17500067,29.0235799 7.54625733,28.9996176 C8.93838094,28.9726601 10.0234623,27.8494296 9.99961435,26.4626144 C9.96980443,25.0548322 8.84597016,23.9735357 7.45682755,24.0004932 Z"
-                  ></path></svg
-                ><span class="inline-block font-semibold text-lg">Ask</span>
+                  ></path>
+                </svg>
+                <span class="inline-block font-semibold text-lg">
+                  {{ $t("sidebar.ask") }}
+                </span>
               </n-link>
             </div>
             <ul class="menu p-4 space-y-1 text-base-content">
@@ -271,7 +274,7 @@
                       class="fa-primary"
                     />
                   </svg>
-                  <div>My Feed</div>
+                  <div>{{ $t("sidebar.feed") }}</div>
                 </n-link>
               </li>
               <li>
@@ -292,7 +295,7 @@
                       class="fa-primary"
                     />
                   </svg>
-                  <div>Explore</div>
+                  <div>{{ $t("sidebar.explore") }}</div>
                 </n-link>
               </li>
               <li>
@@ -313,7 +316,7 @@
                       class="fa-primary"
                     />
                   </svg>
-                  <div>Category</div>
+                  <div>{{ $t("sidebar.category") }}</div>
                 </n-link>
               </li>
               <li>
@@ -334,7 +337,7 @@
                       class="fa-primary"
                     />
                   </svg>
-                  <div>Experts</div>
+                  <div>{{ $t("sidebar.experts") }}</div>
                 </n-link>
               </li>
               <li>
@@ -355,7 +358,7 @@
                       class="fa-primary"
                     />
                   </svg>
-                  <div>Saved</div>
+                  <div>{{ $t("sidebar.saved") }}</div>
                 </n-link>
               </li>
               <li>
@@ -376,7 +379,7 @@
                       class="fa-primary"
                     />
                   </svg>
-                  <div>Search</div>
+                  <div>{{ $t("sidebar.search") }}</div>
                 </n-link>
               </li>
               <li>
@@ -397,7 +400,7 @@
                       class="fa-primary"
                     />
                   </svg>
-                  <div>More</div>
+                  <div>{{ $t("sidebar.more") }}</div>
                 </n-link>
               </li>
             </ul>
@@ -485,7 +488,7 @@
                         hover:text-theme-base-900
                         hover:rounded
                       "
-                      >Profile</n-link
+                      >{{ $t("sidebar.userMenu.profile") }}</n-link
                     >
                     <a
                       class="
@@ -497,7 +500,7 @@
                         hover:rounded hover:text-theme-base-900
                       "
                       @click="signOut"
-                      >Logout</a
+                      >{{ $t("sidebar.userMenu.logout") }}</a
                     >
                   </div>
                   <div v-else role="none">
@@ -512,7 +515,7 @@
                         hover:rounded
                         hover:text-theme-base-900
                       "
-                      >Login</n-link
+                      >{{ $t("sidebar.userMenu.login") }}</n-link
                     >
                     <n-link
                       id="menu-item-0"
@@ -525,7 +528,7 @@
                         hover:rounded
                         hover:text-theme-base-900
                       "
-                      >Sign Up</n-link
+                      >{{ $t("sidebar.userMenu.singUp") }}</n-link
                     >
                   </div>
                 </div>

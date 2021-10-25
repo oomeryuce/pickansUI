@@ -2,13 +2,13 @@
   <PickansCard v-if="data">
     <template #header>
       <div class="flex justify-between items-center">
-        <h2 class="text-xl font-bold">Details</h2>
+        <h2 class="text-xl font-bold">{{ $t("questions.details.title") }}</h2>
         <button
           type="button"
           class="btn btn-primary btn-sm py-0"
           @click="$emit('open-settings')"
         >
-          Settings
+          {{ $t("questions.details.button") }}
         </button>
       </div>
     </template>
@@ -16,16 +16,20 @@
       <div class="px-4 py-3">
         <ul class="divide-y divide-gray-100">
           <li class="py-3 flex justify-between items-center">
-            <span>Privacy</span>
+            <span>{{ $t("questions.details.privacy") }}</span>
             <div
               class="badge badge-outline"
               :class="details.privacy ? 'badge-error' : 'badge-success'"
             >
-              {{ details.privacy ? "Private" : "Public" }}
+              {{
+                details.privacy
+                  ? $t("questions.details.private")
+                  : $t("questions.details.public")
+              }}
             </div>
           </li>
           <li class="py-3 flex justify-between items-center">
-            <span>Difficulty</span>
+            <span>{{ $t("questions.settings.difficulty.title") }}</span>
             <div
               class="badge"
               :class="
@@ -40,17 +44,17 @@
             >
               {{
                 details.difficulty === 5
-                  ? "Easy"
+                  ? $t("questions.settings.difficulty.easy")
                   : details.difficulty === 10
-                  ? "Medium"
+                  ? $t("questions.settings.difficulty.medium")
                   : details.difficulty === 20
-                  ? "Hard"
-                  : "Offer"
+                  ? $t("questions.settings.difficulty.hard")
+                  : $t("questions.settings.difficulty.offer")
               }}
             </div>
           </li>
           <li class="py-3 flex justify-between items-center">
-            <span>Deadline</span>
+            <span>{{ $t("questions.settings.deadLine.title") }}</span>
             <div
               class="badge badge-outline"
               :class="
@@ -63,11 +67,11 @@
                   : 'badge-error'
               "
             >
-              {{ details.deadLine }}h
+              {{ details.deadLine + $t("questions.details.hour") }}
             </div>
           </li>
           <li class="py-3 flex justify-between items-center">
-            <span>Price</span>
+            <span>{{ $t("questions.details.price") }}</span>
             <div
               class="badge badge-outline capitalize"
               :class="
@@ -84,7 +88,7 @@
             </div>
           </li>
           <li class="py-3 flex justify-between items-center">
-            <span>Estimated Preview Income</span>
+            <span>{{ $t("questions.details.previewIncome") }}</span>
             <div
               class="badge badge-outline"
               :class="
@@ -101,12 +105,16 @@
             </div>
           </li>
           <li class="py-3 flex justify-between items-center">
-            <span>Donate</span>
+            <span>{{ $t("questions.settings.donate.title") }}</span>
             <div
               class="badge badge-outline"
               :class="details.donate ? 'badge-success' : 'badge-warning'"
             >
-              {{ details.donate ? "Yes" : "No" }}
+              {{
+                details.donate
+                  ? $t("questions.details.yes")
+                  : $t("questions.details.no")
+              }}
             </div>
           </li>
         </ul>
